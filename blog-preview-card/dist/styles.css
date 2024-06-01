@@ -2,14 +2,29 @@
 /*                 COLORS & FONTS                   */
 /*  ----------------------------------------------  */
 
+@font-face {
+    font-family: Figtree-Italic;
+    src: url(../assets/fonts/Figtree-Italic-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Figtree-Var;
+    src: url(../assets/fonts/Figtree-VariableFont_wght.ttf);
+}
+
 :root {
     font-size: 10px;
+    font-family: "Figtree-Italic";
 
     --yellow: hsl(47, 88%, 63%);
     --white: hsl(0, 0%, 100%);
     --grey: hsl(0, 0%, 50%);
     --black: hsl(0, 0%, 7%);
 }
+
+/*  ----------------------------------------------  */
+/*                     GENERAL                      */
+/*  ----------------------------------------------  */
 
 * {
     outline: 1px solid red;
