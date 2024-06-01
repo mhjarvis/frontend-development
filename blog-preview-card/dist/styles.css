@@ -1,0 +1,23 @@
+/*  ----------------------------------------------  */
+/*                 COLORS & FONTS                   */
+/*  ----------------------------------------------  */
+
+:root {
+    font-size: 10px;
+
+    --yellow: hsl(47, 88%, 63%);
+    --white: hsl(0, 0%, 100%);
+    --grey: hsl(0, 0%, 50%);
+    --black: hsl(0, 0%, 7%);
+}
+
+* {
+    outline: 1px solid red;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
