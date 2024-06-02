@@ -74,6 +74,7 @@ svg {
     height: 50.1rem;
     background-color: var(--white);
     border-radius: 20px;
+    box-shadow: 8px 8px black;
 }
 
 .card-container {
@@ -89,6 +90,7 @@ svg {
     /*     width: 27.9rem; */
     border-radius: 10px;
     object-fit: fill;
+    box-shadow: 0px 6px 6px -6px black;
 }
 
 .card-category {
@@ -113,4 +115,20 @@ svg {
     font-size: 1.4rem;
     font-weight: 300;
     color: var(--grey);
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 12.9rem;
+}
+
+.profile-image {
+    width: 3.2rem;
+}
+
+.profile-name {
+    font-size: 1.4rem;
+    font-weight: 800;
 }
