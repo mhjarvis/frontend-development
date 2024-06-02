@@ -77,6 +77,13 @@ svg {
     box-shadow: 8px 8px black;
 }
 
+@media screen and (min-width: 600px) {
+    .blog-card {
+        width: 38.4rem;
+        height: 52.8rem;
+    }
+}
+
 .card-container {
     display: flex;
     flex-direction: column;
@@ -87,10 +94,15 @@ svg {
 }
 
 .blog-image {
-    /*     width: 27.9rem; */
     border-radius: 10px;
     object-fit: fill;
     box-shadow: 0px 6px 6px -6px black;
+}
+
+@media screen and (min-width: 600px) {
+    .blog-image {
+        box-shadow: none;
+    }
 }
 
 .card-category {
@@ -102,8 +114,20 @@ svg {
     padding: 0.4rem 1.2rem;
 }
 
+@media screen and (min-width: 600px) {
+    .card-category {
+        width: 8.2rem;
+    }
+}
+
 .publish-date {
     font-size: 1.2rem;
+}
+
+@media screen and (min-width: 600px) {
+    .publish-date {
+        font-size: 1.4rem;
+    }
 }
 
 .card-title {
@@ -111,10 +135,27 @@ svg {
     font-weight: 800;
 }
 
+@media screen and (min-width: 600px) {
+    .card-title {
+        font-size: 2.4rem;
+    }
+
+    .card-title:hover {
+        color: var(--yellow);
+        cursor: pointer;
+    }
+}
+
 .card-description {
     font-size: 1.4rem;
     font-weight: 300;
     color: var(--grey);
+}
+
+@media screen and (min-width: 600px) {
+    .card-description {
+        font-size: 1.6rem;
+    }
 }
 
 .profile-container {
