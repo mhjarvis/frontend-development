@@ -14,8 +14,7 @@
 
 :root {
     font-size: 10px;
-    font-family: "Figtree-Italic";
-
+    font-family: "Figtree-Var";
     --yellow: hsl(47, 88%, 63%);
     --white: hsl(0, 0%, 100%);
     --grey: hsl(0, 0%, 50%);
@@ -26,15 +25,41 @@
 /*                     GENERAL                      */
 /*  ----------------------------------------------  */
 
+*,
+*::before,
+*::after {
+    /* change box model so that border and paddings are not added to total width / total height of a box */
+    box-sizing: border-box;
+}
+
 * {
+    margin: 0;
+    padding: 0;
 }
 
 body {
+    line-height: 1.5;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
     overflow-x: hidden;
     background-color: var(--yellow);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /*  ----------------------------------------------  */
@@ -48,6 +73,7 @@ body {
     width: 32.7rem;
     height: 50.1rem;
     background-color: var(--white);
+    border-radius: 20px;
 }
 
 .card-container {
@@ -56,10 +82,35 @@ body {
     align-items: flex-start;
     justify-content: space-evenly;
     height: 100%;
-    width: 27.9rem;
+    padding: 0 2rem;
 }
 
 .blog-image {
-    width: 27.9rem;
+    /*     width: 27.9rem; */
     border-radius: 10px;
+    object-fit: fill;
+}
+
+.card-category {
+    width: 7.3rem;
+    background-color: var(--yellow);
+    font-size: 1.4rem;
+    font-weight: 800;
+    border-radius: 0.4rem;
+    padding: 0.4rem 1.2rem;
+}
+
+.publish-date {
+    font-size: 1.2rem;
+}
+
+.card-title {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.card-description {
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: var(--grey);
 }
