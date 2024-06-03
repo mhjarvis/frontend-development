@@ -1,0 +1,17 @@
+* {
+    /* Ignore width when adding margin / padding to elements */
+    box-sizing: border-box;
+}
+body {
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Take up entire height of viewport / browser */
+    height: 100vh;
+    /* Do not show scroll bars by defulalt */
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
