@@ -1,4 +1,6 @@
 ---
+import Menu from '../components/Menu.astro';
+
 ---
 
 <html lang="en">
@@ -8,9 +10,10 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   
-  <title>Frontend Mentor | Planets fact site</title>
+  <title>Planets fact site</title>
 </head>
 <body>
+    <Menu />
   Mercury
 
   <!-- Overview Content Start -->
@@ -63,3 +66,10 @@
   430°c
 </body>
 </html>
+
+<style is:global>
+    body {
+      background-color: #070724;
+      color: white;
+    }
+</style>
