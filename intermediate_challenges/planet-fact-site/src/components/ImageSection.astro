@@ -1,0 +1,22 @@
+---
+import { Image } from "astro:assets";
+import MercuryImage from "../images/planet-mercury.svg";
+---
+
+<figure class="image-container">
+	<Image
+		src={MercuryImage}
+		alt="Image of planet Mercury"
+		class="mercury-image"
+	/>
+</figure>
+
+<style>
+	.image-container {
+		height: 90rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+</style>

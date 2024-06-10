@@ -1,0 +1,47 @@
+---
+
+---
+
+<div class="selector">
+	<div class="selector-container">
+		<h3 class="selector-link active">OVERVIEW</h3>
+		<h3 class="selector-link">STRUCTURE</h3>
+		<h3 class="selector-link">SURFACE</h3>
+	</div>
+</div>
+
+<script>
+	// Array Selector
+	const arr = document.querySelectorAll(".selector-link");
+	// Remove all active classes and add only to clicked element
+	arr.forEach((element) => {
+		element.addEventListener("click", () => {
+			arr.forEach((e) => e.classList.remove("active"));
+			element.classList.add("active");
+		});
+	});
+</script>
+
+<style>
+	.selector {
+		padding: 4.8rem 0;
+		border-top: 2px solid var(--color-darkGray);
+		border-bottom: 2px solid var(--color-darkGray);
+	}
+
+	.selector-container {
+		margin: 0 7.2rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	h3 {
+		font-size: 3rem;
+		color: var(--color-lightGray);
+	}
+
+	.active {
+		color: var(--color-white);
+	}
+</style>
