@@ -1,0 +1,15 @@
+---
+import { Image } from "astro:assets";
+import Hamburger from "../images/icon-hamburger.svg";
+---
+
+<nav class="navigation">
+	<h1 class="heading">THE PLANETS</h1>
+	<Image src={Hamburger} alt="testing..." class="hamburger" />
+</nav>
+
+<style>
+	.navigation {
+		display: inline;
+	}
+</style>
