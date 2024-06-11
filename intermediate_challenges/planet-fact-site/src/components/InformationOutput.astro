@@ -5,16 +5,18 @@ import SourceImage from "../images/icon-source.svg"
 const title = "Mercury"
 const description =
 	"Mercury is the smallest planet in the Solar System and the closest to the Sun. Its orbit around the Sun takes 87.97 Earth days, the shortest of all the Sun's planets. Mercury is one of four terrestrial planets in the Solar System, and is a rocky body like Earth."
+
+const { data } = Astro.props
 ---
 
 <div class="output-container">
-	<h1 class="planet-title">{title}</h1>
-	<p class="planet-description">{description}</p>
+	<h1 class="planet-title">{data.name}</h1>
+	<p class="planet-description">{data.overview.content}</p>
 
 	<figcaption class="source">
 		<div class="figcaption-container">
 			<span class="source-1">Source</span> : <span class="source-2">
-				Wikipedia
+				<a href={data.overview.source} class="linky"> Wikipedia</a>
 			</span>
 			<Image src={SourceImage} alt="Cheveron icon" />
 		</div>
@@ -56,11 +58,19 @@ const description =
 
 			.source-1 {
 				font-family: "Spartan-Small";
+				margin-right: 4px;
 			}
 
 			.source-2 {
 				font-family: "Spartan-Medium";
 				margin-right: 0.4rem;
+				margin-left: 4px;
+			}
+
+			.linky {
+				text-decoration: none;
+				color: var(--color-lightGray);
+				border-bottom: 1px solid var(--color-lightGray);
 			}
 		</style>
 	</figcaption>

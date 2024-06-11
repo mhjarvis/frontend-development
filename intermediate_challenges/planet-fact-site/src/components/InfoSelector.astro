@@ -1,6 +1,8 @@
 ---
 import ImageSection from "./ImageSection.astro"
 import InformationOutput from "./InformationOutput.astro"
+
+const { data } = Astro.props
 ---
 
 <div class="selector">
@@ -14,8 +16,8 @@ import InformationOutput from "./InformationOutput.astro"
 		<h3 class="selector-link">SURFACE</h3>
 	</div>
 </div>
-<ImageSection />
-<InformationOutput />
+<ImageSection data={data} />
+<InformationOutput data={data} />
 
 <script>
 	// Array Selector
