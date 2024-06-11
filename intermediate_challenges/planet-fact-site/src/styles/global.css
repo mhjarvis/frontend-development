@@ -50,8 +50,7 @@ html {
 }
 
 body {
-	/* Add font-family as needed */
-
+	width: 100vw;
 	/* border & padding accounted for in element's width/height */
 	box-sizing: border-box;
 	/* TYPEOGRAPHY */
@@ -79,36 +78,14 @@ select {
 /*                 ELEMENT SPECIFIC                 */
 /*  ----------------------------------------------  */
 
-h1 {
-	font-size: 7rem;
-	line-height: 10.3rem;
-	font-family: "Antonio";
-}
-
+h1,
 h2 {
-	font-size: 4rem;
-	line-height: 5.2rem;
-	letter-spacing: -1.5px;
 	font-family: "Antonio";
 }
 
-h3 {
-	font-size: 1.2rem;
-	line-height: 2.5rem;
-	letter-spacing: 7.8px;
-	font-family: "Spartan-Regular";
-}
-
-h4 {
-	font-size: 1.1rem;
-	line-height: 2.5rem;
-	letter-spacing: 1px;
-	font-family: "Spartan-Bold";
-}
-
+h3,
+h4,
 p {
-	font-size: 1.4rem;
-	line-height: 2.5rem;
 	font-family: "Spartan-Regular";
 }
 
