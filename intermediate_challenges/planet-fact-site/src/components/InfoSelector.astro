@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets"
+
 import ImageSection from "./ImageSection.astro"
 import InformationOutput from "./InformationOutput.astro"
 
@@ -16,7 +18,15 @@ const { data } = Astro.props
 		<h3 class="selector-link">SURFACE</h3>
 	</div>
 </div>
-<ImageSection data={data} />
+<ImageSection>
+	<Image
+		src={data.images.planet}
+		alt="Image of planet Mercury"
+		class="mercury-image"
+		width="110"
+		height="110"
+	/>
+</ImageSection>
 <InformationOutput data={data} />
 
 <script>
@@ -59,5 +69,10 @@ const { data } = Astro.props
 	.active {
 		color: var(--color-white);
 		border-bottom: 3px solid var(--color-lightBlue);
+	}
+
+	.mercury-image {
+		height: 11.1rem;
+		width: 11.1rem;
 	}
 </style>

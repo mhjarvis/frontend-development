@@ -1,14 +1,16 @@
 ---
-import { Image } from "astro:assets";
-import MercuryImage from "../images/planet-mercury.svg";
+import { Image } from "astro:assets"
+
+const data = Astro.props
 ---
 
 <figure class="image-container">
-	<Image
+	<slot />
+	<!-- 	<Image
 		src={MercuryImage}
 		alt="Image of planet Mercury"
 		class="mercury-image"
-	/>
+	/> -->
 </figure>
 
 <style>
