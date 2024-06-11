@@ -3,7 +3,12 @@
 /*  ----------------------------------------------  */
 
 @font-face {
-	font-family: "Spartan-Regular";
+	font-family: "Spartan-Small";
+	src: url("/league-spartan-v11-latin/league-spartan-v11-latin-100.woff2");
+}
+
+@font-face {
+	font-family: "Spartan-Medium";
 	src: url("/league-spartan-v11-latin/league-spartan-v11-latin-regular.woff2");
 }
 
@@ -50,7 +55,6 @@ html {
 }
 
 body {
-	width: 100vw;
 	/* border & padding accounted for in element's width/height */
 	box-sizing: border-box;
 	/* TYPEOGRAPHY */
@@ -86,7 +90,7 @@ h2 {
 h3,
 h4,
 p {
-	font-family: "Spartan-Regular";
+	font-family: "Spartan-Bold";
 }
 
 button {

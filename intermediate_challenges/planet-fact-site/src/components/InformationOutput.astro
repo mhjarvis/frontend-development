@@ -1,0 +1,67 @@
+---
+import { Image } from "astro:assets"
+import SourceImage from "../images/icon-source.svg"
+
+const title = "Mercury"
+const description =
+	"Mercury is the smallest planet in the Solar System and the closest to the Sun. Its orbit around the Sun takes 87.97 Earth days, the shortest of all the Sun's planets. Mercury is one of four terrestrial planets in the Solar System, and is a rocky body like Earth."
+---
+
+<div class="output-container">
+	<h1 class="planet-title">{title}</h1>
+	<p class="planet-description">{description}</p>
+
+	<figcaption class="source">
+		<div class="figcaption-container">
+			<span class="source-1">Source</span> : <span class="source-2">
+				Wikipedia
+			</span>
+			<Image src={SourceImage} alt="Cheveron icon" />
+		</div>
+
+		<style>
+			.output-container {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: space-between;
+				height: 23.5rem;
+				margin: 0 2.4rem;
+			}
+
+			.planet-title {
+				font-size: 4rem;
+				text-transform: uppercase;
+			}
+
+			.planet-description {
+				font-family: "Spartan-Small";
+				color: var(--color-white);
+				text-align: center;
+				font-size: 1.4rem;
+				line-height: 2.2rem;
+				padding: 1rem 1rem 2rem 1rem;
+			}
+
+			.figcaption-container {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.source {
+				color: var(--color-lightGray);
+				font-size: 1.7rem;
+			}
+
+			.source-1 {
+				font-family: "Spartan-Small";
+			}
+
+			.source-2 {
+				font-family: "Spartan-Medium";
+				margin-right: 0.4rem;
+			}
+		</style>
+	</figcaption>
+</div>
