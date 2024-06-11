@@ -1,12 +1,15 @@
 ---
-import "../styles/global.css";
-import Navigation from "../components/Navigation.astro";
-import InfoSelector from "../components/InfoSelector.astro";
-import ImageSection from "../components/ImageSection.astro";
-import InformationOutput from "../components/InformationOutput.astro";
+import "../styles/global.css"
+import Navigation from "../components/Navigation.astro"
+import InfoSelector from "../components/InfoSelector.astro"
+import ImageSection from "../components/ImageSection.astro"
+import InformationOutput from "../components/InformationOutput.astro"
+import FactTable from "../components/FactTable.astro"
+
+const { data } = Astro.props
 ---
 
 <Navigation />
 <InfoSelector />
-<ImageSection />
-<InformationOutput />
+
+<FactTable />

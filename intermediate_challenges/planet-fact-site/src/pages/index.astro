@@ -1,5 +1,8 @@
 ---
-import GeneralLayout from "../layouts/GeneralLayout.astro";
+import GeneralLayout from "../layouts/GeneralLayout.astro"
+import json from "../../public/data.json"
+
+const data = json[0]
 ---
 
 <html lang="en">
@@ -17,7 +20,7 @@ import GeneralLayout from "../layouts/GeneralLayout.astro";
 		<title>Planets fact site</title>
 	</head>
 	<body>
-		<GeneralLayout />
+		<GeneralLayout data={data} />
 	</body>
 </html>
 

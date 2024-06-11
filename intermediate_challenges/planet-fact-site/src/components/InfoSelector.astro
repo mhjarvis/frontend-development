@@ -1,5 +1,6 @@
 ---
-
+import ImageSection from "./ImageSection.astro"
+import InformationOutput from "./InformationOutput.astro"
 ---
 
 <div class="selector">
@@ -13,17 +14,19 @@
 		<h3 class="selector-link">SURFACE</h3>
 	</div>
 </div>
+<ImageSection />
+<InformationOutput />
 
 <script>
 	// Array Selector
-	const arr = document.querySelectorAll(".selector-link");
+	const arr = document.querySelectorAll(".selector-link")
 	// Remove all active classes and add only to clicked element
 	arr.forEach((element) => {
 		element.addEventListener("click", () => {
-			arr.forEach((e) => e.classList.remove("active"));
-			element.classList.add("active");
-		});
-	});
+			arr.forEach((e) => e.classList.remove("active"))
+			element.classList.add("active")
+		})
+	})
 </script>
 
 <style>

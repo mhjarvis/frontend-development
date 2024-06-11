@@ -1,0 +1,62 @@
+---
+const rotation = "58.6 DAYS"
+const revolution = "87.97 DAYS"
+const radius = "2,439.7 KM"
+const temp = "430°C"
+---
+
+<section class="fact-table">
+	<div class="fact-container fact-rotation">
+		<h4 class="fact-rotation-title">ROTATION TIME</h4>
+		<p class="fact-rotation-data">{rotation}</p>
+	</div>
+	<div class="fact-container fact-revolution">
+		<h4 class="fact-revolution-title">REVOLUTION TIME</h4>
+		<p class="fact-revolution-data">{revolution}</p>
+	</div>
+	<div class="fact-container fact-radius">
+		<h4 class="fact-radius-title">RADIUS</h4>
+		<p class='fact-radius-data"'>{radius}</p>
+	</div>
+	<div class="fact-container fact-temp">
+		<h4 class="fact-temp-title">AVERAGE TEMP.</h4>
+		<p class="fact-temp-data">{temp}</p>
+	</div>
+</section>
+
+<style>
+	.fact-table {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin: 2.6rem 2.4rem;
+	}
+
+	.fact-container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border: 1px solid var(--color-lightGray);
+		width: 100%;
+		height: 4.8rem;
+		padding: 0 2.4rem;
+	}
+
+	.fact-table > div {
+		margin-bottom: 1rem;
+	}
+
+	.fact-container > h4 {
+		color: var(--color-lightGray);
+		font-size: 1.1rem;
+		font-family: "Spartan-Medium";
+		letter-spacing: 0.73px;
+	}
+
+	.fact-container > p {
+		font-size: 2.4rem;
+		font-family: "Antonio";
+		letter-spacing: -0.75px;
+	}
+</style>
