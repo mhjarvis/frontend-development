@@ -1,26 +1,23 @@
 ---
-const rotation = "58.6 DAYS"
-const revolution = "87.97 DAYS"
-const radius = "2,439.7 KM"
-const temp = "430°C"
+const { data } = Astro.props
 ---
 
 <section class="fact-table">
 	<div class="fact-container fact-rotation">
 		<h4 class="fact-rotation-title">ROTATION TIME</h4>
-		<p class="fact-rotation-data">{rotation}</p>
+		<p class="fact-rotation-data">{data.rotation}</p>
 	</div>
 	<div class="fact-container fact-revolution">
 		<h4 class="fact-revolution-title">REVOLUTION TIME</h4>
-		<p class="fact-revolution-data">{revolution}</p>
+		<p class="fact-revolution-data">{data.revolution}</p>
 	</div>
 	<div class="fact-container fact-radius">
 		<h4 class="fact-radius-title">RADIUS</h4>
-		<p class='fact-radius-data"'>{radius}</p>
+		<p class='fact-radius-data"'>{data.radius}</p>
 	</div>
 	<div class="fact-container fact-temp">
 		<h4 class="fact-temp-title">AVERAGE TEMP.</h4>
-		<p class="fact-temp-data">{temp}</p>
+		<p class="fact-temp-data">{data.temperature}</p>
 	</div>
 </section>
 
