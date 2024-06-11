@@ -5,7 +5,11 @@
 <div class="selector">
 	<div class="selector-container">
 		<h3 class="selector-link active">OVERVIEW</h3>
+	</div>
+	<div class="selector-container">
 		<h3 class="selector-link">STRUCTURE</h3>
+	</div>
+	<div class="selector-container">
 		<h3 class="selector-link">SURFACE</h3>
 	</div>
 </div>
@@ -24,25 +28,26 @@
 
 <style>
 	.selector {
-		border-top: 1px solid var(--color-darkGray);
-		border-bottom: 1px solid var(--color-darkGray);
-	}
-
-	.selector-container {
 		padding-top: 2rem;
 		margin: 0 2.4rem;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		border-top: 1px solid var(--color-darkGray);
+		border-bottom: 1px solid var(--color-darkGray);
 	}
 
-	h3 {
-		font-size: 1.1rem;
-		letter-spacing: 2px;
-		color: var(--color-lightGray);
+	.selector-container {
 	}
 
 	.selector-link {
+		min-width: 8rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 1.1rem;
+		letter-spacing: 2px;
+		color: var(--color-lightGray);
 		padding-bottom: 2rem;
 	}
 
