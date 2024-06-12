@@ -21,24 +21,46 @@ const { data } = Astro.props
 <ImageSection>
 	<Image
 		src={data.images.planet}
-		alt="Image of planet Mercury"
-		class="mercury-image"
+		id="planet-image"
+		alt=`Image of planet ${data.name}`
+		class="planet-image"
 		width="110"
 		height="110"
 	/>
 </ImageSection>
 <InformationOutput data={data} />
 
-<script>
+<script define:vars={{ data }}>
 	// Array Selector
 	const arr = document.querySelectorAll(".selector-link")
+	const planet = document.getElementById("planet-image")
+	const description = document.querySelector(".planet-description")
+
 	// Remove all active classes and add only to clicked element
 	arr.forEach((element) => {
 		element.addEventListener("click", () => {
+			// this changes the color and border of the current 'link'
 			arr.forEach((e) => e.classList.remove("active"))
 			element.classList.add("active")
+			// update image and contents
+			//planet.src = "/images/geology-mercury.png" // remove!!!!!!
+			updateContent(element.innerHTML)
 		})
 	})
+
+	// udpate content, image, and source based on link clicked
+	function updateContent(val) {
+		if (val === "OVERVIEW") {
+			planet.src = data.images.planet
+			description.innerHTML = data.overview.content
+		} else if (val === "STRUCTURE") {
+			planet.src = data.images.internal
+			description.innerHTML = data.structure.content
+		} else if (val === "SURFACE") {
+			planet.src = data.images.geology
+			description.innerHTML = data.geology.content
+		}
+	}
 </script>
 
 <style>
@@ -71,7 +93,7 @@ const { data } = Astro.props
 		border-bottom: 3px solid var(--color-lightBlue);
 	}
 
-	.mercury-image {
+	.planet-image {
 		height: 11.1rem;
 		width: 11.1rem;
 	}
