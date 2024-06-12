@@ -35,6 +35,7 @@ const { data } = Astro.props
 	const arr = document.querySelectorAll(".selector-link")
 	const planet = document.getElementById("planet-image")
 	const description = document.querySelector(".planet-description")
+	const link = document.querySelector(".linky")
 
 	// Remove all active classes and add only to clicked element
 	arr.forEach((element) => {
@@ -53,12 +54,15 @@ const { data } = Astro.props
 		if (val === "OVERVIEW") {
 			planet.src = data.images.planet
 			description.innerHTML = data.overview.content
+			link.href = data.overview.source
 		} else if (val === "STRUCTURE") {
 			planet.src = data.images.internal
 			description.innerHTML = data.structure.content
+			link.href = data.structure.source
 		} else if (val === "SURFACE") {
 			planet.src = data.images.planet
 			description.innerHTML = data.geology.content
+			link.href = data.geology.source
 		}
 	}
 </script>
