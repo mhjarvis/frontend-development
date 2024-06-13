@@ -66,13 +66,16 @@
 <script>
 	const hamburger = document.getElementById("hamburger")
 	const mobileMenu = document.getElementById("mobile-menu")
+	const body = document.querySelector("body")
 
 	// Event Listener to toggle Mobile Menu
 	hamburger.addEventListener("click", () => {
 		if (mobileMenu.style.display === "none") {
 			mobileMenu.style.display = "block"
+			body.style.overflow = "hidden"
 		} else {
 			mobileMenu.style.display = "none"
+			body.style.overflow = "auto"
 		}
 	})
 </script>
@@ -90,7 +93,7 @@
 
 	/* CHANGE THIS TO RESUME ABILITY TO SCROLL */
 	body {
-		overflow: hidden;
+		overflow: auto;
 	}
 
 	.menu-container {
