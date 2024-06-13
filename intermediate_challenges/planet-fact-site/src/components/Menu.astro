@@ -2,7 +2,7 @@
 
 ---
 
-<div class="mobile-menu">
+<div class="mobile-menu" id="mobile-menu">
 	<div class="menu-container">
 		<div class="menu-front">
 			<div class="circle circle-mercury"></div>
@@ -12,14 +12,14 @@
 	</div>
 	<div class="menu-container">
 		<div class="menu-front">
-			<div class="circle circle-mercury"></div>
+			<div class="circle circle-venus"></div>
 			<a href="/venus/">Venus</a>
 		</div>
 		<img src="/images/icon-chevron.svg" class="chevron" alt="Chevron" />
 	</div>
 	<div class="menu-container">
 		<div class="menu-front">
-			<div class="circle circle-mercury"></div>
+			<div class="circle circle-earth"></div>
 
 			<a href="/earth/">Earth</a>
 		</div>
@@ -27,7 +27,7 @@
 	</div>
 	<div class="menu-container">
 		<div class="menu-front">
-			<div class="circle circle-mercury"></div>
+			<div class="circle circle-mars"></div>
 
 			<a href="/mars/">Mars</a>
 		</div>
@@ -35,40 +35,54 @@
 	</div>
 	<div class="menu-container">
 		<div class="menu-front">
-			<div class="circle circle-mercury"></div>
+			<div class="circle circle-jupiter"></div>
 			<a href="/jupiter/">Jupiter</a>
 		</div>
 		<img src="/images/icon-chevron.svg" class="chevron" alt="Chevron" />
 	</div>
 	<div class="menu-container">
 		<div class="menu-front">
-			<div class="circle circle-mercury"></div>
+			<div class="circle circle-saturn"></div>
 			<a href="/saturn/">Saturn</a>
 		</div>
 		<img src="/images/icon-chevron.svg" class="chevron" alt="Chevron" />
 	</div>
 	<div class="menu-container">
 		<div class="menu-front">
-			<div class="circle circle-mercury"></div>
+			<div class="circle circle-uranus"></div>
 			<a href="/uranus/">Uranus</a>
 		</div>
 		<img src="/images/icon-chevron.svg" class="chevron" alt="Chevron" />
 	</div>
 	<div class="menu-container">
 		<div class="menu-front">
-			<div class="circle circle-mercury"></div>
+			<div class="circle circle-neptune"></div>
 			<a href="/neptune/">Neptune</a>
 		</div>
 		<img src="/images/icon-chevron.svg" class="chevron" alt="Chevron" />
 	</div>
 </div>
 
-<script></script>
+<script>
+	const hamburger = document.getElementById("hamburger")
+	const mobileMenu = document.getElementById("mobile-menu")
+
+	// Event Listener to toggle Mobile Menu
+	hamburger.addEventListener("click", () => {
+		if (mobileMenu.style.display === "none") {
+			mobileMenu.style.display = "block"
+		} else {
+			mobileMenu.style.display = "none"
+		}
+	})
+</script>
 
 <style>
 	.mobile-menu {
+		display: none;
 		position: absolute;
-		top: 6.8rem;
+		top: 8rem;
+		padding-top: 1em;
 		width: 100%;
 		height: 100%;
 		background-color: var(--color-black);
@@ -110,12 +124,40 @@
 		border-radius: 50%;
 	}
 
+	.chevron {
+		width: 4px;
+		height: 8px;
+	}
+
 	.circle-mercury {
 		background-color: #def4fc;
 	}
 
-	.chevron {
-		width: 4px;
-		height: 8px;
+	.circle-venus {
+		background-color: #f7cc7f;
+	}
+
+	.circle-earth {
+		background-color: #545bfe;
+	}
+
+	.circle-mars {
+		background-color: #ff6a45;
+	}
+
+	.circle-jupiter {
+		background-color: #ecad7a;
+	}
+
+	.circle-saturn {
+		background-color: #fccb6b;
+	}
+
+	.circle-uranus {
+		background-color: #65f0d5;
+	}
+
+	.circle-neptune {
+		background-color: #497efa;
 	}
 </style>
