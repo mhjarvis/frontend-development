@@ -4,8 +4,10 @@
 
 <div class="mobile-menu">
 	<div class="menu-container">
-		<div class="circle circle-mercury"></div>
-		<a href="/">Mercury</a>
+		<div class="menu-front">
+			<div class="circle circle-mercury"></div>
+			<a href="/">Mercury</a>
+		</div>
 		<img src="/images/icon-chevron.svg" class="chevron" alt="Chevron" />
 	</div>
 	<div class="menu-container">
@@ -55,6 +57,20 @@
 	}
 
 	.menu-container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin: 2rem 2.4rem;
+		font-size: 1.5rem;
+		text-transform: uppercase;
+	}
+
+	.menu-container > a {
+		text-decoration: none;
+		color: var(--color-white);
+	}
+
+	.menu-front {
 		display: flex;
 	}
 
