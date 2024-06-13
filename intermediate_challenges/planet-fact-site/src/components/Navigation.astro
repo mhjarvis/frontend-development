@@ -2,6 +2,7 @@
 import { Image } from "astro:assets"
 import Hamburger from "/public/images/icon-hamburger.svg"
 import Menu from "./Menu.astro"
+import NormalMenu from "./NormalMenu.astro"
 ---
 
 <nav class="navigation">
@@ -9,6 +10,7 @@ import Menu from "./Menu.astro"
 	<Image src={Hamburger} alt="testing..." class="hamburger" id="hamburger" />
 </nav>
 <Menu />
+<NormalMenu />
 
 <style>
 	.navigation {
@@ -25,5 +27,16 @@ import Menu from "./Menu.astro"
 	.hamburger {
 		width: 2.4rem;
 		height: 1.7rem;
+		cursor: pointer;
+	}
+
+	@media screen and (min-width: 768px) {
+		.navigation {
+			flex-direction: column;
+		}
+
+		.hamburger {
+			display: none;
+		}
 	}
 </style>
