@@ -1,12 +1,14 @@
 ---
 import { Image } from "astro:assets"
 import Hamburger from "/public/images/icon-hamburger.svg"
+import Menu from "./Menu.astro"
 ---
 
 <nav class="navigation">
 	<h1 class="heading">THE PLANETS</h1>
 	<Image src={Hamburger} alt="testing..." class="hamburger" />
 </nav>
+<Menu />
 
 <style>
 	.navigation {

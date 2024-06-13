@@ -27,7 +27,7 @@
 /*  ----------------------------------------------  */
 
 :root {
-	--color-black: rgb(7, 7, 122);
+	--color-black: #070724;
 	--color-darkGray: #38384f;
 	--color-lightGray: #838391;
 	--color-lightBlue: #419ebb;
@@ -58,11 +58,10 @@ body {
 	/* border & padding accounted for in element's width/height */
 	box-sizing: border-box;
 	/* TYPEOGRAPHY */
-	background-color: var(--color-);
+	background-color: var(--color-black);
 	color: var(--color-white);
 
 	/* background */
-	background-color: black;
 	background-image: radial-gradient(
 			var(--color-darkGray),
 			var(--color-darkGray) 2px,
