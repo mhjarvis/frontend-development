@@ -11,31 +11,54 @@
 		<img src="/images/icon-chevron.svg" class="chevron" alt="Chevron" />
 	</div>
 	<div class="menu-container">
-		<a href="/venus/">Venus</a>
+		<div class="menu-front">
+			<div class="circle circle-mercury"></div>
+			<a href="/venus/">Venus</a>
+		</div>
 		<img src="/images/icon-chevron.svg" class="chevron" alt="Chevron" />
 	</div>
 	<div class="menu-container">
-		<a href="/earth/">Earth</a>
+		<div class="menu-front">
+			<div class="circle circle-mercury"></div>
+
+			<a href="/earth/">Earth</a>
+		</div>
 		<img src="/images/icon-chevron.svg" class="chevron" alt="Chevron" />
 	</div>
 	<div class="menu-container">
-		<a href="/mars/">Mars</a>
+		<div class="menu-front">
+			<div class="circle circle-mercury"></div>
+
+			<a href="/mars/">Mars</a>
+		</div>
 		<img src="/images/icon-chevron.svg" class="chevron" alt="Chevron" />
 	</div>
 	<div class="menu-container">
-		<a href="/jupiter/">Jupiter</a>
+		<div class="menu-front">
+			<div class="circle circle-mercury"></div>
+			<a href="/jupiter/">Jupiter</a>
+		</div>
 		<img src="/images/icon-chevron.svg" class="chevron" alt="Chevron" />
 	</div>
 	<div class="menu-container">
-		<a href="/saturn/">Saturn</a>
+		<div class="menu-front">
+			<div class="circle circle-mercury"></div>
+			<a href="/saturn/">Saturn</a>
+		</div>
 		<img src="/images/icon-chevron.svg" class="chevron" alt="Chevron" />
 	</div>
 	<div class="menu-container">
-		<a href="/uranus/">Uranus</a>
+		<div class="menu-front">
+			<div class="circle circle-mercury"></div>
+			<a href="/uranus/">Uranus</a>
+		</div>
 		<img src="/images/icon-chevron.svg" class="chevron" alt="Chevron" />
 	</div>
 	<div class="menu-container">
-		<a href="/neptune/">Neptune</a>
+		<div class="menu-front">
+			<div class="circle circle-mercury"></div>
+			<a href="/neptune/">Neptune</a>
+		</div>
 		<img src="/images/icon-chevron.svg" class="chevron" alt="Chevron" />
 	</div>
 </div>
@@ -63,15 +86,22 @@
 		margin: 2rem 2.4rem;
 		font-size: 1.5rem;
 		text-transform: uppercase;
+		font-family: "Spartan-Bold";
+		letter-spacing: 1.4px;
+		padding-bottom: 2rem;
+		border-bottom: 1px solid var(--color-darkGray);
 	}
 
-	.menu-container > a {
+	.menu-front > a {
+		display: flex;
 		text-decoration: none;
 		color: var(--color-white);
+		margin-left: 2rem;
 	}
 
 	.menu-front {
 		display: flex;
+		align-items: center;
 	}
 
 	.circle {
