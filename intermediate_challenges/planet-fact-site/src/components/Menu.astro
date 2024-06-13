@@ -2,7 +2,41 @@
 
 ---
 
-<div class="mobile-menu"></div>
+<div class="mobile-menu">
+	<div class="menu-container">
+		<div class="circle circle-mercury"></div>
+		<a href="/">Mercury</a>
+		<img src="/images/icon-chevron.svg" class="chevron" alt="Chevron" />
+	</div>
+	<div class="menu-container">
+		<a href="/venus/">Venus</a>
+		<img src="/images/icon-chevron.svg" class="chevron" alt="Chevron" />
+	</div>
+	<div class="menu-container">
+		<a href="/earth/">Earth</a>
+		<img src="/images/icon-chevron.svg" class="chevron" alt="Chevron" />
+	</div>
+	<div class="menu-container">
+		<a href="/mars/">Mars</a>
+		<img src="/images/icon-chevron.svg" class="chevron" alt="Chevron" />
+	</div>
+	<div class="menu-container">
+		<a href="/jupiter/">Jupiter</a>
+		<img src="/images/icon-chevron.svg" class="chevron" alt="Chevron" />
+	</div>
+	<div class="menu-container">
+		<a href="/saturn/">Saturn</a>
+		<img src="/images/icon-chevron.svg" class="chevron" alt="Chevron" />
+	</div>
+	<div class="menu-container">
+		<a href="/uranus/">Uranus</a>
+		<img src="/images/icon-chevron.svg" class="chevron" alt="Chevron" />
+	</div>
+	<div class="menu-container">
+		<a href="/neptune/">Neptune</a>
+		<img src="/images/icon-chevron.svg" class="chevron" alt="Chevron" />
+	</div>
+</div>
 
 <script></script>
 
@@ -18,5 +52,24 @@
 	/* CHANGE THIS TO RESUME ABILITY TO SCROLL */
 	body {
 		overflow: hidden;
+	}
+
+	.menu-container {
+		display: flex;
+	}
+
+	.circle {
+		width: 2rem;
+		height: 2rem;
+		border-radius: 50%;
+	}
+
+	.circle-mercury {
+		background-color: #def4fc;
+	}
+
+	.chevron {
+		width: 4px;
+		height: 8px;
 	}
 </style>
