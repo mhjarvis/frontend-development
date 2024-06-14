@@ -62,15 +62,15 @@ const { data } = Astro.props
 		padding: 1rem 1rem 2rem 1rem;
 	}
 
+	.source-container {
+		color: var(--color-lightGray);
+		font-size: 1.7rem;
+	}
+
 	.figcaption-container {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-	}
-
-	.source-container {
-		color: var(--color-lightGray);
-		font-size: 1.7rem;
 	}
 
 	.source-text {
@@ -109,6 +109,11 @@ const { data } = Astro.props
 			border: 1px solid white;
 		}
 
+		.information-content {
+			display: flex;
+			align-items: flex-start;
+		}
+
 		.information-content,
 		.information-container-mobile {
 			width: 50%;
@@ -116,6 +121,13 @@ const { data } = Astro.props
 			flex-direction: column;
 			align-items: flex-start;
 			justify-content: center;
+			margin: 3.9rem;
+		}
+
+		.planet-description {
+			text-align: left;
+			padding-left: 0;
+			margin: 2rem 0;
 		}
 	}
 </style>
