@@ -6,68 +6,92 @@ const { data } = Astro.props
 ---
 
 <aside class="output-container">
-	<h1 class="planet-title">{data.name}</h1>
-	<p class="planet-description">{data.overview.content}</p>
+	<div class="normal-container">
+		<h1 class="planet-title">{data.name}</h1>
+		<p class="planet-description">{data.overview.content}</p>
 
-	<figcaption class="source">
-		<div class="figcaption-container">
-			<span class="source-1">Source</span> : <span class="source-2">
-				<a href={data.overview.source} class="linky"> Wikipedia</a>
-			</span>
-			<Image src={SourceImage} alt="Cheveron icon" />
+		<figcaption class="source">
+			<div class="figcaption-container">
+				<span class="source-1">Source</span> : <span class="source-2">
+					<a href={data.overview.source} class="linky"> Wikipedia</a>
+				</span>
+				<Image src={SourceImage} alt="Cheveron icon" />
+			</div>
+		</figcaption>
+
+		<div class="normal-selector">
+			<div class="selector-container">
+				<h3 class="selector-link active">OVERVIEW</h3>
+			</div>
+			<div class="selector-container">
+				<h3 class="selector-link">STRUCTURE</h3>
+			</div>
+			<div class="selector-container">
+				<h3 class="selector-link">SURFACE</h3>
+			</div>
 		</div>
-
-		<style>
-			.output-container {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				justify-content: space-between;
-				height: 23.5rem;
-				margin: 0 2.4rem;
-			}
-
-			.planet-title {
-				font-size: 4rem;
-				text-transform: uppercase;
-			}
-
-			.planet-description {
-				font-family: "Spartan-Small";
-				color: var(--color-white);
-				text-align: center;
-				font-size: 1.4rem;
-				line-height: 2.2rem;
-				padding: 1rem 1rem 2rem 1rem;
-			}
-
-			.figcaption-container {
-				display: flex;
-				align-items: center;
-				justify-content: center;
-			}
-
-			.source {
-				color: var(--color-lightGray);
-				font-size: 1.7rem;
-			}
-
-			.source-1 {
-				font-family: "Spartan-Small";
-				margin-right: 4px;
-			}
-
-			.source-2 {
-				font-family: "Spartan-Medium";
-				margin-right: 0.4rem;
-				margin-left: 4px;
-			}
-
-			.linky {
-				text-decoration: none;
-				color: var(--color-lightGray);
-				border-bottom: 1px solid var(--color-lightGray);
-			}
-		</style>
-	</figcaption>
+	</div>
 </aside>
+
+<style>
+	.output-container {
+	}
+
+	.normal-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		height: 23.5rem;
+		margin: 0 2.4rem;
+	}
+
+	.planet-title {
+		font-size: 4rem;
+		text-transform: uppercase;
+	}
+
+	.planet-description {
+		font-family: "Spartan-Small";
+		color: var(--color-white);
+		text-align: center;
+		font-size: 1.4rem;
+		line-height: 2.2rem;
+		padding: 1rem 1rem 2rem 1rem;
+	}
+
+	.figcaption-container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.source {
+		color: var(--color-lightGray);
+		font-size: 1.7rem;
+	}
+
+	.source-1 {
+		font-family: "Spartan-Small";
+		margin-right: 4px;
+	}
+
+	.source-2 {
+		font-family: "Spartan-Medium";
+		margin-right: 0.4rem;
+		margin-left: 4px;
+	}
+
+	.linky {
+		text-decoration: none;
+		color: var(--color-lightGray);
+		border-bottom: 1px solid var(--color-lightGray);
+	}
+
+	.normal-selector {
+		display: none;
+	}
+
+	@media screen and (min-width: 768px) {
+	}
+</style>

@@ -2,7 +2,16 @@
 
 ---
 
-<navn class="normal-menu">normal menu</navn>
+<nav class="normal-menu">
+	<a href="/" class="link-name">Mercury</a>
+	<a href="/venus/" class="link-name">Venus</a>
+	<a href="/eart/" class="link-name">Earth</a>
+	<a href="/mars/" class="link-name">Mars</a>
+	<a href="/jupiter/" class="link-name">Jupiter</a>
+	<a href="/saturn/" class="link-name">Saturn</a>
+	<a href="/uranus/" class="link-name">Uranus</a>
+	<a href="/neptune/" class="link-name">Neptune</a>
+</nav>
 
 <style>
 	.normal-menu {
@@ -12,6 +21,25 @@
 	@media screen and (min-width: 768px) {
 		.normal-menu {
 			display: block;
+		}
+
+		.normal-menu {
+			display: flex;
+			align-items: center;
+			justify-content: space-evenly;
+			margin: 5rem 0;
+			border-bottom: 1px solid var(--color-darkGray);
+			padding-bottom: 3rem;
+		}
+
+		.link-name {
+			font-size: 1.8rem;
+			font-family: "Spartan-Medium";
+			color: var(--color-white);
+			text-decoration: none;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			cursor: pointer;
 		}
 	}
 </style>
