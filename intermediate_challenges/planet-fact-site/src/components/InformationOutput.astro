@@ -5,23 +5,23 @@ import SourceImage from "/public/images/icon-source.svg"
 const { data } = Astro.props
 ---
 
-<aside class="output-container">
-	<div class="normal-container">
-		<div class="basic-info-container">
+<aside class="information-container">
+	<div class="information-container-desktop">
+		<div class="information-content">
 			<h1 class="planet-title">{data.name}</h1>
 			<p class="planet-description">{data.overview.content}</p>
 
-			<figcaption class="source">
-				<div class="figcaption-container">
-					<span class="source-1">Source</span> : <span class="source-2">
-						<a href={data.overview.source} class="linky"> Wikipedia</a>
+			<figcaption class="source-container">
+				<div class="source-information-container">
+					<span class="source-text">Source</span> : <span class="source-link">
+						<a href={data.overview.source} class="source-link-a"> Wikipedia</a>
 					</span>
-					<Image src={SourceImage} alt="Cheveron icon" />
+					<Image src={SourceImage} class="chevron" alt="Cheveron icon" />
 				</div>
 			</figcaption>
 		</div>
 
-		<div class="normal-selector">
+		<div class="information-container-mobile">
 			<div class="selector-container">
 				<h3 class="selector-link active">OVERVIEW</h3>
 			</div>
@@ -36,10 +36,10 @@ const { data } = Astro.props
 </aside>
 
 <style>
-	.output-container {
+	.information-container {
 	}
 
-	.basic-info-container {
+	.information-content {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -68,23 +68,23 @@ const { data } = Astro.props
 		justify-content: center;
 	}
 
-	.source {
+	.source-container {
 		color: var(--color-lightGray);
 		font-size: 1.7rem;
 	}
 
-	.source-1 {
+	.source-text {
 		font-family: "Spartan-Small";
 		margin-right: 4px;
 	}
 
-	.source-2 {
+	.source-link {
 		font-family: "Spartan-Medium";
 		margin-right: 0.4rem;
 		margin-left: 4px;
 	}
 
-	.linky {
+	.source-link-a {
 		text-decoration: none;
 		color: var(--color-lightGray);
 		border-bottom: 1px solid var(--color-lightGray);
@@ -95,7 +95,7 @@ const { data } = Astro.props
 	}
 
 	@media screen and (min-width: 768px) {
-		.normal-container {
+		.information-container-desktop {
 			display: flex;
 			transition: display 0.5s ease;
 			visibility: visible;
@@ -103,14 +103,14 @@ const { data } = Astro.props
 			flex-direction: row;
 		}
 
-		.normal-selector {
+		.information-container-mobile {
 			display: flex;
 			color: white;
 			border: 1px solid white;
 		}
 
-		.basic-info-container,
-		.normal-selector {
+		.information-content,
+		.information-container-mobile {
 			width: 50%;
 			display: flex;
 			flex-direction: column;
