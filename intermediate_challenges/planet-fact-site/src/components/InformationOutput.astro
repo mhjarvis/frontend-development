@@ -7,17 +7,19 @@ const { data } = Astro.props
 
 <aside class="output-container">
 	<div class="normal-container">
-		<h1 class="planet-title">{data.name}</h1>
-		<p class="planet-description">{data.overview.content}</p>
+		<div class="basic-info-container">
+			<h1 class="planet-title">{data.name}</h1>
+			<p class="planet-description">{data.overview.content}</p>
 
-		<figcaption class="source">
-			<div class="figcaption-container">
-				<span class="source-1">Source</span> : <span class="source-2">
-					<a href={data.overview.source} class="linky"> Wikipedia</a>
-				</span>
-				<Image src={SourceImage} alt="Cheveron icon" />
-			</div>
-		</figcaption>
+			<figcaption class="source">
+				<div class="figcaption-container">
+					<span class="source-1">Source</span> : <span class="source-2">
+						<a href={data.overview.source} class="linky"> Wikipedia</a>
+					</span>
+					<Image src={SourceImage} alt="Cheveron icon" />
+				</div>
+			</figcaption>
+		</div>
 
 		<div class="normal-selector">
 			<div class="selector-container">
@@ -37,7 +39,7 @@ const { data } = Astro.props
 	.output-container {
 	}
 
-	.normal-container {
+	.basic-info-container {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -54,9 +56,9 @@ const { data } = Astro.props
 	.planet-description {
 		font-family: "Spartan-Small";
 		color: var(--color-white);
-		text-align: center;
 		font-size: 1.4rem;
 		line-height: 2.2rem;
+		text-align: center;
 		padding: 1rem 1rem 2rem 1rem;
 	}
 
@@ -93,5 +95,27 @@ const { data } = Astro.props
 	}
 
 	@media screen and (min-width: 768px) {
+		.normal-container {
+			display: flex;
+			transition: display 0.5s ease;
+			visibility: visible;
+			display: flex;
+			flex-direction: row;
+		}
+
+		.normal-selector {
+			display: flex;
+			color: white;
+			border: 1px solid white;
+		}
+
+		.basic-info-container,
+		.normal-selector {
+			width: 50%;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: center;
+		}
 	}
 </style>
