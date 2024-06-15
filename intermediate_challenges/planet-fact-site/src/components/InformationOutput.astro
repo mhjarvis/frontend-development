@@ -42,13 +42,14 @@ const { data } = Astro.props
 	const infoSelectors = document.querySelectorAll(".selector-container-desktop")
 	const planet = document.getElementById("planet-image")
 	const description = document.querySelector(".planet-description")
-	const link = document.querySelector(".linky")
+	const link = document.querySelector(".source-link")
 
 	infoSelectors.forEach((selector) => {
 		selector.addEventListener("click", () => {
+			const val = selector.children[1].innerHTML
 			infoSelectors.forEach((e) => e.classList.remove("active"))
 			selector.classList.add("active")
-			updateContent(selector.innerHTML)
+			updateContent(val)
 		})
 	})
 
@@ -170,6 +171,8 @@ const { data } = Astro.props
 			display: flex;
 			color: white;
 			width: 28rem;
+			font-family: "Spartan-Small";
+			letter-spacing: 2px;
 		}
 
 		.selector-container-desktop {
