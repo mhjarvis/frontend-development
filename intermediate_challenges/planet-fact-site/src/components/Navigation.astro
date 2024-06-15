@@ -5,14 +5,19 @@ import Menu from "./Menu.astro"
 import NormalMenu from "./NormalMenu.astro"
 ---
 
-<nav class="navigation">
-	<h1 class="heading">THE PLANETS</h1>
-	<Image src={Hamburger} alt="testing..." class="hamburger" id="hamburger" />
+<nav class="nav-container">
+	<div class="navigation">
+		<h1 class="heading">THE PLANETS</h1>
+		<Image src={Hamburger} alt="testing..." class="hamburger" id="hamburger" />
+	</div>
+	<Menu />
+	<NormalMenu />
 </nav>
-<Menu />
-<NormalMenu />
 
 <style>
+	.nav-container {
+	}
+
 	.navigation {
 		display: flex;
 		align-items: center;
@@ -37,6 +42,14 @@ import NormalMenu from "./NormalMenu.astro"
 
 		.hamburger {
 			display: none;
+		}
+	}
+
+	@media screen and (min-width: 1024px) {
+		.nav-container {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
 		}
 	}
 </style>
