@@ -138,6 +138,11 @@ const { data } = Astro.props
 			flex-direction: row;
 		}
 
+		.information-container {
+			width: 100%;
+			max-width: 768px;
+		}
+
 		.information-content {
 			display: flex;
 			align-items: flex-start;
@@ -198,6 +203,25 @@ const { data } = Astro.props
 		.active {
 			background-color: var(--test);
 			border: none;
+		}
+	}
+
+	@media screen and (min-width: 1024px) {
+		.information-container-mobile {
+		}
+		.information-container-desktop {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.information-container {
+			width: 35rem;
+			border: 1px solid blue;
+			margin-right: 8rem;
+		}
+
+		.information-content {
+			width: 300px;
 		}
 	}
 </style>

@@ -16,12 +16,15 @@ import NormalMenu from "./NormalMenu.astro"
 
 <style>
 	.nav-container {
+		width: 100%;
+		max-width: 1440px;
 	}
 
 	.navigation {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		width: 100%;
 		margin: 1.6rem 2.4rem;
 	}
 
@@ -36,6 +39,11 @@ import NormalMenu from "./NormalMenu.astro"
 	}
 
 	@media screen and (min-width: 768px) {
+		.nav-container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
 		.navigation {
 			flex-direction: column;
 		}

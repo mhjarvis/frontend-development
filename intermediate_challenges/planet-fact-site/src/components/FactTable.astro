@@ -61,6 +61,8 @@ const { data } = Astro.props
 		.fact-table {
 			flex-direction: row;
 			margin: 3.5rem;
+			width: 100%;
+			max-width: 768px;
 		}
 
 		.fact-container {
@@ -70,6 +72,17 @@ const { data } = Astro.props
 			align-items: flex-start;
 			justify-content: space-evenly;
 			height: 8.8rem;
+		}
+	}
+
+	@media screen and (min-width: 1024px) {
+		.fact-table {
+			width: 100%;
+			max-width: 1440px;
+		}
+
+		.fact-container {
+			margin: 0 2.4rem 0 2.4rem;
 		}
 	}
 </style>

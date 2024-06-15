@@ -18,17 +18,19 @@ const { data } = Astro.props
 		<h3 class="selector-link">SURFACE</h3>
 	</div>
 </div>
-<ImageSection>
-	<Image
-		src={data.images.planet}
-		id="planet-image"
-		alt=`Image of planet ${data.name}`
-		class="planet-image"
-		width="110"
-		height="110"
-	/>
-</ImageSection>
-<InformationOutput data={data} />
+<main class="main-container">
+	<ImageSection>
+		<Image
+			src={data.images.planet}
+			id="planet-image"
+			alt=`Image of planet ${data.name}`
+			class="planet-image"
+			width="110"
+			height="110"
+		/>
+	</ImageSection>
+	<InformationOutput data={data} />
+</main>
 
 <script define:vars={{ data }}>
 	document.documentElement.style.setProperty("--test", data.color)
@@ -78,6 +80,7 @@ const { data } = Astro.props
 		justify-content: space-between;
 		border-top: 1px solid var(--color-darkGray);
 		border-bottom: 1px solid var(--color-darkGray);
+		width: 100%;
 	}
 	@media screen and (min-width: 768px) {
 		.selector {
@@ -86,6 +89,7 @@ const { data } = Astro.props
 	}
 
 	.selector-container {
+		margin: 0 2.4rem;
 	}
 
 	.selector-link {
@@ -108,5 +112,16 @@ const { data } = Astro.props
 	.planet-image {
 		height: 11.1rem;
 		width: 11.1rem;
+	}
+
+	@media screen and (min-width: 1024px) {
+		.main-container {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			border: 1px solid red;
+			margin: 8.2rem;
+		}
 	}
 </style>
