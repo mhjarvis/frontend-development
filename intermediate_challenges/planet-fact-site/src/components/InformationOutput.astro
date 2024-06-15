@@ -22,13 +22,16 @@ const { data } = Astro.props
 		</div>
 
 		<div class="information-container-mobile">
-			<div class="selector-container">
-				<h3 class="selector-link active">OVERVIEW</h3>
+			<div class="selector-container active">
+				<span class="selector-link-number">01</span>
+				<h3 class="selector-link">OVERVIEW</h3>
 			</div>
 			<div class="selector-container">
+				<span class="selector-link-number">02</span>
 				<h3 class="selector-link">STRUCTURE</h3>
 			</div>
 			<div class="selector-container">
+				<span class="selector-link-number">03</span>
 				<h3 class="selector-link">SURFACE</h3>
 			</div>
 		</div>
@@ -103,12 +106,6 @@ const { data } = Astro.props
 			flex-direction: row;
 		}
 
-		.information-container-mobile {
-			display: flex;
-			color: white;
-			border: 1px solid white;
-		}
-
 		.information-content {
 			display: flex;
 			align-items: flex-start;
@@ -127,7 +124,45 @@ const { data } = Astro.props
 		.planet-description {
 			text-align: left;
 			padding-left: 0;
-			margin: 2rem 0;
+			margin: 1rem 0;
+		}
+
+		.source-information-container {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+		}
+
+		/*  ----------------------------------------------  */
+		/*                 SECTION SELECTOR                 */
+		/*  ----------------------------------------------  */
+
+		.information-container-mobile {
+			display: flex;
+			color: white;
+			width: 28rem;
+		}
+
+		.selector-container {
+			display: flex;
+			align-items: center;
+			height: 4rem;
+			width: 100%;
+			border: 1px solid var(--color-darkGray);
+			margin: 1rem 0;
+		}
+
+		.selector-link-number {
+			margin-left: 2rem;
+		}
+
+		.selector-link {
+			margin-left: 1rem;
+		}
+
+		.active {
+			background-color: var(--color-lightBlue);
+			border: none;
 		}
 	}
 </style>
