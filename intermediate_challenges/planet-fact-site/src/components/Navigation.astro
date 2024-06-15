@@ -16,8 +16,9 @@ import NormalMenu from "./NormalMenu.astro"
 
 <style>
 	.nav-container {
+		display: flex;
 		width: 100%;
-		max-width: 1440px;
+		max-width: 400px;
 	}
 
 	.navigation {
@@ -43,6 +44,8 @@ import NormalMenu from "./NormalMenu.astro"
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+			width: 100%;
+			max-width: 768px;
 		}
 		.navigation {
 			flex-direction: column;
@@ -56,8 +59,11 @@ import NormalMenu from "./NormalMenu.astro"
 	@media screen and (min-width: 1024px) {
 		.nav-container {
 			display: flex;
+			flex-direction: row;
 			align-items: center;
 			justify-content: space-between;
+			width: 100%;
+			max-width: 1024px;
 		}
 	}
 </style>

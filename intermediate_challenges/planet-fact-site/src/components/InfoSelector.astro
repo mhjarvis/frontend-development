@@ -81,6 +81,10 @@ const { data } = Astro.props
 		border-top: 1px solid var(--color-darkGray);
 		border-bottom: 1px solid var(--color-darkGray);
 		width: 100%;
+		max-width: 400px;
+	}
+
+	.main-container {
 	}
 	@media screen and (min-width: 768px) {
 		.selector {
@@ -120,7 +124,6 @@ const { data } = Astro.props
 			flex-direction: row;
 			align-items: center;
 			justify-content: space-between;
-			border: 1px solid red;
 			margin: 8.2rem;
 		}
 	}
