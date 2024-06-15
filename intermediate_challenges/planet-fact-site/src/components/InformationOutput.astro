@@ -39,6 +39,9 @@ const { data } = Astro.props
 </aside>
 
 <script define:vars={{ data }}>
+	console.log(data.color)
+	document.documentElement.style.setProperty("--test", data.color)
+
 	const infoSelectors = document.querySelectorAll(".selector-container-desktop")
 	const planet = document.getElementById("planet-image")
 	const description = document.querySelector(".planet-description")
@@ -194,7 +197,7 @@ const { data } = Astro.props
 		}
 
 		.active {
-			background-color: var(--color-lightBlue);
+			background-color: var(--test);
 			border: none;
 		}
 	}
