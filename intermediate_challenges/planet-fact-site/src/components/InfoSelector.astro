@@ -35,19 +35,7 @@ const { data } = Astro.props
 	const arr = document.querySelectorAll(".selector-link")
 	const planet = document.getElementById("planet-image")
 	const description = document.querySelector(".planet-description")
-	const link = document.querySelector(".linky")
-
-	// Remove all active classes and add only to clicked element
-	arr.forEach((element) => {
-		element.addEventListener("click", () => {
-			// this changes the color and border of the current 'link'
-			arr.forEach((e) => e.classList.remove("active"))
-			element.classList.add("active")
-			// update image and contents
-			//planet.src = "/images/geology-mercury.png" // remove!!!!!!
-			updateContent(element.innerHTML)
-		})
-	})
+	const link = document.querySelector(".source-link")
 
 	// udpate content, image, and source based on link clicked
 	function updateContent(val) {
@@ -65,6 +53,18 @@ const { data } = Astro.props
 			link.href = data.geology.source
 		}
 	}
+
+	// Remove all active classes and add only to clicked element
+	arr.forEach((element) => {
+		element.addEventListener("click", () => {
+			// this changes the color and border of the current 'link'
+			arr.forEach((e) => e.classList.remove("active"))
+			element.classList.add("active")
+			// update image and contents
+			//planet.src = "/images/geology-mercury.png" // remove!!!!!!
+			updateContent(element.innerHTML)
+		})
+	})
 </script>
 
 <style>
@@ -95,6 +95,7 @@ const { data } = Astro.props
 		letter-spacing: 2px;
 		color: var(--color-lightGray);
 		padding-bottom: 2rem;
+		cursor: pointer;
 	}
 
 	.active {
