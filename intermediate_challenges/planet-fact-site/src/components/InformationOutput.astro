@@ -39,7 +39,6 @@ const { data } = Astro.props
 </aside>
 
 <script define:vars={{ data }}>
-	console.log(data.color)
 	document.documentElement.style.setProperty("--test", data.color)
 
 	const infoSelectors = document.querySelectorAll(".selector-container-desktop")
