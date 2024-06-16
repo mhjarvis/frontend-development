@@ -14,7 +14,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Screenshot](/Screenshot%202024-06-16%20at%204.17.39 PM.png)
+![Screenshot](./screenshot.png)
 
 ### Links
 
