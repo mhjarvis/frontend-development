@@ -46,6 +46,7 @@ const { data } = Astro.props
 	const description = document.querySelector(".planet-description")
 	const link = document.querySelector(".source-link")
 	const selectorLink = document.querySelectorAll(".selector-link")
+	const geologyImage = document.getElementById("geology-image")
 
 	infoSelectors.forEach((selector) => {
 		selector.addEventListener("click", () => {
@@ -62,14 +63,17 @@ const { data } = Astro.props
 			planet.src = data.images.planet
 			description.innerHTML = data.overview.content
 			link.href = data.overview.source
+			geologyImage.style.display = "none"
 		} else if (val === "STRUCTURE") {
 			planet.src = data.images.internal
 			description.innerHTML = data.structure.content
 			link.href = data.structure.source
+			geologyImage.style.display = "none"
 		} else if (val === "SURFACE") {
 			planet.src = data.images.planet
 			description.innerHTML = data.geology.content
 			link.href = data.geology.source
+			geologyImage.style.display = "block"
 		}
 	}
 </script>

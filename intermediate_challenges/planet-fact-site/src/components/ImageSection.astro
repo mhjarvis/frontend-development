@@ -5,7 +5,7 @@ const data = Astro.props
 ---
 
 <figure class="image-container">
-	<slot />
+	<slot class="slot" />
 	<!-- 	<Image
 		src={MercuryImage}
 		alt="Image of planet Mercury"
@@ -15,6 +15,7 @@ const data = Astro.props
 
 <style>
 	.image-container {
+		position: relative;
 		height: 31rem;
 		display: flex;
 		flex-direction: column;

@@ -28,6 +28,14 @@ const { data } = Astro.props
 			width="11"
 			height="11"
 		/>
+		<Image
+			src={data.images.geology}
+			id="geology-image"
+			alt="Planet Geology"
+			class="geology-image"
+			width="11"
+			height="11"
+		/>
 	</ImageSection>
 	<InformationOutput data={data} />
 </main>
@@ -87,6 +95,11 @@ const { data } = Astro.props
 	.planet-image {
 		width: 11rem;
 		height: 11rem;
+		position: relative;
+	}
+
+	.geology-image {
+		display: none;
 	}
 
 	.selector-container {
@@ -119,6 +132,14 @@ const { data } = Astro.props
 			height: 25rem;
 			width: 25rem;
 		}
+
+		.geology-image {
+			position: absolute;
+			display: none;
+			height: 12rem;
+			width: 10rem;
+			bottom: -2rem;
+		}
 	}
 
 	@media screen and (min-width: 1024px) {
@@ -136,6 +157,12 @@ const { data } = Astro.props
 			height: 32.5rem;
 			width: 32.5rem;
 		}
+
+		.geology-image {
+			height: 18rem;
+			width: 15rem;
+			bottom: -6rem;
+		}
 	}
 
 	@media screen and (min-width: 1440px) {
@@ -147,6 +174,12 @@ const { data } = Astro.props
 		.planet-image {
 			height: 40rem;
 			width: 40rem;
+		}
+
+		.geology-image {
+			height: 22rem;
+			width: 18rem;
+			bottom: -10rem;
 		}
 	}
 </style>
