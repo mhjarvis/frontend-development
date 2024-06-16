@@ -19,7 +19,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/mhjarvis/frontend-development/tree/main/intermediate_challenges/planet-fact-site](https://github.com/mhjarvis/frontend-development/tree/main/intermediate_challenges/planet-fact-site)
-- Live Site URL: [https://planet-sigma.vercel.app/](https://planet-sigma.vercel.app/)
+- Live Site URL: [https://planet-8xcec5h8l-markus-projects-c0039c1f.vercel.app/](https://planet-8xcec5h8l-markus-projects-c0039c1f.vercel.app/)
 
 ## My process
 
