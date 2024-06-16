@@ -45,11 +45,13 @@ const { data } = Astro.props
 	const planet = document.getElementById("planet-image")
 	const description = document.querySelector(".planet-description")
 	const link = document.querySelector(".source-link")
+	const selectorLink = document.querySelectorAll(".selector-link")
 
 	infoSelectors.forEach((selector) => {
 		selector.addEventListener("click", () => {
 			const val = selector.children[1].innerHTML
 			infoSelectors.forEach((e) => e.classList.remove("active"))
+			selectorLink.forEach((e) => e.classList.remove("active"))
 			selector.classList.add("active")
 			updateContent(val)
 		})
