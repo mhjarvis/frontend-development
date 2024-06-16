@@ -57,6 +57,10 @@ const { data } = Astro.props
 		letter-spacing: -0.75px;
 	}
 
+	/*  ----------------------------------------------  */
+	/*                      768px                       */
+	/*  ----------------------------------------------  */
+
 	@media screen and (min-width: 768px) {
 		.fact-table {
 			flex-direction: row;
@@ -75,13 +79,31 @@ const { data } = Astro.props
 		}
 	}
 
+	/*  ----------------------------------------------  */
+	/*                      1024px                      */
+	/*  ----------------------------------------------  */
+
 	@media screen and (min-width: 1024px) {
 		.fact-table {
-			width: 1024px;
+			max-width: 1024px;
 		}
 
 		.fact-container {
-			margin: 0 1rem 0 1rem;
+			margin: 0 1rem;
+		}
+	}
+
+	/*  ----------------------------------------------  */
+	/*                      1440px                      */
+	/*  ----------------------------------------------  */
+
+	@media screen and (min-width: 1440px) {
+		.fact-table {
+			max-width: 1440px;
+		}
+
+		.fact-container {
+			max-width: 25.5rem;
 		}
 	}
 </style>

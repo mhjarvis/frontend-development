@@ -4,11 +4,11 @@ import Navigation from "../components/Navigation.astro"
 import InfoSelector from "../components/InfoSelector.astro"
 import ImageSection from "../components/ImageSection.astro"
 import InformationOutput from "../components/InformationOutput.astro"
-import FactTable from "../components/FactTable.astro"
+import Footer from "../components/Footer.astro"
 
 const { data } = Astro.props
 ---
 
 <Navigation />
 <InfoSelector data={data} />
-<FactTable data={data} />
+<Footer data={data} />

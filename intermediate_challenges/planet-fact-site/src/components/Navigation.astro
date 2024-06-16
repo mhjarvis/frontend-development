@@ -39,6 +39,10 @@ import NormalMenu from "./NormalMenu.astro"
 		cursor: pointer;
 	}
 
+	/*  ----------------------------------------------  */
+	/*                      768px                       */
+	/*  ----------------------------------------------  */
+
 	@media screen and (min-width: 768px) {
 		.nav-container {
 			display: flex;
@@ -56,6 +60,10 @@ import NormalMenu from "./NormalMenu.astro"
 		}
 	}
 
+	/*  ----------------------------------------------  */
+	/*                      1024px                      */
+	/*  ----------------------------------------------  */
+
 	@media screen and (min-width: 1024px) {
 		.nav-container {
 			display: flex;
@@ -64,6 +72,23 @@ import NormalMenu from "./NormalMenu.astro"
 			justify-content: space-between;
 			width: 100%;
 			max-width: 1024px;
+		}
+
+		.navigation {
+			align-items: flex-start;
+		}
+	}
+
+	/*  ----------------------------------------------  */
+	/*                      1440px                      */
+	/*  ----------------------------------------------  */
+
+	@media screen and (min-width: 1440px) {
+		.nav-container {
+			width: 100%;
+			max-width: 1440px;
+			display: flex;
+			justify-content: space-between;
 		}
 	}
 </style>

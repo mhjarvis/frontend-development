@@ -213,16 +213,27 @@ const { data } = Astro.props
 
 	@media screen and (min-width: 1024px) {
 		.information-container-mobile {
+			max-width: 32rem;
 		}
 		.information-container-desktop {
 			display: flex;
 			flex-direction: column;
+			max-width: 32rem;
 		}
 
 		.information-container {
+			display: flex;
+			justify-content: flex-end;
 		}
 
 		.information-content {
+			max-width: 32rem;
+		}
+	}
+
+	@media screen and (min-width: 1440px) {
+		.information-container {
+			max-width: 35rem;
 		}
 	}
 </style>

@@ -25,8 +25,8 @@ const { data } = Astro.props
 			id="planet-image"
 			alt=`Image of planet ${data.name}`
 			class="planet-image"
-			width="110"
-			height="110"
+			width="11"
+			height="11"
 		/>
 	</ImageSection>
 	<InformationOutput data={data} />
@@ -84,12 +84,9 @@ const { data } = Astro.props
 		max-width: 400px;
 	}
 
-	.main-container {
-	}
-	@media screen and (min-width: 768px) {
-		.selector {
-			display: none;
-		}
+	.planet-image {
+		width: 11rem;
+		height: 11rem;
 	}
 
 	.selector-container {
@@ -113,9 +110,15 @@ const { data } = Astro.props
 		border-bottom: 3px solid var(--test);
 	}
 
-	.planet-image {
-		height: 11.1rem;
-		width: 11.1rem;
+	@media screen and (min-width: 768px) {
+		.selector {
+			display: none;
+		}
+
+		.planet-image {
+			height: 25rem;
+			width: 25rem;
+		}
 	}
 
 	@media screen and (min-width: 1024px) {
@@ -125,6 +128,25 @@ const { data } = Astro.props
 			align-items: center;
 			justify-content: space-between;
 			margin: 8.2rem;
+			width: 100%;
+			max-width: 90rem;
+		}
+
+		.planet-image {
+			height: 32.5rem;
+			width: 32.5rem;
+		}
+	}
+
+	@media screen and (min-width: 1440px) {
+		.main-container {
+			width: 100%;
+			max-width: 1100px;
+		}
+
+		.planet-image {
+			height: 40rem;
+			width: 40rem;
 		}
 	}
 </style>
