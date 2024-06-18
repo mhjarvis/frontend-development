@@ -1,3 +1,13 @@
+@font-face {
+	font-family: "Young-serif";
+	src: url("./fonts/young-serif/YoungSerif-Regular.ttf");
+}
+
+@font-face {
+	font-family: "Outfit";
+	src: url("./fonts/outfit/Outfit-VariableFont_wght.ttf");
+}
+
 /*  ----------------------------------------------  */
 /*                 CORE STYLES                      */
 /*  ----------------------------------------------  */
@@ -17,7 +27,6 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: inherit;
-	border: 1px solid red;
 }
 
 html {
@@ -26,18 +35,17 @@ html {
 
 body {
 	/* Add font-family as needed */
-	font-family: sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: "Young-serif", sans-serif;
 	font-weight: 400;
 	line-height: 1.5;
 	min-height: 100vh;
 	/* border & padding accounted for in element's width/height */
 	box-sizing: border-box;
-}
 
-@media screen and (min-width: 360px) {
-	.body {
-		font-size: 31.25%;
-	}
+	width: 100vw;
 }
 
 img,
@@ -56,28 +64,43 @@ select {
 	font: inherit;
 }
 
-/*  ----------------------------------------------  */
-/*                   BREAKPOINTS                    */
-/*  ----------------------------------------------  */
+li {
+	list-style-position: inside;
+}
 
-/* 320px - Small Phones */
-/* 400px - Large Phones */
-/* 568px - Landscape Mobile Phones */
-/* 768px - Tablet */
-/* 1024px - Small Desktop */
-/* 1300px - Normal Desktop */
-
-/*  ----------------------------------------------  */
-/*                     COMMENTS                     */
-/*  ----------------------------------------------  */
+p {
+	font-family: "Outfit";
+	font-size: 1.4rem;
+}
 
 .main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	max-width: 37.5rem;
 }
 
-.prep {
+/*  ----------------------------------------------  */
+/*                      HEADER                      */
+/*  ----------------------------------------------  */
+
+.header {
+	width: 31.1rem;
+}
+
+.omelette-img {
+	min-width: 37.5rem;
+
+	/* align image center while keeping overflow */
+	margin-left: 50%;
+	transform: translateX(-50%);
+}
+
+.title {
+	font-size: 3.6rem;
+}
+
+. .prep {
 }
 
 .ingredients-list {
