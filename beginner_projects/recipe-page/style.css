@@ -13,12 +13,14 @@
 /*  ----------------------------------------------  */
 
 :root {
-	--color-primary: #f2f2f2;
-	--color-secondary: #1a477b;
-	--color-accent: #14ba57;
-	--color-header: rgb(17, 17, 17);
-	--color-text: rgb(65, 65, 65);
-	--color-white: rgb(247, 247, 248);
+	--nutmeg: hsl(14, 45%, 36%);
+	--raspberry: hsl(332, 51%, 32%);
+	--white: hsl(0, 0%, 100%);
+	--roseWhite: hsl(330, 100%, 98%);
+	--eggshell: hsl(30, 54%, 90%);
+	--lightGray: hsl(30, 18%, 87%);
+	--wengeBrown: hsl(30, 10%, 34%);
+	--darkCharcoal: hsl(24, 5%, 18%);
 }
 
 *,
@@ -44,7 +46,7 @@ body {
 	min-height: 100vh;
 	/* border & padding accounted for in element's width/height */
 	box-sizing: border-box;
-
+	background-color: var(--eggshell);
 	width: 100vw;
 }
 
@@ -64,13 +66,9 @@ select {
 	font: inherit;
 }
 
-li {
-	list-style-position: inside;
-}
-
 p {
 	font-family: "Outfit";
-	font-size: 1.4rem;
+	font-size: 1.6rem;
 }
 
 .main {
@@ -78,6 +76,7 @@ p {
 	flex-direction: column;
 	align-items: center;
 	max-width: 37.5rem;
+	background-color: #fff;
 }
 
 /*  ----------------------------------------------  */
@@ -97,12 +96,55 @@ p {
 }
 
 .title {
+	margin-top: 2.4rem;
 	font-size: 3.6rem;
+	font-weight: 300;
+	line-height: 4rem;
+	color: var(--darkCharcoal);
 }
 
-. .prep {
+.title-text {
+	margin-top: 2rem;
+	font-weight: 300;
+	color: var(--wengeBrown);
 }
 
-.ingredients-list {
+/*  ----------------------------------------------  */
+/*                   PREPERATION                    */
+/*  ----------------------------------------------  */
+
+.prep {
+	background-color: var(--roseWhite);
 	width: 31.1rem;
+	padding: 2.4rem;
+	border-radius: 1.2rem;
+	margin: 2.4rem 0;
+	color: var(--wengeBrown);
+}
+
+.prep-title {
+	color: var(--raspberry);
+	font-size: 2rem;
+	font-weight: 600;
+}
+
+.prep-list-container {
+	font-family: "Outfit";
+	font-size: 1.8rem;
+	margin-left: 0.5rem;
+	margin-top: 1rem;
+	padding-left: 2rem;
+}
+
+.prep-buttlet {
+	text-align: left;
+	font-weight: 400;
+}
+
+.bullet-indent {
+	display: block;
+	padding-left: 1rem;
+}
+.bold-text {
+	font-weight: 600;
 }
