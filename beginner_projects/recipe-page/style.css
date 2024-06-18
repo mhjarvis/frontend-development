@@ -85,7 +85,7 @@ h2 {
 	background-color: #fff;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 1440px) {
 	.main {
 		min-width: 73.6rem;
 		border-radius: 12px;
@@ -100,7 +100,7 @@ h2 {
 	margin: 2rem 0;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 1440px) {
 	.break {
 		width: 65.6rem;
 	}
@@ -110,7 +110,7 @@ h2 {
 /*                      HEADER                      */
 /*  ----------------------------------------------  */
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 1440px) {
 	.header {
 		margin: 4rem 4rem 0 4rem;
 	}
@@ -123,7 +123,7 @@ h2 {
 	transform: translateX(-50%);
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 1440px) {
 	.omelette-img {
 		height: 30rem;
 		border-radius: 12px;
@@ -139,7 +139,7 @@ h2 {
 	color: var(--darkCharcoal);
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 1440px) {
 	.title {
 		padding: 0;
 	}
@@ -154,7 +154,7 @@ h2 {
 	color: var(--wengeBrown);
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 1440px) {
 	.title-text {
 		padding: 0;
 	}
@@ -173,7 +173,7 @@ h2 {
 	color: var(--wengeBrown);
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 1440px) {
 	.prep {
 		width: 65.6rem;
 	}
@@ -216,7 +216,7 @@ h2 {
 	padding: 0 3.2rem;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 1440px) {
 	.ingredients {
 		width: 100%;
 		padding: 0 4rem;
@@ -227,7 +227,7 @@ h2 {
 	margin: 2rem 0;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 1440px) {
 	.ingredients-title {
 		font-size: 2.6rem;
 	}
@@ -253,7 +253,7 @@ h2 {
 	margin-left: 3rem;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 1440px) {
 	.item-text {
 		font-size: 1.6rem;
 	}
@@ -267,7 +267,7 @@ h2 {
 	padding: 0 3.2rem;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 1440px) {
 	.instructions {
 		padding: 0 4rem;
 	}
@@ -299,7 +299,7 @@ h2 {
 	color: var(--raspberry);
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 1440px) {
 	.item-number {
 		font-size: 1.6rem;
 	}
@@ -312,7 +312,7 @@ h2 {
 	font-weight: 300;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 1440px) {
 	.item-text {
 		font-size: 1.6rem;
 	}
@@ -328,7 +328,7 @@ h2 {
 	margin-bottom: 3rem;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 1440px) {
 	.nutrition {
 		padding: 0 4rem;
 		width: 100%;
@@ -360,7 +360,7 @@ h2 {
 	color: var(--raspberry);
 	margin-left: 10rem;
 }
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 1440px) {
 	.nutrition-text {
 		font-size: 1.6rem;
 	}
