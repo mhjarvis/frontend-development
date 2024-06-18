@@ -85,6 +85,13 @@ h2 {
 	background-color: #fff;
 }
 
+@media screen and (min-width: 400px) {
+	.main {
+		min-width: 73.6rem;
+		border-radius: 12px;
+	}
+}
+
 .break {
 	margin: 0 3.2rem;
 	background-color: var(--lightGray);
@@ -93,23 +100,38 @@ h2 {
 	margin: 2rem 0;
 }
 
+@media screen and (min-width: 400px) {
+	.break {
+		width: 65.6rem;
+	}
+}
+
 /*  ----------------------------------------------  */
 /*                      HEADER                      */
 /*  ----------------------------------------------  */
 
-.header {
-	width: 31.1rem;
+@media screen and (min-width: 400px) {
+	.header {
+		margin: 4rem 4rem 0 4rem;
+	}
 }
 
 .omelette-img {
 	min-width: 37.5rem;
-
 	/* align image center while keeping overflow */
 	margin-left: 50%;
 	transform: translateX(-50%);
 }
 
+@media screen and (min-width: 400px) {
+	.omelette-img {
+		height: 30rem;
+		border-radius: 12px;
+	}
+}
+
 .title {
+	padding: 0 3.2rem;
 	margin-top: 2.4rem;
 	font-size: 3.6rem;
 	font-weight: 300;
@@ -117,11 +139,25 @@ h2 {
 	color: var(--darkCharcoal);
 }
 
+@media screen and (min-width: 400px) {
+	.title {
+		padding: 0;
+	}
+}
+
 .title-text {
+	padding: 0 3.2rem;
+
 	margin-top: 2.4rem;
 	font-weight: 300;
 	font-size: 1.6rem;
 	color: var(--wengeBrown);
+}
+
+@media screen and (min-width: 400px) {
+	.title-text {
+		padding: 0;
+	}
 }
 
 /*  ----------------------------------------------  */
@@ -135,6 +171,12 @@ h2 {
 	border-radius: 1.2rem;
 	margin: 2.4rem 0;
 	color: var(--wengeBrown);
+}
+
+@media screen and (min-width: 400px) {
+	.prep {
+		width: 65.6rem;
+	}
 }
 
 .prep-title {
@@ -174,8 +216,21 @@ h2 {
 	padding: 0 3.2rem;
 }
 
+@media screen and (min-width: 400px) {
+	.ingredients {
+		width: 100%;
+		padding: 0 4rem;
+	}
+}
+
 .ingredients-list {
 	margin: 2rem 0;
+}
+
+@media screen and (min-width: 400px) {
+	.ingredients-title {
+		font-size: 2.6rem;
+	}
 }
 
 .item-container {
@@ -198,12 +253,28 @@ h2 {
 	margin-left: 3rem;
 }
 
+@media screen and (min-width: 400px) {
+	.item-text {
+		font-size: 1.6rem;
+	}
+}
+
 /*  ----------------------------------------------  */
 /*                   INSTRUCTIONS                   */
 /*  ----------------------------------------------  */
 
 .instructions {
 	padding: 0 3.2rem;
+}
+
+@media screen and (min-width: 400px) {
+	.instructions {
+		padding: 0 4rem;
+	}
+
+	.instructions-title {
+		font-size: 2.6rem;
+	}
 }
 
 .instructions-list {
@@ -228,11 +299,23 @@ h2 {
 	color: var(--raspberry);
 }
 
+@media screen and (min-width: 400px) {
+	.item-number {
+		font-size: 1.6rem;
+	}
+}
+
 .item-text {
 	font-family: "Outfit";
 	font-size: 1.8rem;
 	margin-left: 3rem;
 	font-weight: 300;
+}
+
+@media screen and (min-width: 400px) {
+	.item-text {
+		font-size: 1.6rem;
+	}
 }
 
 /*  ----------------------------------------------  */
@@ -243,6 +326,13 @@ h2 {
 	color: var(--wengeBrown);
 	padding: 0 3.2rem;
 	margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 400px) {
+	.nutrition {
+		padding: 0 4rem;
+		width: 100%;
+	}
 }
 .nutrition-text {
 	font-size: 1.8rem;
@@ -269,4 +359,21 @@ h2 {
 	font-weight: 600;
 	color: var(--raspberry);
 	margin-left: 10rem;
+}
+@media screen and (min-width: 400px) {
+	.nutrition-text {
+		font-size: 1.6rem;
+	}
+	.nutrition-title {
+		font-size: 2.6rem;
+	}
+
+	.nutrition-item-title {
+		font-size: 1.6rem;
+	}
+
+	.nutrition-item-value {
+		font-size: 1.6rem;
+		margin-left: 25rem;
+	}
 }
