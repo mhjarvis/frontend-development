@@ -1,0 +1,170 @@
+/****************************************
+	Fonts
+****************************************/
+
+@font-face {
+	font-family: "Libre Baskerville";
+	src: url(/public/fonts/libre-baskerville-v14-latin-regular.woff2);
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Libre Baskerville";
+	src: url(/public/fonts/libre-baskerville-v14-latin-italic.woff2);
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Libre Franklin";
+	src: url(/public/fonts/libre-franklin-v14-latin-regular.woff2);
+	font-weight: normal;
+	font-style: normal;
+}
+
+/****************************************
+	Reset
+****************************************/
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/****************************************
+	Variables
+****************************************/
+
+:root {
+	/* Primary Colors */
+	--color-primary: #0073e6;
+	--color-primary-light: #3399ff;
+	--color-primary-dark: #005bb5;
+
+	/* Secondary Colors */
+	--color-secondary: #2ecc71;
+	--color-secondary-light: #58d68d;
+	--color-secondary-dark: #28a745;
+
+	/* Accent Colors */
+	--color-accent: #e74c3c;
+	--color-accent-light: #f1948a;
+	--color-accent-dark: #c0392b;
+
+	/* Background Colors */
+	--color-bg-light: #ffffff;
+	--color-bg-dark: #f4f4f4;
+	--color-bg-primary: #e6f2ff;
+
+	/* Text Colors */
+	--color-text-primary: #333333;
+	--color-text-secondary: #555555;
+
+	/* Border Colors */
+	--color-border-light: #dddddd;
+	--color-border-dark: #bbbbbb;
+
+	/* Hover and Active States */
+	--color-hover: #005bb5;
+	--color-active: #004494;
+
+	--max-width: 1440px;
+	--transition-time: 0.3s;
+}
+
+/****************************************
+	Utility Classes
+****************************************/
+
+/****************************************
+	General Styles
+****************************************/
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: "Libre Baskerville", serif;
+	color: var(--color-text-primary);
+	background-color: var(--color-bg-light);
+	padding: 0 1%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--color-text-primary);
+}
+
+p {
+	color: var(--color-text-secondary);
+	font-family: "Libre Franklin", sans-serif;
+}
+
+code,
+pre {
+	background-color: var(--color-bg-dark);
+	color: var(--color-text-primary);
+	padding: 0.5em;
+	border-radius: 4px;
+}
+
+button {
+	background-color: var(--color-primary);
+	color: var(--color-bg-light);
+	border: none;
+	padding: 0.5em 1em;
+	cursor: pointer;
+	transition: background-color var(--transition-time);
+	border-radius: 4px;
+}
+
+button:hover {
+	background-color: var(--color-hover);
+}
+
+/****************************************
+	Blocks
+****************************************/
+
+/****************************************
+	Break Points
+****************************************/
+/* @media screen and (min-width: 568px) {	
+} */
+
+/* 320px - Small Phones */
+/* 400px - Large Phones */
+/* 568px - Landscape Mobile Phones */
+/* 768px - Tablet */
+/* 1024px - Small Desktop */
+/* 1300px - Normal Desktop */
