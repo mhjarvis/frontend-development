@@ -12,7 +12,23 @@ import "../css/style.css"
 	</head>
 	<body>
 		<main class="main">
-			<h1 class="title">Mortgage Calculator</h1>
+			<section class="form-section">
+				<div class="heading">
+					<h1 class="heading__title">Mortgage Calculator</h1>
+					<div class="heading__clear"></div>
+				</div>
+			</section>
+
+			<section class="results-section">
+				<div class="default-container">
+					<img src="" alt="" class="default-container-image" />
+					<h2 class="default-container__title">Results shown here</h2>
+					<p class="default-container__text">
+						Complete the form and click "calculate repayments" to see what your
+						monthly repayments would be.
+					</p>
+				</div>
+			</section>
 
 			<p>Clear All</p> Mortgage Amount Mortgage Term Interest Rate Mortgage Type
 			Repayment Interest Only Calculate Repayments
@@ -39,5 +55,9 @@ import "../css/style.css"
 <style>
 	.main {
 		max-width: 375px;
+	}
+
+	.heading__title {
+		font-size: 2.4rem;
 	}
 </style>

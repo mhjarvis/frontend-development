@@ -30,7 +30,7 @@
 
 html {
 	box-sizing: border-box;
-	font-size: 16px;
+	font-size: 10px;
 	line-height: 1.5;
 }
 
@@ -96,26 +96,13 @@ p {
 	font-family: "Jakarta Medium", sans-serif;
 }
 
-code,
-pre {
-	background-color: var(--color-bg-dark);
-	color: var(--color-text-primary);
-	padding: 0.5em;
-	border-radius: 4px;
-}
-
 button {
-	background-color: var(--color-primary);
+	background-color: var(--color--lime);
+	color: var(--color--slate-900);
 	color: var(--color-bg-light);
 	border: none;
 	padding: 0.5em 1em;
 	cursor: pointer;
-	transition: background-color var(--transition-time);
-	border-radius: 4px;
-}
-
-button:hover {
-	background-color: var(--color-hover);
 }
 
 /****************************************
