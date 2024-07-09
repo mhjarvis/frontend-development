@@ -11,108 +11,193 @@ import "../css/style.css"
 		<title>Mortgage repayment calculator</title>
 	</head>
 	<body>
-		<main class="main">
-			<section class="form-section">
-				<div class="heading">
-					<h1 class="heading__title">Mortgage Calculator</h1>
-					<button class="heading__clear">Clear All</button>
+		<section class="calculator">
+			<h2>Mortgage Calculator</h2>
+			<a href="#" class="calculator__clear-all">Clear All</a>
+			<div class="calculator__field">
+				<label for="mortgage-amount">Mortgage Amount</label>
+				<input
+					type="number"
+					id="mortgage-amount"
+					class="calculator__input"
+					value=""
+				/>
+			</div>
+			<div class="calculator__field">
+				<label for="mortgage-term">Mortgage Term</label>
+				<input
+					type="number"
+					id="mortgage-term"
+					class="calculator__input"
+					value="25"
+				/>
+				<span>years</span>
+			</div>
+			<div class="calculator__field">
+				<label for="interest-rate">Interest Rate</label>
+				<input
+					type="number"
+					step="0.01"
+					id="interest-rate"
+					class="calculator__input"
+					value="5.25"
+				/>
+				<span>%</span>
+			</div>
+			<div class="calculator__field">
+				<label>Mortgage Type</label>
+				<div>
+					<input
+						type="radio"
+						id="repayment"
+						name="mortgage-type"
+						value="repayment"
+						checked
+					/>
+					<label for="repayment">Repayment</label>
 				</div>
-
-				<form class="form-section__form">
-					<div class="form-section__container">
-						<label for="mortgage-amount" class="form-section__label"
-							>Mortgage Amount</label
-						>
-						<input
-							type="number"
-							id="mortgage-amount"
-							class="form-section__input form-section__input--amount"
-						/>
-					</div>
-					<div class="form-section__container">
-						<label for="mortgage-term" class="form-section__label"
-							>Mortgage Term</label
-						>
-						<input
-							type="number"
-							id="mortgage-term"
-							class="form-section__input form-section__input--term"
-						/>
-					</div>
-					<div class="form-section__container">
-						<label for="interest-rate" class="form-section__label"
-							>Interest Rate</label
-						>
-						<input
-							type="number"
-							id="interest-rate"
-							class="form-section__input form-section__input--rate"
-						/>
-					</div>
-					<div class="form-section__rad-container">
-						<label class="form-section__label">Mortgage Type</label>
-						<input
-							type="radio"
-							id="rad-repayment"
-							name="mortgage-type"
-							class="form-section__radio"
-						/>
-						<label for="rad-repayment" class="form-section__radio-label"
-							>Repayment</label
-						>
-						<input
-							type="radio"
-							id="interest-only"
-							name="mortgage-type"
-							class="form-section__radio"
-						/>
-						<label for="interest-only" class="form-section__radio-label"
-							>Interest Only</label
-						>
-					</div>
-					<button class="form-section__button">Calculate Repayments</button>
-				</form>
-			</section>
-
-			<section class="results-section">
-				<div class="results-section__default-container">
-					<img src="" alt="" class="results-section__default-image" />
-					<h2 class="results-section__default-title">Results shown here</h2>
-					<p class="results-section__default-text">
-						Complete the form and click "calculate repayments" to see what your
-						monthly repayments would be.
-					</p>
+				<div>
+					<input
+						type="radio"
+						id="interest-only"
+						name="mortgage-type"
+						value="interest-only"
+					/>
+					<label for="interest-only">Interest Only</label>
 				</div>
-
-				<div class="results-section__results-container">
-					<h2 class="results-section__title">Your results</h2>
-					<p class="results-section__text">
-						Your results are shown below based on the information you provided.
-						To adjust the results, edit the form and click “calculate
-						repayments” again.
-					</p>
-					<div class="results-section__output">
-						<div class="results-section__monthly">
-							<h3 class="results-section__monthly-title">
-								Your monthly repayments
-							</h3>
-							<p class="results-section__monthly-output">$300</p>
-						</div>
-						<div class="results-section__total">
-							<h3 class="results-section__total-title">
-								Total you'll repay over the term
-							</h3>
-							<p class="results-section__total-output">$399,443.94</p>
-						</div>
-					</div>
-				</div>
-			</section>
-		</main>
+			</div>
+			<button class="calculator__button">Calculate Repayments</button>
+		</section>
+		<div class="results">
+			<h2>Your results</h2>
+			<p>
+				Your results are shown below based on the information you provided. To
+				adjust the results, edit the form and click "calculate repayments"
+				again.
+			</p>
+			<div class="results__details">
+				<p>Your monthly repayments</p>
+				<p>£1,797.74</p>
+				<p>Total you'll repay over the term</p>
+				<p>£539,322.94</p>
+			</div>
+		</div>
 	</body>
 </html>
 
 <style>
-	.main {
+	.calculator {
+		background-color: white;
+		padding: 20px;
+		max-width: 300px;
+		margin: 20px auto;
+		border-radius: 8px;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	}
+
+	.calculator h2 {
+		font-size: 1.5em;
+		margin-bottom: 10px;
+	}
+
+	.calculator__clear-all {
+		display: block;
+		margin-bottom: 20px;
+		color: #0072ce;
+		text-decoration: none;
+	}
+
+	.calculator__field {
+		margin-bottom: 20px;
+	}
+
+	.calculator__field label {
+		display: block;
+		margin-bottom: 5px;
+	}
+
+	.calculator__input {
+		width: calc(100% - 60px);
+		padding: 8px;
+		box-sizing: border-box;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		font-size: 1em;
+	}
+
+	.calculator__field span {
+		margin-left: 5px;
+		font-size: 1em;
+		vertical-align: middle;
+	}
+
+	.calculator__button {
+		background-color: #d4d400;
+		color: white;
+		border: none;
+		padding: 10px;
+		width: 100%;
+		border-radius: 4px;
+		font-size: 1em;
+		cursor: pointer;
+	}
+
+	.calculator__button:hover {
+		background-color: #c4c400;
+	}
+
+	.results {
+		background-color: #002f54;
+		color: white;
+		padding: 20px;
+		max-width: 300px;
+		margin: 20px auto;
+		border-radius: 8px;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	}
+
+	.results h2 {
+		font-size: 1.5em;
+		margin-bottom: 10px;
+	}
+
+	.results p {
+		font-size: 0.9em;
+		margin-bottom: 20px;
+	}
+
+	.results__details {
+		background-color: #001d3d;
+		padding: 15px;
+		border-radius: 4px;
+	}
+
+	.results__details p {
+		margin: 5px 0;
+		font-size: 1em;
+	}
+
+	.results__details p:nth-child(1) {
+		font-size: 0.9em;
+		color: #ccc;
+	}
+
+	.results__details p:nth-child(2) {
+		font-size: 1.8em;
+		font-weight: bold;
+	}
+
+	.results__details p:nth-child(3) {
+		font-size: 0.9em;
+		color: #ccc;
+	}
+
+	.results__details p:nth-child(4) {
+		font-size: 1.2em;
+		font-weight: bold;
+	}
+
+	/* 	.main {
 		max-width: 375px;
 	}
 
@@ -122,5 +207,5 @@ import "../css/style.css"
 
 	.results-section {
 		border: 1px solid red;
-	}
+	} */
 </style>
