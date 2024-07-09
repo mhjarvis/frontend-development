@@ -12,7 +12,7 @@ import "../css/style.css"
 	</head>
 	<body>
 		<section class="calculator">
-			<h2>Mortgage Calculator</h2>
+			<h2 class="calculator__title">Mortgage Calculator</h2>
 			<a href="#" class="calculator__clear-all">Clear All</a>
 			<div class="calculator__field">
 				<label for="mortgage-amount">Mortgage Amount</label>
@@ -31,7 +31,7 @@ import "../css/style.css"
 					class="calculator__input"
 					value="25"
 				/>
-				<span>years</span>
+				<span class="mortgage-term__years">years</span>
 			</div>
 			<div class="calculator__field">
 				<label for="interest-rate">Interest Rate</label>
@@ -68,7 +68,7 @@ import "../css/style.css"
 			</div>
 			<button class="calculator__button">Calculate Repayments</button>
 		</section>
-		<div class="results">
+		<section class="results">
 			<h2>Your results</h2>
 			<p>
 				Your results are shown below based on the information you provided. To
@@ -81,131 +81,19 @@ import "../css/style.css"
 				<p>Total you'll repay over the term</p>
 				<p>£539,322.94</p>
 			</div>
-		</div>
+		</section>
 	</body>
 </html>
 
 <style>
 	.calculator {
 		background-color: white;
-		padding: 20px;
-		max-width: 300px;
-		margin: 20px auto;
-		border-radius: 8px;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-	}
-
-	.calculator h2 {
-		font-size: 1.5em;
-		margin-bottom: 10px;
-	}
-
-	.calculator__clear-all {
-		display: block;
-		margin-bottom: 20px;
-		color: #0072ce;
-		text-decoration: none;
-	}
-
-	.calculator__field {
-		margin-bottom: 20px;
-	}
-
-	.calculator__field label {
-		display: block;
-		margin-bottom: 5px;
-	}
-
-	.calculator__input {
-		width: calc(100% - 60px);
-		padding: 8px;
-		box-sizing: border-box;
-		border: 1px solid #ccc;
-		border-radius: 4px;
-		font-size: 1em;
-	}
-
-	.calculator__field span {
-		margin-left: 5px;
-		font-size: 1em;
-		vertical-align: middle;
-	}
-
-	.calculator__button {
-		background-color: #d4d400;
-		color: white;
-		border: none;
-		padding: 10px;
 		width: 100%;
-		border-radius: 4px;
-		font-size: 1em;
-		cursor: pointer;
+		max-width: 37.5rem;
+		padding: 2rem;
 	}
 
-	.calculator__button:hover {
-		background-color: #c4c400;
-	}
-
-	.results {
-		background-color: #002f54;
-		color: white;
-		padding: 20px;
-		max-width: 300px;
-		margin: 20px auto;
-		border-radius: 8px;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-	}
-
-	.results h2 {
-		font-size: 1.5em;
-		margin-bottom: 10px;
-	}
-
-	.results p {
-		font-size: 0.9em;
-		margin-bottom: 20px;
-	}
-
-	.results__details {
-		background-color: #001d3d;
-		padding: 15px;
-		border-radius: 4px;
-	}
-
-	.results__details p {
-		margin: 5px 0;
-		font-size: 1em;
-	}
-
-	.results__details p:nth-child(1) {
-		font-size: 0.9em;
-		color: #ccc;
-	}
-
-	.results__details p:nth-child(2) {
-		font-size: 1.8em;
-		font-weight: bold;
-	}
-
-	.results__details p:nth-child(3) {
-		font-size: 0.9em;
-		color: #ccc;
-	}
-
-	.results__details p:nth-child(4) {
-		font-size: 1.2em;
-		font-weight: bold;
-	}
-
-	/* 	.main {
-		max-width: 375px;
-	}
-
-	.heading__title {
+	.calculator__title {
 		font-size: 2.4rem;
 	}
-
-	.results-section {
-		border: 1px solid red;
-	} */
 </style>
