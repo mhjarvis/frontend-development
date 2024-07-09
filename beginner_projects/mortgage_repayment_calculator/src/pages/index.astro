@@ -15,62 +15,98 @@ import "../css/style.css"
 			<section class="form-section">
 				<div class="heading">
 					<h1 class="heading__title">Mortgage Calculator</h1>
-					<div class="heading__clear">Clear All</div>
+					<button class="heading__clear">Clear All</button>
 				</div>
 
-				<form action="">
-					<div class="form-container">
-						<label for="mortgage-amount">Mortgage Amount</label>
-						<input type="number" class="mortgage-amount" />
+				<form class="form-section__form">
+					<div class="form-section__container">
+						<label for="mortgage-amount" class="form-section__label"
+							>Mortgage Amount</label
+						>
+						<input
+							type="number"
+							id="mortgage-amount"
+							class="form-section__input form-section__input--amount"
+						/>
 					</div>
-					<div class="form-container">
-						<label for="mortgage-term">Mortgage Amount</label>
-						<input type="number" class="mortgage-term" />
+					<div class="form-section__container">
+						<label for="mortgage-term" class="form-section__label"
+							>Mortgage Term</label
+						>
+						<input
+							type="number"
+							id="mortgage-term"
+							class="form-section__input form-section__input--term"
+						/>
 					</div>
-					<div class="form-container">
-						<label for="interest-rate">Interest Rate</label>
-						<input type="number" class="interest-rate" />
+					<div class="form-section__container">
+						<label for="interest-rate" class="form-section__label"
+							>Interest Rate</label
+						>
+						<input
+							type="number"
+							id="interest-rate"
+							class="form-section__input form-section__input--rate"
+						/>
 					</div>
-					<div class="rad-container">
-						<label for="type-selector">Mortgage Type </label>
-						<input type="radio" id="rad-repayment" />
-						<label for="rad-repayment">Repayment</label>
-						<input type="radio" id="interest-only" />
-						<label for="interest-only">Interest Only</label>
+					<div class="form-section__rad-container">
+						<label class="form-section__label">Mortgage Type</label>
+						<input
+							type="radio"
+							id="rad-repayment"
+							name="mortgage-type"
+							class="form-section__radio"
+						/>
+						<label for="rad-repayment" class="form-section__radio-label"
+							>Repayment</label
+						>
+						<input
+							type="radio"
+							id="interest-only"
+							name="mortgage-type"
+							class="form-section__radio"
+						/>
+						<label for="interest-only" class="form-section__radio-label"
+							>Interest Only</label
+						>
 					</div>
-					<button>Calculate Repayments</button>
+					<button class="form-section__button">Calculate Repayments</button>
 				</form>
 			</section>
 
 			<section class="results-section">
-				<div class="default-container">
-					<img src="" alt="" class="default-container-image" />
-					<h2 class="default-container__title">Results shown here</h2>
-					<p class="default-container__text">
+				<div class="results-section__default-container">
+					<img src="" alt="" class="results-section__default-image" />
+					<h2 class="results-section__default-title">Results shown here</h2>
+					<p class="results-section__default-text">
 						Complete the form and click "calculate repayments" to see what your
 						monthly repayments would be.
 					</p>
 				</div>
+
+				<div class="results-section__results-container">
+					<h2 class="results-section__title">Your results</h2>
+					<p class="results-section__text">
+						Your results are shown below based on the information you provided.
+						To adjust the results, edit the form and click “calculate
+						repayments” again.
+					</p>
+					<div class="results-section__output">
+						<div class="results-section__monthly">
+							<h3 class="results-section__monthly-title">
+								Your monthly repayments
+							</h3>
+							<p class="results-section__monthly-output">$300</p>
+						</div>
+						<div class="results-section__total">
+							<h3 class="results-section__total-title">
+								Total you'll repay over the term
+							</h3>
+							<p class="results-section__total-output">$399,443.94</p>
+						</div>
+					</div>
+				</div>
 			</section>
-
-			Mortgage Amount Mortgage Term Interest Rate Mortgage Type Repayment
-			Interest Only Calculate Repayments
-
-			<!-- Empty results start -->
-
-			Results shown here Complete the form and click “calculate repayments” to
-			see what your monthly repayments would be.
-
-			<!-- Empty results end -->
-
-			<!-- Completed results start -->
-
-			Your results Your results are shown below based on the information you
-			provided. To adjust the results, edit the form and click “calculate
-			repayments” again. Your monthly repayments Total you'll repay over the
-			term
-
-			<!-- Completed results end -->
 		</main>
 	</body>
 </html>
