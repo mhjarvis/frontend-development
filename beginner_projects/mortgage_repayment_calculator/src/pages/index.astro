@@ -15,8 +15,31 @@ import "../css/style.css"
 			<section class="form-section">
 				<div class="heading">
 					<h1 class="heading__title">Mortgage Calculator</h1>
-					<div class="heading__clear"></div>
+					<div class="heading__clear">Clear All</div>
 				</div>
+
+				<form action="">
+					<div class="form-container">
+						<label for="mortgage-amount">Mortgage Amount</label>
+						<input type="number" class="mortgage-amount" />
+					</div>
+					<div class="form-container">
+						<label for="mortgage-term">Mortgage Amount</label>
+						<input type="number" class="mortgage-term" />
+					</div>
+					<div class="form-container">
+						<label for="interest-rate">Interest Rate</label>
+						<input type="number" class="interest-rate" />
+					</div>
+					<div class="rad-container">
+						<label for="type-selector">Mortgage Type </label>
+						<input type="radio" id="rad-repayment" />
+						<label for="rad-repayment">Repayment</label>
+						<input type="radio" id="interest-only" />
+						<label for="interest-only">Interest Only</label>
+					</div>
+					<button>Calculate Repayments</button>
+				</form>
 			</section>
 
 			<section class="results-section">
@@ -30,8 +53,8 @@ import "../css/style.css"
 				</div>
 			</section>
 
-			<p>Clear All</p> Mortgage Amount Mortgage Term Interest Rate Mortgage Type
-			Repayment Interest Only Calculate Repayments
+			Mortgage Amount Mortgage Term Interest Rate Mortgage Type Repayment
+			Interest Only Calculate Repayments
 
 			<!-- Empty results start -->
 
@@ -59,5 +82,9 @@ import "../css/style.css"
 
 	.heading__title {
 		font-size: 2.4rem;
+	}
+
+	.results-section {
+		border: 1px solid red;
 	}
 </style>
