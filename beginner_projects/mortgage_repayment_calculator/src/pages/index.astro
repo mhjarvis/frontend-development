@@ -13,7 +13,26 @@ import Input from "../components/Input.astro"
 	</head>
 	<body>
 		<section class="calculator">
-			<Input />
+			<Input
+				type="number"
+				containerClass="input-container"
+				id="mortgage-amount"
+				val=`\u00A3`
+			/>
+
+			<Input
+				type="number"
+				containerClass="input-container--reversed"
+				id="mortgage-term"
+				val="years"
+			/>
+
+			<Input
+				type="number"
+				containerClass="input-container--reversed"
+				id="interest-rate"
+				val="%"
+			/>
 
 			<h2 class="calculator__title">Mortgage Calculator</h2>
 			<a href="#" class="calculator__clear-all">Clear All</a>
