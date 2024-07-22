@@ -1,21 +1,24 @@
 ---
-const { type, containerClass, id, val } = Astro.props
+const { type, containerClass, id, val, labelTitle } = Astro.props
 ---
 
-<div class={containerClass}>
-	<div class="input-container__prefix">{val}</div>
-	<input type={type} id={id} class="input-container__input" value="" />
+<div class="input-container">
+	<label class="input-container__label" for={id}>{labelTitle}</label>
+	<div class={containerClass}>
+		<div class="input-container__prefix">{val}</div>
+		<input type={type} id={id} class="input-container__input" value="" />
+	</div>
 </div>
 
 <style>
-	.input-container {
+	.input-container__section {
 		display: flex;
 		border: 0.5px solid var(--color--slate-900);
 		border-radius: 2px;
 		overflow: hidden;
 	}
 
-	.input-container--reversed {
+	.input-container__section--reversed {
 		display: flex;
 		flex-direction: row-reverse;
 		border: 0.5px solid var(--color--slate-900);
