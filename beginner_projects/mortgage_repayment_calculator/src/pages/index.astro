@@ -20,7 +20,7 @@ import Input from "../components/Input.astro"
 				<Input
 					type="number"
 					containerClass="input-container__section"
-					id="mortgage-amount"
+					idName="mortgage-amount"
 					val=`\u00A3`
 					labelTitle="Mortgage Amount"
 				/>
@@ -28,15 +28,15 @@ import Input from "../components/Input.astro"
 					<Input
 						type="number"
 						containerClass="input-container__section--reversed"
-						id="mortgage-term"
+						idName="mortgage-term"
 						val="years"
 						labelTitle="Mortgage Term"
 					/>
 
 					<Input
 						type="number"
-						containerClass="input-container--reversed"
-						id="interest-rate"
+						containerClass="input-container__section--reversed"
+						idName="interest-rate"
 						val="%"
 						labelTitle="Interest Rate"
 					/>

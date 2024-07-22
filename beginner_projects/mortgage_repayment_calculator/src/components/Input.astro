@@ -1,12 +1,12 @@
 ---
-const { type, containerClass, id, val, labelTitle } = Astro.props
+const { type, containerClass, idName, val, labelTitle } = Astro.props
 ---
 
 <div class="input-container">
-	<label class="input-container__label" for={id}>{labelTitle}</label>
+	<label class="input-container__label" for={idName}>{labelTitle}</label>
 	<div class={containerClass}>
 		<div class="input-container__prefix">{val}</div>
-		<input type={type} id={id} class="input-container__input" value="" />
+		<input type={type} id={idName} class="input-container__input" value="" />
 	</div>
 </div>
 
