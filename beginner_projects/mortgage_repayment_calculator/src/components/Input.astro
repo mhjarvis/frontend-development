@@ -14,14 +14,21 @@ const { type, containerClass, idName, val, labelTitle } = Astro.props
 	.input-container {
 		margin: 1em 0;
 	}
+
+	.input-container__label {
+		color: var(--color--slate-700);
+	}
+
 	.input-container__section {
+		margin-top: 5px;
 		display: flex;
 		border: 0.5px solid var(--color--slate-900);
-		border-radius: 2px;
+		border-radius: 4px;
 		overflow: hidden;
 	}
 
 	.input-container__section--reversed {
+		margin-top: 5px;
 		display: flex;
 		flex-direction: row-reverse;
 		border: 0.5px solid var(--color--slate-900);
@@ -30,12 +37,17 @@ const { type, containerClass, idName, val, labelTitle } = Astro.props
 	}
 
 	.input-container__prefix {
+		display: flex;
+		align-items: center;
 		background-color: var(--color--slate-100);
 		width: fit-content;
 		padding: 0.5em 1em;
+		font-family: "Jakarta Bold";
+		color: var(--color--slate-700);
 	}
 
 	.input-container__input {
+		height: 3em;
 		border: none;
 	}
 </style>

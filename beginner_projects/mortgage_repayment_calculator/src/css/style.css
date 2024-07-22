@@ -83,6 +83,8 @@ body {
 	justify-content: center;
 	background-color: var(--color--slate-100);
 	min-height: 100vh;
+	font-size: 1.5em;
+	font-family: "Jakarta Medium", sans-serif;
 }
 
 h1,
