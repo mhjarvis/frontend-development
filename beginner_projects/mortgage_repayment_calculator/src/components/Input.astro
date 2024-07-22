@@ -1,0 +1,29 @@
+---
+const type = "number"
+const id = "tbd"
+const prefix = `\u00A3`
+---
+
+<div class="input-container">
+	<div class="input-container__prefix">{prefix}</div>
+	<input type={type} id={id} class="input-container__input" value="" />
+</div>
+
+<style>
+	.input-container {
+		display: flex;
+		border: 0.5px solid var(--color--slate-900);
+		border-radius: 2px;
+		overflow: hidden;
+	}
+
+	.input-container__prefix {
+		background-color: var(--color--slate-100);
+		width: fit-content;
+		padding: 0 0.5em;
+	}
+
+	.input-container__input {
+		border: none;
+	}
+</style>
