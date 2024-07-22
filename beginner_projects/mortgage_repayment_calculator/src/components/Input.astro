@@ -1,11 +1,9 @@
 ---
-const type = "number"
-const id = "tbd"
-const prefix = `\u00A3`
+const { type, containerClass, id, val } = Astro.props
 ---
 
-<div class="input-container">
-	<div class="input-container__prefix">{prefix}</div>
+<div class={containerClass}>
+	<div class="input-container__prefix">{val}</div>
 	<input type={type} id={id} class="input-container__input" value="" />
 </div>
 
@@ -17,10 +15,18 @@ const prefix = `\u00A3`
 		overflow: hidden;
 	}
 
+	.input-container--reversed {
+		display: flex;
+		flex-direction: row-reverse;
+		border: 0.5px solid var(--color--slate-900);
+		border-radius: 2px;
+		overflow: hidden;
+	}
+
 	.input-container__prefix {
 		background-color: var(--color--slate-100);
 		width: fit-content;
-		padding: 0 0.5em;
+		padding: 0.5em 1em;
 	}
 
 	.input-container__input {
