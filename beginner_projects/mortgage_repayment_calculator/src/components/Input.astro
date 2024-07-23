@@ -36,6 +36,12 @@ const { type, containerClass, idName, val, labelTitle } = Astro.props
 		overflow: hidden;
 	}
 
+	@media screen and (min-width: 768px) {
+		.input-container__section--reversed {
+			width: 300px;
+		}
+	}
+
 	.input-container__prefix {
 		display: flex;
 		align-items: center;
