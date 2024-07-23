@@ -1,5 +1,26 @@
 ---
-
+import Image from "astro/components/Image.astro"
+import calculatorIcon from "../../public/images/icon-calculator.svg"
 ---
 
-<button class="calculator__button">Calculate Repayments</button>
+<button class="calculator-button">
+	<Image
+		src={calculatorIcon}
+		class="calculator-button__icon"
+		alt="calculator icon"
+	/>
+	<p class="calculator-button__text">Calculate Repayments</p>
+</button>
+
+<style>
+	.calculator-button {
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+		width: 100%;
+		margin: 1em 0;
+		padding: 0 3em;
+		height: 3em;
+		border-radius: 24px;
+	}
+</style>
