@@ -3,7 +3,7 @@ import "../css/style.css"
 ---
 
 <div class="mortgage-selector">
-	<label>Mortgage Type</label>
+	<label class="mortgage-selector__label">Mortgage Type</label>
 	<div class="mortgage-selector__radial-container">
 		<input
 			type="radio"
@@ -12,7 +12,9 @@ import "../css/style.css"
 			name="mortgage-type"
 			value="repayment"
 		/>
-		<label for="repayment">Repayment</label>
+		<label class="mortgage-selector-radial__label" for="repayment"
+			>Repayment</label
+		>
 	</div>
 	<div class="mortgage-selector__radial-container">
 		<div>
@@ -23,13 +25,30 @@ import "../css/style.css"
 				name="mortgage-type"
 				value="interest-only"
 			/>
-			<label for="interest-only">Interest Only</label>
+			<label class="mortgage-selector-radial__label" for="interest-only"
+				>Interest Only</label
+			>
 		</div>
 	</div>
 </div>
 
 <style>
+	.mortgage-selector__label {
+		color: var(--color--slate-700);
+	}
+
 	.mortgage-selector__radial-container {
+		display: flex;
+		align-items: center;
 		border: 0.5px solid var(--color--slate-900);
+		border-radius: 4px;
+		padding: 0.5em 1em;
+		margin: 0.5em 0;
+		height: 3em;
+	}
+
+	.mortgage-selector-radial__label {
+		margin-left: 1em;
+		font-size: 1em;
 	}
 </style>

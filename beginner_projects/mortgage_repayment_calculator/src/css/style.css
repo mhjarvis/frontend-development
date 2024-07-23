@@ -109,6 +109,10 @@ button {
 	cursor: pointer;
 }
 
+label {
+	font-size: 0.8em;
+}
+
 /* Remove up/down arrows from input elements */
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
