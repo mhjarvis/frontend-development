@@ -14,10 +14,29 @@ import calculatorIcon from "../../public/images/icon-calculator.svg"
 
 <script>
 	const button = document.getElementById("calculator-button")
-	const amount = document.getElementById("mortgage-amount")
+	const mortgageAmount = document.getElementById(
+		"mortgage-amount"
+	) as HTMLInputElement
+	const mortgageTerm = document.getElementById(
+		"mortgage-term"
+	) as HTMLInputElement
+	const interestRate = document.getElementById(
+		"interest-rate"
+	) as HTMLInputElement
+
+	function getMortgageType() {
+		const inputs = document.querySelectorAll<HTMLScriptElement>(
+			"input[name='mortgage-type']:checked"
+		)
+		for (let i = 0; i < inputs.length; i++) {
+			if (inputs[i].id) {
+				return inputs[i].id
+			}
+		}
+	}
 
 	button.addEventListener("click", () => {
-		console.log(amount.value)
+		console.log(getMortgageType())
 	})
 </script>
 
