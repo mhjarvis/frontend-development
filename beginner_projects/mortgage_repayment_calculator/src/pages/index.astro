@@ -1,5 +1,6 @@
 ---
 import "../css/style.css"
+import Form from "../components/Form.astro"
 import Input from "../components/Input.astro"
 import TypeSelector from "../components/TypeSelector.astro"
 import Button from "../components/Button.astro"
@@ -21,7 +22,9 @@ import Output from "../components/Output.astro"
 			<h2 class="calculator__title">Mortgage Calculator</h2>
 			<a href="#" class="calculator__clear-all">Clear All</a>
 
-			<div class="calculator__inputs">
+			<Form />
+
+			<!-- 			<div class="calculator__inputs">
 				<Input
 					type="number"
 					containerClass="input-container__section"
@@ -46,9 +49,9 @@ import Output from "../components/Output.astro"
 					/>
 				</div>
 			</div>
-
-			<TypeSelector />
-			<Button />
+ -->
+			<!-- 			<TypeSelector />
+			<Button /> -->
 		</section>
 		<!---------------------- OUTPUT SECTION ----------------------->
 		<Output />
