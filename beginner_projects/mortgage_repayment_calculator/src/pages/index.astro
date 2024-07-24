@@ -59,12 +59,20 @@ import Output from "../components/Output.astro"
 
 <style>
 	.whiteback {
+		display: none;
 		position: absolute;
 		width: 1000px;
 		height: 600px;
 		background-color: white;
 		z-index: -1;
 	}
+
+	@media screen and (min-width: 1000px) {
+		.whiteback {
+			display: block;
+		}
+	}
+
 	.calculator {
 		background-color: white;
 		width: 100%;
