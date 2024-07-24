@@ -3,7 +3,7 @@ import Image from "astro/components/Image.astro"
 import calculatorIcon from "../../public/images/icon-calculator.svg"
 ---
 
-<button class="calculator-button">
+<button class="calculator-button" id="calculator-button">
 	<Image
 		src={calculatorIcon}
 		class="calculator-button__icon"
@@ -11,6 +11,15 @@ import calculatorIcon from "../../public/images/icon-calculator.svg"
 	/>
 	<p class="calculator-button__text">Calculate Repayments</p>
 </button>
+
+<script>
+	const button = document.getElementById("calculator-button")
+	const amount = document.getElementById("mortgage-amount")
+
+	button.addEventListener("click", () => {
+		console.log(amount.value)
+	})
+</script>
 
 <style>
 	.calculator-button {
