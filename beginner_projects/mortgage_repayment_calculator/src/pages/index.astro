@@ -50,14 +50,21 @@ import Output from "../components/Output.astro"
 			<TypeSelector />
 			<Button />
 		</section>
-
-		<Output />
-
 		<!---------------------- OUTPUT SECTION ----------------------->
+		<Output />
+		<!-- white background add in -->
+		<div class="whiteback"></div>
 	</body>
 </html>
 
 <style>
+	.whiteback {
+		position: absolute;
+		width: 1000px;
+		height: 600px;
+		background-color: white;
+		z-index: -1;
+	}
 	.calculator {
 		background-color: white;
 		width: 100%;
@@ -68,6 +75,18 @@ import Output from "../components/Output.astro"
 	@media screen and (min-width: 768px) {
 		.calculator {
 			max-width: 68.8rem;
+		}
+	}
+
+	@media screen and (min-width: 1000px) {
+		body {
+			display: flex;
+			flex-direction: row;
+		}
+
+		.calculator {
+			max-width: 500px;
+			height: 600px;
 		}
 	}
 

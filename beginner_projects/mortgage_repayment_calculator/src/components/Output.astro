@@ -30,6 +30,19 @@ import worksheetImage from "../../public/images/illustration-empty.svg"
 		}
 	}
 
+	@media screen and (min-width: 1000px) {
+		.output {
+			width: 500px;
+			height: 600px;
+			border-bottom-left-radius: 15%;
+		}
+		.output::before {
+			background-color: white;
+			height: 600px;
+			width: 500px;
+		}
+	}
+
 	.output__title {
 		color: var(--color--white);
 		margin-bottom: 0.5em;
