@@ -36,7 +36,12 @@ import calculatorIcon from "../../public/images/icon-calculator.svg"
 	}
 
 	button.addEventListener("click", () => {
-		console.log(getMortgageType())
+		let val = getMortgageType()
+		if (val === undefined) {
+			console.log("error")
+		} else {
+			console.log(val)
+		}
 	})
 </script>
 

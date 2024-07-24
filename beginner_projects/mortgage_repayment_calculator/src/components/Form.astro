@@ -3,16 +3,30 @@
 ---
 
 <form action="" class="form">
-	<label for="mortgage-amount">Mortgage Amount</label>
-	<div class="input__container">
-		<div class="form__prefix">$</div>
-		<input
-			type="number"
-			class="form__input"
-			id="mortgage-amount"
-			name="mortgage-amount"
-		/>
+	<div class="mortgage-amount">
+		<label for="mortgage-amount">Mortgage Amount</label>
+		<div class="input__container">
+			<div class="form__prefix">$</div>
+			<input
+				type="number"
+				class="form__input"
+				id="mortgage-amount"
+				name="mortgage-amount"
+				required
+			/>
+		</div>
 	</div>
+
+	<input type="submit" value="submit" />
 </form>
 
-<style></style>
+<style>
+	.mortgage-amount {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.input__container {
+		display: flex;
+	}
+</style>
