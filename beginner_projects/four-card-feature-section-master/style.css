@@ -23,6 +23,10 @@ html {
 }
 
 body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	/* Add font-family as needed */
 	font-family: sans-serif;
 	font-weight: 400;
@@ -74,6 +78,7 @@ select {
 	width: 111rem;
 	grid-template-columns: 37rem 37rem 37rem;
 	grid-template-rows: 13.25rem 13.25rem 13.25rem 13.25rem;
+	gap: 25px;
 	grid-template-areas:
 		". top ."
 		"left top right"
@@ -101,4 +106,13 @@ select {
 
 #bottom {
 	grid-area: bottom;
+}
+
+@media screen and (max-width: 1110px) {
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 25px;
+	}
 }
