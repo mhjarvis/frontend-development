@@ -52,6 +52,7 @@ body {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	background-color: var(--color-lightGray);
 
 	/* Add font-family as needed */
 	font-size: 1.5rem;
@@ -59,6 +60,7 @@ body {
 	font-weight: 400;
 	line-height: 1.5;
 	min-height: 100vh;
+
 	/* border & padding accounted for in element's width/height */
 	box-sizing: border-box;
 }
@@ -88,13 +90,22 @@ select {
 /*  ----------------------------------------------  */
 /*                     HEADER                       */
 /*  ----------------------------------------------  */
-
 .header {
+	width: 37.5rem;
+	background-color: white;
+}
+.header__container {
 	margin: 5rem 0;
-	max-width: 31rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+
+@media screen and (max-width: 1110px) {
+	.header__container {
+		max-width: 37.5rem;
+		background-color: white;
+	}
 }
 
 .header__part1,
@@ -116,6 +127,7 @@ select {
 	text-align: center;
 	color: var(--color-grayishBlue);
 	line-height: 2.5rem;
+	max-width: 31rem;
 }
 /*  ----------------------------------------------  */
 /*                   CARD AREA                      */
@@ -136,35 +148,62 @@ select {
 }
 
 .container__card {
+	position: relative;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: flex-start;
 	width: 35rem;
 	height: 25rem;
-	border: 1px solid black;
+	padding: 2.6rem;
+	border-radius: 8px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+		rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 @media screen and (max-width: 1110px) {
 	.container__card {
 		max-width: 31rem;
 		max-height: 22.2rem;
+		background-color: white;
 	}
+}
+
+.card__title {
+	font-size: 2rem;
+	color: var(--color-darkBlue);
+}
+
+.card__text {
+	margin-top: 5px;
+	font-size: 1.3rem;
+	color: var(--color-grayishBlue);
+}
+
+.container__card > img {
+	width: 5.7rem;
+	position: absolute;
+	bottom: 2.6rem;
+	right: 2.6rem;
 }
 
 #top {
 	grid-area: top;
+	border-top: 4px solid var(--color-red);
 }
 
 #left {
 	grid-area: left;
+	border-top: 4px solid var(--color-green);
 }
 
 #right {
 	grid-area: right;
+	border-top: 4px solid var(--color-blue);
 }
 
 #bottom {
 	grid-area: bottom;
+	border-top: 4px solid var(--color-orange);
 }
 
 @media screen and (max-width: 1110px) {
@@ -172,6 +211,9 @@ select {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		max-width: 37.5rem;
+		padding-bottom: 2.5rem;
+		background-color: white;
 		gap: 25px;
 	}
 }
