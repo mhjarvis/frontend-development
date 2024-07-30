@@ -13,7 +13,7 @@ import Output from "../components/Output.astro"
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<title>Mortgage repayment calculatorf</title>
+		<title>Mortgage repayment calculator</title>
 	</head>
 	<body>
 		<section class="calculator">
@@ -23,33 +23,6 @@ import Output from "../components/Output.astro"
 			<a href="#" class="calculator__clear-all">Clear All</a>
 
 			<Form />
-
-			<!-- 			<div class="calculator__inputs">
-				<Input
-					type="number"
-					containerClass="input-container__section"
-					idName="mortgage-amount"
-					val=`\u00A3`
-					labelTitle="Mortgage Amount"
-				/>
-				<div class="calculator__inputs--inline">
-					<Input
-						type="number"
-						containerClass="input-container__section--reversed"
-						idName="mortgage-term"
-						val="years"
-						labelTitle="Mortgage Term"
-					/>
-					<Input
-						type="number"
-						containerClass="input-container__section--reversed"
-						idName="interest-rate"
-						val="%"
-						labelTitle="Interest Rate"
-					/>
-				</div>
-			</div>
- -->
 			<TypeSelector />
 			<Button />
 		</section>
