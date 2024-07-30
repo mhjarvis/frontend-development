@@ -1,0 +1,104 @@
+/*  ----------------------------------------------  */
+/*                 CORE STYLES                      */
+/*  ----------------------------------------------  */
+
+:root {
+	--color-red: #ea5454;
+	--color-green: #44d3d2;
+	--color-orange: #fcae4a;
+	--color-blue: #549ef2;
+	--color-gray: #4d4f62;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	/* Add font-family as needed */
+	font-family: sans-serif;
+	font-weight: 400;
+	line-height: 1.5;
+	min-height: 100vh;
+	/* border & padding accounted for in element's width/height */
+	box-sizing: border-box;
+}
+
+@media screen and (min-width: 360px) {
+	.body {
+		font-size: 31.25%;
+	}
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/*  ----------------------------------------------  */
+/*                   BREAKPOINTS                    */
+/*  ----------------------------------------------  */
+
+/* 320px - Small Phones */
+/* 400px - Large Phones */
+/* 568px - Landscape Mobile Phones */
+/* 768px - Tablet */
+/* 1024px - Small Desktop */
+/* 1300px - Normal Desktop */
+
+/*  ----------------------------------------------  */
+/*                   CARD AREA                      */
+/*  ----------------------------------------------  */
+
+.container {
+	display: grid;
+	width: 111rem;
+	grid-template-columns: 37rem 37rem 37rem;
+	grid-template-rows: 13.25rem 13.25rem 13.25rem 13.25rem;
+	grid-template-areas:
+		". top ."
+		"left top right"
+		"left bottom right"
+		". bottom .";
+}
+
+.container__card {
+	width: 35rem;
+	height: 25rem;
+	border: 1px solid black;
+}
+
+#top {
+	grid-area: top;
+}
+
+#left {
+	grid-area: left;
+}
+
+#right {
+	grid-area: right;
+}
+
+#bottom {
+	grid-area: bottom;
+}
