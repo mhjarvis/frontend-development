@@ -1,32 +1,107 @@
 ---
+import "../styles/style.css"
 import Image from "astro/components/Image.astro"
-const { id, image } = Astro.props
+const { ident, image, name, grad, title, text } = Astro.props
 ---
 
-<div class="card" id={id}>
+<div class="card" id={ident}>
 	<div class="card__profile-container">
 		<Image src={image} alt="Profile picture" class="card__image" />
 		<div class="card__information-container">
-			<h2 class="card__name"></h2>
-			<p class="card__graduate"></p>
+			<h2 class="card__name">{name}</h2>
+			<p class="card__graduate">{grad}</p>
 		</div>
 	</div>
-	<div class="card__review-container">
-		<h2 class="card__title"></h2>
-		<p class="card__text"></p>
-	</div>
+	<h2 class="card__title">{title}</h2>
+	<p class="card__text">{text}</p>
 </div>
 
 <style>
 	.card {
-		width: 100%;
-		height: 200px;
-		border: 1px solid black;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		width: 32.7rem;
+		/* 		border: 1px solid black;
+ */
+		color: white;
+		padding: 3.2rem;
+		border-radius: 8px;
+	}
+
+	.card__profile-container {
+		display: flex;
+		align-items: center;
 	}
 
 	.card__image {
 		width: 2.8rem;
 		height: 2.8rem;
 		border-radius: 50%;
+	}
+
+	.card__information-container {
+		margin-left: 2rem;
+	}
+
+	.card__name {
+		font-size: 1.3rem;
+		font-weight: 500;
+		color: var(--color-white);
+	}
+
+	.card__graduate {
+		font-size: 1.1rem;
+		font-weight: 400;
+		color: var(--color-lightGray);
+	}
+
+	.card__title {
+		font-size: 2rem;
+		font-weight: 500;
+		background-color: inherit;
+		color: inherit;
+	}
+
+	.card__text {
+		font-size: 1.8rem;
+		font-weight: 400;
+		color: var(--color-lightGray);
+	}
+
+	#card--1 {
+		background-color: var(--color-violet);
+	}
+
+	#card--2 {
+		background-color: var(--color-grayishBlue);
+	}
+
+	#card--3 {
+		background-color: var(--color-white);
+	}
+
+	#card--3
+		> .card__profile-container
+		> .card__information-container
+		> .card__name,
+	#card--3 > .card__title {
+		color: var(--color-grayishBlue);
+	}
+
+	#card--4 {
+		background-color: var(--color-blackishBlue);
+	}
+
+	#card--5 {
+		background-color: var(--color-white);
+	}
+
+	#card--5
+		> .card__profile-container
+		> .card__information-container
+		> .card__name,
+	#card--5 > .card__title {
+		color: var(--color-grayishBlue);
 	}
 </style>
