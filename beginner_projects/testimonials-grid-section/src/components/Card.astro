@@ -72,8 +72,14 @@ const { ident, image, name, grad, title, text } = Astro.props
 	.card__text {
 		font-size: 1.3rem;
 		font-weight: 400;
-		width: 250px;
+		width: inherit;
 		color: var(--color-lightGray);
+	}
+
+	@media screen and (max-width: 1110px) {
+		.card__text {
+			max-width: 26.6rem;
+		}
 	}
 
 	#card--1 {
@@ -94,6 +100,12 @@ const { ident, image, name, grad, title, text } = Astro.props
 		position: absolute;
 		width: 102px;
 		height: 104px;
+	}
+
+	@media screen and (min-width: 1110px) {
+		#card--1::before {
+			right: 6rem;
+		}
 	}
 
 	#card--2 {
