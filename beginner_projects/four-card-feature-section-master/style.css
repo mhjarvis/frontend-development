@@ -91,20 +91,37 @@ select {
 /*                     HEADER                       */
 /*  ----------------------------------------------  */
 .header {
-	width: 37.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 37.5rem;
+	width: 100%;
 	background-color: white;
 }
+
+@media screen and (min-width: 1110px) {
+	.header {
+		background-color: var(--color-lightGray);
+		max-width: 54rem;
+		width: 100%;
+	}
+}
+
 .header__container {
+	max-width: 37.5rem;
+	width: 100%;
+	background-color: white;
 	margin: 5rem 0;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
-@media screen and (max-width: 1110px) {
+@media screen and (min-width: 1110px) {
 	.header__container {
-		max-width: 37.5rem;
-		background-color: white;
+		background-color: var(--color-lightGray);
+		max-width: 54rem;
+		width: 100%;
 	}
 }
 
@@ -113,6 +130,13 @@ select {
 	font-size: 2.4rem;
 	letter-spacing: 0.17px;
 	color: var(--color-darkBlue);
+}
+
+@media screen and (min-width: 1110px) {
+	.header__part1,
+	.header__part2 {
+		font-size: 3.6rem;
+	}
 }
 
 .header__part1 {
@@ -129,6 +153,13 @@ select {
 	line-height: 2.5rem;
 	max-width: 31rem;
 }
+
+@media screen and (min-width: 1110px) {
+	.header__text {
+		max-width: 54rem;
+		margin-top: 1rem;
+	}
+}
 /*  ----------------------------------------------  */
 /*                   CARD AREA                      */
 /*  ----------------------------------------------  */
@@ -138,7 +169,8 @@ select {
 	width: 111rem;
 	grid-template-columns: 37rem 37rem 37rem;
 	grid-template-rows: 13.25rem 13.25rem 13.25rem 13.25rem;
-	gap: 25px;
+	column-gap: 20px;
+	row-gap: 10px;
 	margin-bottom: 5rem;
 	grid-template-areas:
 		". top ."
@@ -185,6 +217,12 @@ select {
 	position: absolute;
 	bottom: 2.6rem;
 	right: 2.6rem;
+}
+
+@media screen and (min-width: 1110px) {
+	.container__card > img {
+		width: 64px;
+	}
 }
 
 #top {
