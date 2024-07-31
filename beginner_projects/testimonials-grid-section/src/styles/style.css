@@ -58,6 +58,7 @@ body {
 	min-height: 100vh;
 	/* border & padding accounted for in element's width/height */
 	box-sizing: border-box;
+	background-color: var(--color-lightGrayishBlue);
 }
 
 img,
