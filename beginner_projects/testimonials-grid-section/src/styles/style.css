@@ -1,0 +1,72 @@
+/*  ----------------------------------------------  */
+/*                 CORE STYLES                      */
+/*  ----------------------------------------------  */
+
+:root {
+	--color-primary: #f2f2f2;
+	--color-secondary: #1a477b;
+	--color-accent: #14ba57;
+	--color-header: rgb(17, 17, 17);
+	--color-text: rgb(65, 65, 65);
+	--color-white: rgb(247, 247, 248);
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+	border: 1px solid red;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	/* Add font-family as needed */
+	font-family: sans-serif;
+	font-weight: 400;
+	line-height: 1.5;
+	min-height: 100vh;
+	/* border & padding accounted for in element's width/height */
+	box-sizing: border-box;
+}
+
+@media screen and (min-width: 360px) {
+	.body {
+		font-size: 31.25%;
+	}
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/*  ----------------------------------------------  */
+/*                   BREAKPOINTS                    */
+/*  ----------------------------------------------  */
+
+/* 320px - Small Phones */
+/* 400px - Large Phones */
+/* 568px - Landscape Mobile Phones */
+/* 768px - Tablet */
+/* 1024px - Small Desktop */
+/* 1300px - Normal Desktop */
+
+/*  ----------------------------------------------  */
+/*                     COMMENTS                     */
+/*  ----------------------------------------------  */
