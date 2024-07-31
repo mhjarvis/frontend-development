@@ -74,13 +74,16 @@ import { Image } from "astro:assets"
 		margin: 20px 0;
 	}
 	.testimonials__container {
-		display: grid;
+		display: flex;
+		flex-direction: column;
 		gap: 20px;
-		grid-template-columns: 32.7rem;
 	}
 
 	@media screen and (min-width: 1100px) {
 		.testimonials__container {
+			display: grid;
+			grid-template-columns: 25.5rem 25.5rem 25.5rem 25.5rem;
+			grid-template-rows: 28.2rem 26.6rem;
 		}
 	}
 </style>
