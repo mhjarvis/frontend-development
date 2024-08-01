@@ -48,14 +48,23 @@ import heroDesktopRight from "../../public/images/desktop/image-hero-right.png"
 		flex-direction: column;
 		align-items: center;
 		border: 1px solid red;
+		overflow: hidden;
+		padding: 2.4rem 0;
+		gap: 2.4rem;
 	}
 
 	.header__logo {
 	}
 
 	.header__image--tablet {
-		width: 375px;
+		width: 433px;
 		height: auto;
+	}
+
+	@media screen and (min-width: 768px) {
+		.header__image--tablet {
+			display: none;
+		}
 	}
 
 	@media screen and (min-width: 1100px) {
