@@ -12,8 +12,16 @@ import Footer from "../components/Footer.astro"
 		<title>Meet Landing Page</title>
 	</head>
 	<body>
-		<Header />
-		<Main />
-		<Footer />
+		<div class="index__container">
+			<Header />
+			<Main />
+			<Footer />
+		</div>
 	</body>
 </html>
+
+<style>
+	.index__container {
+		max-width: 375px;
+	}
+</style>
