@@ -1,5 +1,80 @@
 ---
-
+import Image from "astro/components/Image.astro"
+import logo from "../../public/images/logo.svg"
+import heroTablet from "../../public/images/tablet/image-hero.png"
+import heroDesktopLeft from "../../public/images/desktop/image-hero-left.png"
+import heroDesktopRight from "../../public/images/desktop/image-hero-right.png"
 ---
 
-<header class="header"></header>
+<header class="header">
+	<Image src={logo} alt="Meet logo" class="header__logo" />
+	<Image
+		src={heroTablet}
+		alt="Headshots of multiple user profiles"
+		class="header__image--tablet"
+	/>
+	<div class="header__image-container">
+		<Image
+			src={heroDesktopLeft}
+			alt="Headshots of users - left"
+			class="header__image--desktop-left"
+		/>
+		<Image
+			src={heroDesktopRight}
+			alt="Headshots of users - right"
+			class="header__image--desktop-right"
+		/>
+	</div>
+	<div class="header__text-container">
+		<h1 class="header__title">Group Chat for Everyone</h1>
+		<p class="header__text">
+			Meet makes it easy to connect with others face-to-face virtually and
+			collaborate across any device.
+		</p>
+		<div class="header__button-container">
+			<button class="header__download-button"
+				>Download <span class="version">v1.3</span></button
+			>
+			<button class="header__whatisit-button">What is it?</button>
+		</div>
+	</div>
+</header>
+
+<style>
+	.header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		border: 1px solid red;
+	}
+
+	.header__logo {
+	}
+
+	.header__image--tablet {
+		width: 375px;
+		height: auto;
+	}
+
+	@media screen and (min-width: 1100px) {
+		.header__image--tablet {
+			display: none;
+		}
+	}
+
+	.header__image-container {
+		display: none;
+	}
+
+	@media screen and (min-width: 1100px) {
+		.header__image-container {
+			display: block;
+		}
+	}
+
+	.header__image--desktop-left {
+	}
+
+	.header__image--desktop-right {
+	}
+</style>
