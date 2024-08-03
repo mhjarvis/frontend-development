@@ -1,0 +1,40 @@
+---
+import Image from "astro/components/Image.astro"
+import Woman from "../../public/images/desktop/image-woman-in-videocall.jpg"
+import Women from "../../public/images/desktop/image-women-videochatting.jpg"
+import Man from "../../public/images/desktop/image-man-texting.jpg"
+import Men from "../../public/images/desktop/image-men-in-meeting.jpg"
+import NumberElement from "./NumberElement.astro"
+---
+
+<footer class="footer">
+	<div class="images__container">
+		<Image src={Woman} alt="Woman in videocall" class="images__image" />
+		<Image src={Women} alt="Women videochatting" class="images__image" />
+		<Image src={Man} alt="Man texting" class="images__image" />
+		<Image src={Men} alt="Men in meeting" class="images__image" />
+	</div>
+	<NumberElement num="2" />
+</footer>
+
+<style>
+	.footer {
+		padding: 4rem 0;
+		background-color: var(--white);
+	}
+
+	.images__container {
+		max-width: 37.5rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 20px;
+		flex-wrap: wrap;
+	}
+
+	.images__image {
+		width: 14.4rem;
+		height: auto;
+		border-radius: 12px;
+	}
+</style>
