@@ -32,10 +32,10 @@ import heroDesktopRight from "../../public/images/desktop/image-hero-right.png"
 			collaborate across any device.
 		</p>
 		<div class="header__button-container">
-			<button class="header__download-button"
+			<button class="header__download-button button-blue"
 				>Download <span class="version">v1.3</span></button
 			>
-			<button class="header__whatisit-button">What is it?</button>
+			<button class="header__whatisit-button button-purple">What is it?</button>
 		</div>
 	</div>
 </header>
@@ -108,5 +108,13 @@ import heroDesktopRight from "../../public/images/desktop/image-hero-right.png"
 		font-weight: 400;
 		line-height: 150%;
 		margin-top: 20px;
+	}
+
+	.header__button-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1.5rem;
+		margin: 2.5rem 0;
 	}
 </style>
