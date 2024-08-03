@@ -77,6 +77,11 @@ select {
 }
 
 .button-blue:hover {
+	background-color: #71c0d4;
+}
+
+.button-blue:hover span {
+	color: var(--cyan-300);
 }
 
 .button-purple {
@@ -90,9 +95,18 @@ select {
 	font-weight: 700;
 }
 
-.button-purple:hover {
+.button-purple:hover span {
+	color: var(--purple-300);
 }
 
-.version {
+.button-purple:hover {
+	background-color: #b18bdd;
+}
+
+.version-blue {
 	color: var(--cyan-300);
+}
+
+.version-purple {
+	color: var(--purple-300);
 }
