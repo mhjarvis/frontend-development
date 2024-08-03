@@ -42,6 +42,7 @@ import heroDesktopRight from "../../public/images/desktop/image-hero-right.png"
 
 <style>
 	.header {
+		position: relative;
 		width: 100%;
 		max-width: 375px;
 		display: flex;
@@ -60,6 +61,12 @@ import heroDesktopRight from "../../public/images/desktop/image-hero-right.png"
 		}
 	}
 
+	@media screen and (min-width: 1440px) {
+		.header {
+			max-width: 1440px;
+		}
+	}
+
 	.header__logo {
 	}
 
@@ -74,7 +81,7 @@ import heroDesktopRight from "../../public/images/desktop/image-hero-right.png"
 		}
 	}
 
-	@media screen and (min-width: 1100px) {
+	@media screen and (min-width: 1440px) {
 		.header__image--tablet {
 			display: none;
 		}
@@ -84,16 +91,22 @@ import heroDesktopRight from "../../public/images/desktop/image-hero-right.png"
 		display: none;
 	}
 
-	@media screen and (min-width: 1100px) {
+	@media screen and (min-width: 1440px) {
 		.header__image-container {
-			display: block;
+			position: absolute;
+			display: flex;
+			width: 1480px;
+			top: 12rem;
 		}
 	}
 
 	.header__image--desktop-left {
+		position: absolute;
 	}
 
 	.header__image--desktop-right {
+		position: absolute;
+		right: 0;
 	}
 
 	.header__text-container {
@@ -101,7 +114,12 @@ import heroDesktopRight from "../../public/images/desktop/image-hero-right.png"
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		max-width: 30rem;
+	}
+
+	@media screen and (min-width: 1440px) {
+		.header__text-container {
+			margin: 2rem 0;
+		}
 	}
 
 	.header__title {
@@ -113,9 +131,17 @@ import heroDesktopRight from "../../public/images/desktop/image-hero-right.png"
 		line-height: 110%;
 	}
 
+	@media screen and (min-width: 1440px) {
+		.header__title {
+			font-size: 6.4rem;
+			max-width: 45rem;
+		}
+	}
+
 	.header__text {
 		text-align: center;
 		color: var(--slate-600);
+		max-width: 30rem;
 		font-size: 1.6rem;
 		font-weight: 400;
 		line-height: 150%;
@@ -124,7 +150,14 @@ import heroDesktopRight from "../../public/images/desktop/image-hero-right.png"
 
 	@media screen and (min-width: 768px) {
 		.header__text {
-			width: 44rem;
+			width: 45rem;
+		}
+	}
+
+	@media screen and (min-width: 1440px) {
+		.header__text {
+			font-size: 1.8rem;
+			max-width: 45rem;
 		}
 	}
 
