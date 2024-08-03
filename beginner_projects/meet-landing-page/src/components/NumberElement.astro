@@ -1,7 +1,35 @@
 ---
-
+const { num } = Astro.props
 ---
 
-<div class="number__container"></div>
+<div class="number__container">
+	<div class="number__line"></div>
+	<div class="number__circle">{num}</div>
+</div>
 
-<style></style>
+<style>
+	.number__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.number__line {
+		height: 8rem;
+		width: 1px;
+		border: 1px solid var(--slate-300);
+	}
+
+	.number__circle {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 5.6rem;
+		height: 5.6rem;
+		border: 2px solid var(--slate-300);
+		border-radius: 50%;
+		color: var(--slate-600);
+		font-size: 1.6rem;
+		font-weight: 900;
+	}
+</style>
