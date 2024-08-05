@@ -1,3 +1,70 @@
 ---
-
+import large from "../../public/images/desktop/image-footer.jpg"
 ---
+
+<footer class="footer">
+	<picture class="footer__image">
+		<source
+			srcset="../../public/images/desktop/image-footer.jpg"
+			media="(min-width: 1440px)"
+		/>
+		<source
+			srcset="../../public/images/tablet/image-footer.jpg"
+			media="(min-width: 768px)"
+		/>
+		<img
+			src="../../public/images/mobile/image-footer.jpg"
+			alt="Lady listening to headphones."
+			width="auto"
+			height="auto"
+		/>
+	</picture>
+	<div class="footer__container">
+		<h2 class="footer__title">Experience more together</h2>
+		<p class="footer__text">
+			Stay connected with reliable HD meetings and unlimited one-on-one and
+			group video sessions.
+		</p>
+		<button class="header__download-button button-purple-new"
+			>Download <span class="version-purple-new">v1.3</span></button
+		>
+	</div>
+
+	<style>
+		footer {
+			position: relative;
+			max-width: 37.5rem;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			background-color: var(--white);
+			top: -67px;
+			;
+		}
+
+		.footer__image {
+			width: 37.5rem;
+			overflow: hidden;
+		}
+
+		.footer__container {
+			position: absolute;
+		}
+
+		.footer__title {
+			font-size: 3.2rem;
+			line-height: 110%;
+			font-weight: 900;
+			color: var(--white);
+		}
+
+		.footer__text {
+			font-size: 1.6rem;
+			font-weight: 400;
+			line-height: 150%;
+			color: var(--white);
+		}
+	</style>
+</footer>
