@@ -28,13 +28,15 @@ import NumberElement from "./NumberElement.astro"
 
 <style>
 	.footer {
+		max-width: 37.5rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 		padding: 4rem 0;
-
 		background-color: var(--white);
 	}
 
 	.images__container {
-		max-width: 37.5rem;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -49,15 +51,21 @@ import NumberElement from "./NumberElement.astro"
 	}
 
 	.text__container {
-		max-width: 37.5rem;
+		max-width: 31rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 
 	.text__pre {
+		font-size: 1.2rem;
+		color: var(--cyan-600);
 	}
 
 	.text__title {
 	}
 
 	.text__text {
+		text-align: center;
 	}
 </style>
