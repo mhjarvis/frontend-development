@@ -29,11 +29,24 @@ import NumberElement from "./NumberElement.astro"
 <style>
 	.footer {
 		max-width: 37.5rem;
+		width: 100%;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		padding: 4rem 0;
 		background-color: var(--white);
+	}
+
+	@media screen and (min-width: 768px) {
+		.footer {
+			max-width: 768px;
+		}
+	}
+
+	@media screen and (min-width: 1440px) {
+		.footer {
+			max-width: 1440px;
+		}
 	}
 
 	.images__container {
@@ -50,6 +63,18 @@ import NumberElement from "./NumberElement.astro"
 		border-radius: 12px;
 	}
 
+	@media screen and (min-width: 768px) {
+		.images__image {
+			width: 16rem;
+		}
+	}
+
+	@media screen and (min-width: 1440px) {
+		.images__image {
+			width: 25.6rem;
+		}
+	}
+
 	.text__container {
 		max-width: 31rem;
 		display: flex;
@@ -58,6 +83,11 @@ import NumberElement from "./NumberElement.astro"
 		margin: 6.4rem 0;
 	}
 
+	@media screen and (min-width: 768px) {
+		.text__container {
+			max-width: 48rem;
+		}
+	}
 	.text__pre {
 		font-size: 1.2rem;
 		font-weight: 900;
@@ -67,12 +97,24 @@ import NumberElement from "./NumberElement.astro"
 		margin-bottom: 1.6rem;
 	}
 
+	@media screen and (min-width: 768px) {
+		.text__pre {
+			font-size: 1.4rem;
+		}
+	}
+
 	.text__title {
 		text-align: center;
 		font-size: 3.2rem;
 		font-weight: 900;
 		line-height: 110%;
 		margin-bottom: 3.2rem;
+	}
+
+	@media screen and (min-width: 768px) {
+		.text__title {
+			max-width: 40rem;
+		}
 	}
 
 	.text__text {
