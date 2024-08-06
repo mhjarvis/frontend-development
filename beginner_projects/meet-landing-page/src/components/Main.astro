@@ -7,7 +7,7 @@ import Men from "../../public/images/desktop/image-men-in-meeting.jpg"
 import NumberElement from "./NumberElement.astro"
 ---
 
-<footer class="footer">
+<main class="main">
 	<div class="images__container">
 		<Image src={Woman} alt="Woman in videocall" class="images__image" />
 		<Image src={Women} alt="Women videochatting" class="images__image" />
@@ -24,10 +24,10 @@ import NumberElement from "./NumberElement.astro"
 		</p>
 	</div>
 	<NumberElement num="02" />
-</footer>
+</main>
 
 <style>
-	.footer {
+	.main {
 		max-width: 37.5rem;
 		width: 100%;
 		display: flex;
@@ -38,13 +38,13 @@ import NumberElement from "./NumberElement.astro"
 	}
 
 	@media screen and (min-width: 768px) {
-		.footer {
+		.main {
 			max-width: 768px;
 		}
 	}
 
 	@media screen and (min-width: 1440px) {
-		.footer {
+		.main {
 			max-width: 1440px;
 		}
 	}

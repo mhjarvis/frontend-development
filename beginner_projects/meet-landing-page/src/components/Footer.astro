@@ -3,20 +3,22 @@ import large from "../../public/images/desktop/image-footer.jpg"
 ---
 
 <footer class="footer">
-	<picture class="footer__image">
+	<!-- 	<picture class="footer__image">
 		<source
-			srcset="../../public/images/desktop/image-footer.jpg"
+			srcset="../public/images/desktop/image-footer.jpg"
 			media="(min-width: 1440px)"
 		/>
 		<source
-			srcset="../../public/images/tablet/image-footer.jpg"
+			srcset="../public/images/tablet/image-footer.jpg"
 			media="(min-width: 768px)"
 		/>
 		<img
-			src="../../public/images/mobile/image-footer.jpg"
+			src="../public/images/mobile/image-footer.jpg"
 			alt="Lady listening to headphones."
+			height="100%"
+			width="100%"
 		/>
-	</picture>
+	</picture> -->
 	<div class="footer__container">
 		<h2 class="footer__title">Experience more together</h2>
 		<p class="footer__text">
@@ -33,23 +35,32 @@ import large from "../../public/images/desktop/image-footer.jpg"
 			position: relative;
 			max-width: 37.5rem;
 			width: 100%;
+			height: 450px;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
 			background-color: var(--white);
 			top: -67px;
+			background-image: url("../../public/images/mobile/image-footer.jpg");
+			background-position: center;
+			background-size: contain;
 		}
 
 		@media screen and (min-width: 768px) {
 			footer {
 				max-width: 768px;
+				height: 32rem;
+				background-image: url("../../public/images/tablet/image-footer.jpg");
+				background-size: cover;
 			}
 		}
 
 		@media screen and (min-width: 1440px) {
 			footer {
 				max-width: 1440px;
+				height: 31rem;
+				background-image: url("../../public/images/desktop/image-footer.jpg");
 			}
 		}
 
@@ -97,13 +108,13 @@ import large from "../../public/images/desktop/image-footer.jpg"
 
 		@media screen and (min-width: 768px) {
 			.footer__title {
-				margin-top: 0;
 				font-size: 3.6rem;
 			}
 		}
 
 		@media screen and (min-width: 1440px) {
 			.footer__title {
+				margin-top: 0;
 				max-width: 44rem;
 				text-align: left;
 				font-size: 4rem;
@@ -123,13 +134,13 @@ import large from "../../public/images/desktop/image-footer.jpg"
 		@media screen and (min-width: 768px) {
 			.footer__text {
 				max-width: 51rem;
-				margin: 3rem 0 0 0;
+				margin: 2rem 0 0 0;
 			}
 		}
 
 		@media screen and (min-width: 1440px) {
 			.footer__text {
-				margin: 0 0 0 4rem;
+				margin: 0 0 0 3rem;
 				max-width: 36rem;
 				text-align: left;
 				font-size: 1.8rem;
@@ -140,6 +151,12 @@ import large from "../../public/images/desktop/image-footer.jpg"
 			z-index: 1;
 			position: absolute;
 			bottom: 8rem;
+		}
+
+		@media screen and (min-width: 768px) {
+			.footer__button {
+				bottom: 5rem;
+			}
 		}
 
 		@media screen and (min-width: 1440px) {
