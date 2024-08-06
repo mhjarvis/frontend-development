@@ -2,6 +2,14 @@
 /*                 CORE STYLES                      */
 /*  ----------------------------------------------  */
 
+/* FONTS */
+
+@font-face {
+	font-family: "Roboto";
+	src: url("../../public/fonts/Roboto-Bold.ttf") format("truetype"),
+		url("../../public/fonts/Roboto-Regular.ttf") format("truetype");
+}
+
 /* COLORS */
 $tomato: hsl(4, 100%, 67%);
 $slateGray: hsl(234, 29%, 20%);
@@ -15,7 +23,6 @@ $white: hsl(0, 0%, 100%);
 	margin: 0;
 	padding: 0;
 	box-sizing: inherit;
-	border: 1px solid red;
 }
 
 html {
@@ -24,9 +31,9 @@ html {
 
 body {
 	/* Add font-family as needed */
-	font-family: sans-serif;
+	font-family: "Roboto", serif;
 	font-size: 1.6rem;
-	font-weight: 400;
+	font-weight: 700;
 	line-height: 1.5;
 	min-height: 100vh;
 	/* border & padding accounted for in element's width/height */
@@ -58,13 +65,6 @@ select {
 /*  ----------------------------------------------  */
 /*                   BREAKPOINTS                    */
 /*  ----------------------------------------------  */
-
-/* 320px - Small Phones */
-/* 400px - Large Phones */
-/* 568px - Landscape Mobile Phones */
-/* 768px - Tablet */
-/* 1024px - Small Desktop */
-/* 1300px - Normal Desktop */
 
 /*  ----------------------------------------------  */
 /*                     COMMENTS                     */
