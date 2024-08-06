@@ -15,8 +15,6 @@ import large from "../../public/images/desktop/image-footer.jpg"
 		<img
 			src="../../public/images/mobile/image-footer.jpg"
 			alt="Lady listening to headphones."
-			width="auto"
-			height="auto"
 		/>
 	</picture>
 	<div class="footer__container">
@@ -43,15 +41,34 @@ import large from "../../public/images/desktop/image-footer.jpg"
 			top: -67px;
 		}
 
+		@media screen and (min-width: 768px) {
+			footer {
+				max-width: 768px;
+			}
+		}
+
+		@media screen and (min-width: 1440px) {
+			footer {
+				max-width: 1440px;
+			}
+		}
+
 		.footer__image {
-			display: block;
-			margin-left: auto;
-			margin-right: auto;
 			width: 100%;
+			height: auto;
+			overflow: hidden;
+		}
+
+		.footer__image img {
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+			margin-top: -1.8rem;
 		}
 
 		.footer__container {
 			height: 100%;
+			width: 100%;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -61,6 +78,14 @@ import large from "../../public/images/desktop/image-footer.jpg"
 			opacity: 90%;
 		}
 
+		@media screen and (min-width: 1440px) {
+			.footer__container {
+				flex-direction: row;
+				justify-content: start;
+				padding-left: 16rem;
+			}
+		}
+
 		.footer__title {
 			margin-top: -5rem;
 			text-align: center;
@@ -68,6 +93,21 @@ import large from "../../public/images/desktop/image-footer.jpg"
 			line-height: 110%;
 			font-weight: 900;
 			color: var(--white);
+		}
+
+		@media screen and (min-width: 768px) {
+			.footer__title {
+				margin-top: 0;
+				font-size: 3.6rem;
+			}
+		}
+
+		@media screen and (min-width: 1440px) {
+			.footer__title {
+				max-width: 44rem;
+				text-align: left;
+				font-size: 4rem;
+			}
 		}
 
 		.footer__text {
@@ -80,10 +120,34 @@ import large from "../../public/images/desktop/image-footer.jpg"
 			max-width: 30rem;
 		}
 
+		@media screen and (min-width: 768px) {
+			.footer__text {
+				max-width: 51rem;
+				margin: 3rem 0 0 0;
+			}
+		}
+
+		@media screen and (min-width: 1440px) {
+			.footer__text {
+				margin: 0 0 0 4rem;
+				max-width: 36rem;
+				text-align: left;
+				font-size: 1.8rem;
+			}
+		}
+
 		.footer__button {
 			z-index: 1;
 			position: absolute;
 			bottom: 8rem;
+		}
+
+		@media screen and (min-width: 1440px) {
+			.footer__button {
+				right: 16rem;
+				bottom: 52%;
+				transform: translateY(52%);
+			}
 		}
 	</style>
 </footer>
