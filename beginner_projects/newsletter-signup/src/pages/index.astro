@@ -21,23 +21,68 @@
 
 			<section class="content">
 				<h1 class="content__title">Stay updated!</h1>
+
+				<!-- List Element -->
+				<ul class="list">
+					<p class="list__description">
+						Join 60,000+ product managers receiving monthly updates on:
+					</p>
+					<li class="list__item">
+						<img
+							src="/public/images/icon-list.svg"
+							alt="check-mark"
+							srcset=""
+							class="list__item--icon"
+						/>
+						<p class="list__item--text">
+							Product discovery and building what matters
+						</p>
+					</li>
+					<li class="list__item">
+						<img
+							src="/public/images/icon-list.svg"
+							alt="check-mark"
+							srcset=""
+							class="list__item--icon"
+						/>
+						<p class="list__item--text">
+							Measuring to ensure updates are a success
+						</p>
+					</li>
+					<li class="list__item">
+						<img
+							src="/public/images/icon-list.svg"
+							alt="check-mark"
+							srcset=""
+							class="list__item--icon"
+						/>
+						<p class="list__item--text">And much more!</p>
+					</li>
+				</ul>
+
+				<!-- Form Element -->
+				<form action="" class="form">
+					<label for="form__email" class="form__label"></label>
+					<input type="email" class="form__email" id="form__email" />
+					<input
+						type="submit"
+						value="Subscribe to monthly newsletter"
+						class="form__submit"
+						id="form__submit"
+					/>
+				</form>
 			</section>
-
-			Stay updated! Join 60,000+ product managers receiving monthly updates on:
-			Product discovery and building what matters Measuring to ensure updates
-			are a success And much more! Email address email@company.com Subscribe to
-			monthly newsletter
-
-			<!-- Sign-up form end -->
-
-			<!-- Success message start -->
-
-			Thanks for subscribing! A confirmation email has been sent to
-			ash@loremcompany.com. Please open it and click the button inside to
-			confirm your subscription. Dismiss message
 		</main>
 	</body>
 </html>
+
+<script>
+	const submit = document.getElementById("form__submit")
+
+	submit.addEventListener("click", (e) => {
+		e.preventDefault()
+	})
+</script>
 
 <style lang="scss">
 	@import "../styles/main.scss";
