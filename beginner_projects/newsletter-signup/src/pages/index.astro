@@ -10,8 +10,8 @@ import Success from "../components/Success.astro"
 		<title>Newsletter sign-up form</title>
 	</head>
 	<body>
-		<main class="main">
-			<Success />
+		<Success />
+		<main class="main" id="main">
 			<picture>
 				<source
 					srcset="../images/illustration-sign-up-desktop.svg"
@@ -89,6 +89,7 @@ import Success from "../components/Success.astro"
 </html>
 
 <script>
+	const main = document.getElementById("main")
 	const submit = document.getElementById("form__submit")
 	const success = document.getElementById("success")
 	const email = document.getElementById("form__email") as HTMLInputElement
@@ -100,6 +101,7 @@ import Success from "../components/Success.astro"
 		e.preventDefault()
 
 		if (validateEmail(email.value) === true) {
+			main.style.display = "none"
 			success.style.display = "block"
 			error.style.display = "none"
 			container.style.borderColor = "hsl(231, 7%, 60%)"
@@ -124,6 +126,8 @@ import Success from "../components/Success.astro"
 	@import "../styles/main.scss";
 
 	main {
+		display: flex;
+		flex-direction: column;
 		position: relative;
 		max-width: 37.5rem;
 		background-color: $white;
@@ -215,6 +219,12 @@ import Success from "../components/Success.astro"
 			border-radius: 8px;
 			background-color: $slateGray;
 			color: $white;
+			&:hover {
+				background-image: linear-gradient($tomato, hsl(345, 59%, 60%));
+				box-shadow:
+					hsl(4, 100%, 67%, 50%) 0px 10px 36px 0px,
+					hsl(4, 100%, 67%, 50%) 0px 0px 0px 1px;
+			}
 		}
 	}
 

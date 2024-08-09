@@ -21,8 +21,11 @@
 <script>
 	const button = document.getElementById("success__button")
 	const success = document.getElementById("success")
+	const main = document.getElementById("main")
+
 	button.addEventListener("click", () => {
 		success.style.display = "none"
+		main.style.display = "flex"
 	})
 </script>
 
@@ -63,6 +66,39 @@
 			background-color: $slateGray;
 			color: $white;
 			margin-top: 40rem;
+
+			&:hover {
+				background-image: linear-gradient($tomato, hsl(345, 59%, 60%));
+				box-shadow:
+					hsl(4, 100%, 67%, 50%) 0px 10px 36px 0px,
+					hsl(4, 100%, 67%, 50%) 0px 0px 0px 1px;
+			}
+		}
+	}
+
+	@media screen and (min-width: 1024px) {
+		.success {
+			align-items: center;
+			box-sizing: border-box;
+			min-width: 50rem;
+			height: 52rem;
+			padding: 2rem 4rem;
+			border: 1px solid red;
+
+			&__title {
+				font-size: 5.6rem;
+			}
+			&__icon {
+				margin-top: 4rem;
+				margin-bottom: 3rem;
+			}
+
+			&__content {
+			}
+
+			&__button {
+				margin-top: 4rem;
+			}
 		}
 	}
 </style>
