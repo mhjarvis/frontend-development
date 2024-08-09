@@ -1,0 +1,59 @@
+---
+
+---
+
+<div class="success" id="success">
+	<img
+		src="/public/images/icon-list.svg"
+		alt="check-mark"
+		srcset=""
+		class="success__icon"
+	/>
+	<h2 class="success__title">Thanks for subscribing!</h2>
+	<p class="success__content">
+		A confirmation email has been sent to <span class="success__content--bold"
+			>ash@loremcompany.com</span
+		>. Please open it and click the button inside to confirm your subscription
+	</p>
+	<button class="success__button">Dismiss message</button>
+</div>
+
+<style lang="scss">
+	@import "../styles/main.scss";
+
+	.success {
+		position: absolute;
+		max-width: 37.5rem;
+		height: 100%;
+		background-color: $white;
+		z-index: 10;
+		padding: 2rem;
+		&__icon {
+			width: 6.4rem;
+			margin-top: 10rem;
+		}
+
+		&__title {
+			font-size: 4rem;
+			font-family: "Roboto-Bold";
+			line-height: 100%;
+			margin: 2rem 0;
+		}
+		&__content {
+			font-family: "Roboto-Regular";
+			&--bold {
+				font-family: "Roboto-Bold";
+			}
+		}
+		&__button {
+			width: 100%;
+			margin-top: 2rem;
+			padding: 1.5rem 0;
+			border: none;
+			border-radius: 8px;
+			background-color: $slateGray;
+			color: $white;
+			margin-top: 40rem;
+		}
+	}
+</style>

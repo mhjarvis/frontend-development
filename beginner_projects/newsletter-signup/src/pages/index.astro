@@ -1,5 +1,5 @@
 ---
-
+import Success from "../components/Success.astro"
 ---
 
 <!doctype html>
@@ -11,6 +11,7 @@
 	</head>
 	<body>
 		<main class="main">
+			<Success />
 			<picture>
 				<source
 					srcset="../images/illustration-sign-up-desktop.svg"
@@ -93,6 +94,7 @@
 	@import "../styles/main.scss";
 
 	main {
+		position: relative;
 		max-width: 37.5rem;
 		background-color: $white;
 	}
