@@ -63,15 +63,21 @@ import Success from "../components/Success.astro"
 
 				<!-- Form Element -->
 				<form action="" class="form">
-					<label for="form__email" class="form__label">Email address</label>
+					<div class="label-container">
+						<label for="form__email" class="form__label">Email address</label>
+						<p class="validate-error" id="validate-error">
+							Valid email required
+						</p>
+					</div>
 					<input
 						type="email"
 						class="form__email"
 						id="form__email"
 						placeholder="email@company.com"
+						required
 					/>
 					<input
-						type="submit"
+						type="button"
 						value="Subscribe to monthly newsletter"
 						class="form__submit"
 						id="form__submit"
@@ -84,10 +90,32 @@ import Success from "../components/Success.astro"
 
 <script>
 	const submit = document.getElementById("form__submit")
+	const success = document.getElementById("success")
+	const email = document.getElementById("form__email") as HTMLInputElement
+	const error = document.getElementById("validate-error")
+	const container = document.getElementById("form__email")
 
 	submit.addEventListener("click", (e) => {
 		e.preventDefault()
+
+		if (validateEmail(email.value) === true) {
+			success.style.display = "block"
+			error.style.display = "none"
+			container.style.borderColor = "hsl(231, 7%, 60%)"
+			container.style.color = "hsl(231, 7%, 60%)"
+			container.style.backgroundColor = "white"
+		} else {
+			error.style.display = "block"
+			container.style.borderColor = "hsl(4, 100%, 67%)"
+			container.style.color = "hsl(4, 100%, 67%)"
+			container.style.backgroundColor = "hsl(4, 100%, 67%, 20%)"
+		}
 	})
+
+	function validateEmail(email) {
+		const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+		return regex.test(email)
+	}
 </script>
 
 <style lang="scss">
@@ -133,9 +161,6 @@ import Success from "../components/Success.astro"
 		flex-direction: column;
 		margin: 4rem 0 2rem 0;
 		&__label {
-			font-size: 1.2rem;
-			font-family: "Roboto-Bold";
-			margin-bottom: 0.5rem;
 		}
 
 		&__email {
@@ -154,5 +179,19 @@ import Success from "../components/Success.astro"
 			background-color: $slateGray;
 			color: $white;
 		}
+	}
+
+	.label-container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		font-size: 1.2rem;
+		font-family: "Roboto-Bold";
+		margin-bottom: 0.5rem;
+	}
+
+	.validate-error {
+		display: none;
+		color: $tomato;
 	}
 </style>
