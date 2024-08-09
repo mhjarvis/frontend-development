@@ -1,5 +1,8 @@
 ---
 import "../styles/main.scss"
+import Picture from "astro/components/Picture.astro"
+import small from "../../public/images/icon-success.svg"
+import big from "../../public/images/illustration-sign-up-desktop.svg"
 ---
 
 <!doctype html>
@@ -10,21 +13,31 @@ import "../styles/main.scss"
 		<title>Newsletter sign-up form</title>
 	</head>
 	<body>
-		<!-- Sign-up form start -->
+		<main class="main">
+			<h1>this is image, not picture</h1>
+			<img src="../public/images/illustration-sign-up-mobile.svg" alt="" />
+			<!-- Sign-up form start -->
 
-		Stay updated! Join 60,000+ product managers receiving monthly updates on:
-		Product discovery and building what matters Measuring to ensure updates are
-		a success And much more! Email address email@company.com Subscribe to
-		monthly newsletter
+			Stay updated! Join 60,000+ product managers receiving monthly updates on:
+			Product discovery and building what matters Measuring to ensure updates
+			are a success And much more! Email address email@company.com Subscribe to
+			monthly newsletter
 
-		<!-- Sign-up form end -->
+			<!-- Sign-up form end -->
 
-		<!-- Success message start -->
+			<!-- Success message start -->
 
-		Thanks for subscribing! A confirmation email has been sent to
-		ash@loremcompany.com. Please open it and click the button inside to confirm
-		your subscription. Dismiss message
+			Thanks for subscribing! A confirmation email has been sent to
+			ash@loremcompany.com. Please open it and click the button inside to
+			confirm your subscription. Dismiss message
 
-		<!-- Success message end -->
+			<picture>
+				<source
+					srcset="/public/images/illustration-sign-up-desktop.svg"
+					media="(min-width: 800px"
+				/>
+				<img src="/public/images/icon-success.svg" />
+			</picture>
+		</main>
 	</body>
 </html>
