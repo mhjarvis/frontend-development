@@ -5,9 +5,13 @@
 /* FONTS */
 
 @font-face {
-	font-family: "Roboto";
-	src: url("../../public/fonts/Roboto-Bold.ttf") format("truetype"),
-		url("../../public/fonts/Roboto-Regular.ttf") format("truetype");
+	font-family: "Roboto-Bold";
+	src: url("../../public/fonts/Roboto-Bold.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Roboto-Regular";
+	src: url("../../public/fonts/Roboto-Regular.ttf") format("truetype");
 }
 
 /* COLORS */
@@ -16,6 +20,12 @@ $slateGray: hsl(234, 29%, 20%);
 $charcoalGray: hsl(235, 18%, 26%);
 $gray: hsl(231, 7%, 60%);
 $white: hsl(0, 0%, 100%);
+
+.r400 {
+	font-family: "Roboto";
+	font-weight: normal;
+	font-style: normal;
+}
 
 *,
 *::before,
@@ -31,7 +41,7 @@ html {
 
 body {
 	/* Add font-family as needed */
-	font-family: "Roboto", serif;
+	font-family: "Roboto-Regular", serif;
 	font-size: 1.6rem;
 	font-weight: 700;
 	line-height: 1.5;

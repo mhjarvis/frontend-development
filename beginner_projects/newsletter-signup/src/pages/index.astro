@@ -62,8 +62,13 @@
 
 				<!-- Form Element -->
 				<form action="" class="form">
-					<label for="form__email" class="form__label"></label>
-					<input type="email" class="form__email" id="form__email" />
+					<label for="form__email" class="form__label">Email address</label>
+					<input
+						type="email"
+						class="form__email"
+						id="form__email"
+						placeholder="email@company.com"
+					/>
 					<input
 						type="submit"
 						value="Subscribe to monthly newsletter"
@@ -97,12 +102,55 @@
 
 		&__title {
 			font-size: 40px;
+			font-family: "Roboto-Bold";
 		}
 	}
 
-	.list__item--text {
-		font-size: 1.6rem;
-		font-weight: 500;
-		color: green;
+	.list {
+		display: grid;
+		gap: 10px;
+		&__description {
+			line-height: 150%;
+			margin: 2rem 0;
+		}
+		&__item {
+			display: flex;
+			align-items: start;
+
+			&--icon {
+			}
+			&--text {
+				line-height: 150%;
+				margin-left: 2rem;
+			}
+		}
+	}
+
+	.form {
+		display: flex;
+		flex-direction: column;
+		margin: 4rem 0 2rem 0;
+		&__label {
+			font-size: 1.2rem;
+			font-family: "Roboto-Bold";
+			margin-bottom: 0.5rem;
+		}
+
+		&__email {
+			padding: 1.5rem 2rem;
+			border-radius: 8px;
+			border: 1px solid $gray;
+			color: $gray;
+			font-weight: 100;
+		}
+
+		&__submit {
+			margin-top: 2rem;
+			padding: 1.5rem 0;
+			border: none;
+			border-radius: 8px;
+			background-color: $slateGray;
+			color: $white;
+		}
 	}
 </style>
