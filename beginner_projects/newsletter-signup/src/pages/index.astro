@@ -14,9 +14,17 @@ import big from "../../public/images/illustration-sign-up-desktop.svg"
 	</head>
 	<body>
 		<main class="main">
-			<h1>this is image, not picture</h1>
-			<img src="../public/images/illustration-sign-up-mobile.svg" alt="" />
-			<!-- Sign-up form start -->
+			<picture>
+				<source
+					srcset="../images/illustration-sign-up-desktop.svg"
+					media="(min-width: 1024px"
+				/>
+				<img src="images/illustration-sign-up-mobile.svg" />
+			</picture>
+
+			<section class="content">
+				<h1 class="content__title">Stay updated!</h1>
+			</section>
 
 			Stay updated! Join 60,000+ product managers receiving monthly updates on:
 			Product discovery and building what matters Measuring to ensure updates
@@ -30,14 +38,17 @@ import big from "../../public/images/illustration-sign-up-desktop.svg"
 			Thanks for subscribing! A confirmation email has been sent to
 			ash@loremcompany.com. Please open it and click the button inside to
 			confirm your subscription. Dismiss message
-
-			<picture>
-				<source
-					srcset="/public/images/illustration-sign-up-desktop.svg"
-					media="(min-width: 800px"
-				/>
-				<img src="/public/images/icon-success.svg" />
-			</picture>
 		</main>
 	</body>
 </html>
+
+<style lang="scss">
+	main {
+	}
+
+	.content {
+		&__title {
+			font-size: 44px;
+		}
+	}
+</style>
