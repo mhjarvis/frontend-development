@@ -1,8 +1,5 @@
 ---
-import "../styles/main.scss"
-import Picture from "astro/components/Picture.astro"
-import small from "../../public/images/icon-success.svg"
-import big from "../../public/images/illustration-sign-up-desktop.svg"
+
 ---
 
 <!doctype html>
@@ -43,7 +40,11 @@ import big from "../../public/images/illustration-sign-up-desktop.svg"
 </html>
 
 <style lang="scss">
+	@import "../styles/main.scss";
+
 	main {
+		max-width: 37.5rem;
+		background-color: $white;
 	}
 
 	.content {

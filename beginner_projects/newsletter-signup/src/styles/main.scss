@@ -36,8 +36,14 @@ body {
 	font-weight: 700;
 	line-height: 1.5;
 	min-height: 100vh;
+	background-color: $slateGray;
+
 	/* border & padding accounted for in element's width/height */
 	box-sizing: border-box;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 @media screen and (min-width: 360px) {
