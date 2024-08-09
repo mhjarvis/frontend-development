@@ -15,13 +15,22 @@
 			>ash@loremcompany.com</span
 		>. Please open it and click the button inside to confirm your subscription
 	</p>
-	<button class="success__button">Dismiss message</button>
+	<button class="success__button" id="success__button">Dismiss message</button>
 </div>
+
+<script>
+	const button = document.getElementById("success__button")
+	const success = document.getElementById("success")
+	button.addEventListener("click", () => {
+		success.style.display = "none"
+	})
+</script>
 
 <style lang="scss">
 	@import "../styles/main.scss";
 
 	.success {
+		display: none;
 		position: absolute;
 		max-width: 37.5rem;
 		height: 100%;
