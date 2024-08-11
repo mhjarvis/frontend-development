@@ -1,7 +1,7 @@
 ---
 import Card from "../components/Card.astro"
 import Head from "../components/Head.astro"
-
+import data from "../assets/data.json"
 import "../styles/style.css"
 
 const work = "work"
@@ -20,16 +20,32 @@ const work = "work"
 				<Head />
 			</div>
 			<div class="profile__container">
+				{data.map((data) => <Card data={data} />)}
+
+				<!-- 				
 				<Card id={"card-" + work} />
 				<Card />
 				<Card />
 				<Card />
 				<Card />
-				<Card />
+				<Card /> 
+				-->
 			</div>
 		</main>
 	</body>
 </html>
+
+<script>
+	import data from "../assets/data.json"
+
+	console.log(data[0].title)
+
+	const daily = document.getElementById("daily")
+
+	daily.addEventListener("click", () => {
+		console.log(data)
+	})
+</script>
 
 <style>
 	.container {
@@ -57,5 +73,6 @@ const work = "work"
 		gap: 20px;
 		justify-content: center;
 		padding: 20px 0;
+		color: white;
 	}
 </style>
