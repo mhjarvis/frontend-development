@@ -1,0 +1,77 @@
+---
+import { Image } from "astro:assets"
+import profile from "../images/image-jeremy.png"
+---
+
+<div class="container">
+	<div class="profile">
+		<Image src={profile} alt="" class="profile__image" />
+		<div class="profile__section">
+			<p class="profile__title">Report for</p>
+			<p class="profile__name">Jeremy Robson</p>
+		</div>
+	</div>
+	<div class="date__container">
+		<button class="daily-button date-button">Daily</button>
+		<button class="weekly-button date-button">Weekly</button>
+		<button class="monthly-button date-button">Monthly</button>
+	</div>
+</div>
+
+<style>
+	.container {
+		max-width: 327px;
+		background-color: var(--darkBlue);
+		border-radius: 15px;
+	}
+	.profile {
+		width: 327px;
+
+		background-color: #5747ea;
+		display: flex;
+		padding: 3rem;
+		border-radius: 15px;
+	}
+	.profile__image {
+		width: 64px;
+		height: auto;
+		border: 3px solid white;
+		border-radius: 50%;
+	}
+
+	.profile__section {
+		display: flex;
+		flex-direction: column;
+		margin-left: 1.5rem;
+	}
+
+	.profile__title {
+		font-size: 15px;
+		font-weight: 300;
+		color: #bbc0ff;
+		margin-top: 5px;
+	}
+
+	.profile__name {
+		font-size: 24px;
+		font-weight: 200;
+		color: white;
+		margin-top: -5px;
+	}
+
+	.date__container {
+		width: 327px;
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+		padding: 2rem 0;
+	}
+
+	.date-button {
+		font-size: 18px;
+		font-weight: 400;
+		color: #7078c9;
+		background-color: var(--darkBlue);
+		border: none;
+	}
+</style>

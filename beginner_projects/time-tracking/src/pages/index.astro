@@ -1,0 +1,60 @@
+---
+import Card from "../components/Card.astro"
+import Head from "../components/Head.astro"
+import "../styles/style.css"
+
+const work = "work"
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Time tracking dashboard</title>
+	</head>
+	<body>
+		<main class="container">
+			<div class="head__container">
+				<Head />
+			</div>
+			<div class="profile__container">
+				<Card id={"card-" + work} />
+				<Card />
+				<Card />
+				<Card />
+				<Card />
+				<Card />
+			</div>
+		</main>
+	</body>
+</html>
+
+<style>
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background-color: var(--veryDarkBlue);
+		padding: 2rem 0;
+	}
+
+	.head__container {
+		max-width: 375px;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+
+	.profile__container {
+		max-width: 375px;
+		width: 100%;
+		display: grid;
+		grid-template-columns: 327px;
+		grid-template-rows: repeat(6, 160px);
+		gap: 20px;
+		justify-content: center;
+		padding: 20px 0;
+	}
+</style>

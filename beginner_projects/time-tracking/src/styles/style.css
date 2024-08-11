@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+/*  ----------------------------------------------  */
+/*                 CORE STYLES                      */
+/*  ----------------------------------------------  */
+
+:root {
+	--blue: #5847eb;
+	--lightRed: #ff8c66;
+	--softBlue: #56c2e6;
+	--lightRedStudy: #ff5c7c;
+	--limeGreen: #4acf81;
+	--violet: #7536d3;
+	--orange: #f1c65b;
+
+	--veryDarkBlue: #0f1424;
+	--darkBlue: #1c1f4a;
+	--desaturatedBlue: #6f76c8;
+	--paleBlue: #bdc1ff;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	/* Add font-family as needed */
+	font-family: "Rubik", sans-serif;
+	font-size: 6rem;
+	font-weight: 800;
+	line-height: 1.5;
+	min-height: 100vh;
+	/* border & padding accounted for in element's width/height */
+	box-sizing: border-box;
+}
+
+@media screen and (min-width: 360px) {
+	.body {
+		font-size: 31.25%;
+	}
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/*  ----------------------------------------------  */
+/*                   BREAKPOINTS                    */
+/*  ----------------------------------------------  */
+
+/* 320px - Small Phones */
+/* 400px - Large Phones */
+/* 568px - Landscape Mobile Phones */
+/* 768px - Tablet */
+/* 1024px - Small Desktop */
+/* 1300px - Normal Desktop */
+
+/*  ----------------------------------------------  */
+/*                     COMMENTS                     */
+/*  ----------------------------------------------  */
