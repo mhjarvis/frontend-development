@@ -20,7 +20,11 @@ const work = "work"
 				<Head />
 			</div>
 			<div class="profile__container">
-				{data.map((data) => <Card data={data} />)}
+				{
+					data.map((data) => (
+						<Card data={data.timeframes.weekly} title={data.title} />
+					))
+				}
 
 				<!-- 				
 				<Card id={"card-" + work} />
