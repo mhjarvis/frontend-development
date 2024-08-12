@@ -1,15 +1,16 @@
 ---
 import "../styles/style.css"
 import Image from "astro/components/Image.astro"
-import ellipsis from "../assets/images/icon-ellipsis.svg"
-const { id, data, title } = Astro.props
+/* import ellipsis from "../assets/images/icon-ellipsis.svg"
+ */ const { id, data, title } = Astro.props
 ---
 
 <div class="card__container" id={id}>
 	<div class="card__subcontainer">
 		<div class="work__container">
 			<p class="work__type">{title}</p>
-			<Image src={ellipsis} alt="" class="work__ellipse" />
+			<!-- 			<Image src={ellipsis} alt="" class="work__ellipse" />
+ -->
 		</div>
 		<div class="time__container">
 			<p class="time__hours">{data.current}hrs</p>

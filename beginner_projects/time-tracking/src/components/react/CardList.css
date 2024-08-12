@@ -1,0 +1,37 @@
+.card__container {
+}
+
+.card__subcontainer {
+	width: 100%;
+	height: 122px;
+	bottom: 0;
+	padding: 2rem;
+	background-color: var(--darkBlue);
+	color: white;
+}
+
+/* ----- Work Container ----- */
+.work__container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+/* ----- Time Container ----- */
+.time__container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 24px;
+	font-weight: 400;
+	margin-top: 1rem;
+}
+
+.time__total-hours {
+	font-size: 12px;
+	color: var(--paleBlue);
+}
