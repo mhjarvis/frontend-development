@@ -1,24 +1,45 @@
 ---
+import Main from "../layouts/Main.astro"
 // component script section
 const profilePicture = "https://i.imgur.com/JPGFE75.jpg"
 ---
 
 <!-- component template section -->
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
+<Main>
+	<div class="profile">
 		<img
 			src={profilePicture}
 			alt="Some crazy lady"
 			width="100px"
 			height="100px"
+			class="profile__picture"
 		/>
-	</body>
-</html>
+		<div class="profile__details">
+			<h1>Frau Katerina</h1>
+			<h2>VP of Engineering at Gooooooogle</h2>
+			<p>Helping devs be excellent to each other.s</p>
+		</div>
+	</div>
+</Main>
+
+<style>
+	.profile {
+		display: flex;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		padding: 1rem 0 3rem 0;
+	}
+
+	.profile__details {
+		flex: 1 0 300px;
+	}
+
+	.profile__details > h1 {
+		margin-top: 0;
+	}
+
+	.profile__picture {
+		border-radius: 50%;
+		margin: 0 2rem 1rem 0;
+	}
+</style>
