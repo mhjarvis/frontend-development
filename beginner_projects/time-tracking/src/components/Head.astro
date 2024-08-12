@@ -1,6 +1,9 @@
 ---
 import { Image } from "astro:assets"
+import Card from "./Card.astro"
 import profile from "../assets/images/image-jeremy.png"
+
+const vari = "poop"
 ---
 
 <div class="container">
@@ -16,7 +19,19 @@ import profile from "../assets/images/image-jeremy.png"
 		<button class="weekly-button date-button" id="weekly">Weekly</button>
 		<button class="monthly-button date-button" id="monthly">Monthly</button>
 	</div>
+	<p id="test">{vari}</p>
 </div>
+
+<script>
+	import Card from "./Card.astro"
+	const dailyButton = document.getElementById("daily")
+	const test = document.getElementById("test")
+
+	dailyButton.addEventListener("click", () => {
+		console.log("o")
+		test.innerHTML = "<Card title='eat a poop' />"
+	})
+</script>
 
 <style>
 	.container {
