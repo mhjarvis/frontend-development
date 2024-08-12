@@ -1,5 +1,9 @@
+import data from "../assets/data.json"
+
+const ex = data[0].title
+
 export default function Test() {
-	return <p>test</p>
+	return <p>{ex}</p>
 }
 
 /* 
