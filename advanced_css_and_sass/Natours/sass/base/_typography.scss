@@ -1,0 +1,42 @@
+body {
+	font-family: "Lato", sans-serif; /* declare in body element */
+	font-weight: 400;
+	line-height: 1.7;
+	color: #777;
+	padding: 3rem;
+}
+
+.heading-primary {
+	color: $color-white;
+	text-transform: uppercase;
+
+	/* prevent 'shake' on animation */
+	backface-visibility: hidden;
+	margin-bottom: 6rem;
+
+	&--main {
+		display: block;
+		font-size: 60px;
+		font-weight: 400;
+		letter-spacing: 3.5rem;
+
+		/* These are the two properties needed to make the animation work */
+		animation-name: moveInLeft;
+		animation-duration: 1s;
+		animation-timing-function: ease-out;
+
+		/* 
+        animation-delaty: 3s;
+        animation-count: 3;
+        animation-timing-function: ease-out;
+        */
+	}
+
+	&--sub {
+		display: block;
+		font-size: 2rem;
+		font-weight: 700;
+		letter-spacing: 1.75rem;
+		animation: moveInRight 1s ease-out;
+	}
+}
