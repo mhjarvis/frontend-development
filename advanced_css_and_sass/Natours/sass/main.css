@@ -27,21 +27,18 @@ body {
   background-position: top; /* top of image always stays on top */
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
           clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  /*****************************************/
+  /*** Center using absolute positioning ***/
+  /*****************************************/
 }
-
 .header__logo-box {
   position: absolute;
   top: 4rem;
   left: 4rem;
 }
-
 .header__logo {
   height: 3.5rem;
 }
-
-/*****************************************/
-/*** Center using absolute positioning ***/
-/*****************************************/
 .header__text-box {
   position: absolute;
   /* 40% in relation to parent element */
@@ -60,7 +57,6 @@ body {
   backface-visibility: hidden;
   margin-bottom: 6rem;
 }
-
 .heading-primary--main {
   display: block;
   font-size: 60px;
@@ -71,12 +67,11 @@ body {
   animation-duration: 1s;
   animation-timing-function: ease-out;
   /* 
-     animation-delaty: 3s;
-     animation-count: 3;
-     animation-timing-function: ease-out;
-     */
+        animation-delaty: 3s;
+        animation-count: 3;
+        animation-timing-function: ease-out;
+        */
 }
-
 .heading-primary--sub {
   display: block;
   font-size: 2rem;
@@ -123,8 +118,7 @@ body {
     transform: translateY(0);
   }
 }
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
@@ -134,12 +128,10 @@ body {
   position: relative;
   font-size: 1.6rem;
 }
-
 .btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
-
 .btn:active {
   transform: translateY(-1px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
