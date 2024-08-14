@@ -90,6 +90,12 @@ body {
   animation: moveInRight 1s ease-out;
 }
 
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -204,4 +210,10 @@ body {
   /* translate item -50% of x/y  of the element itself*/
   transform: translate(-50%, -50%);
   text-align: center;
+}
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -20vh;
 }/*# sourceMappingURL=main.css.map */
