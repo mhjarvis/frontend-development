@@ -250,6 +250,7 @@ body {
   display: inline-block;
   background-image: linear-gradient(to right, #7ed56f, #28b485);
   -webkit-background-clip: text;
+          background-clip: text;
   color: transparent;
 }
 .feature-box:hover {
@@ -339,4 +340,10 @@ body {
 }
 .section-features > * {
   transform: skewY(7deg);
+}
+
+.section-tours {
+  margin-top: -10rem;
+  background-color: #f7f7f7;
+  padding: 25rem 0 50rem 0;
 }/*# sourceMappingURL=main.css.map */
