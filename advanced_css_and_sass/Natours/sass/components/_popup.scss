@@ -8,6 +8,10 @@
 	background-color: rgba($color-black, $alpha: 0.9);
 	z-index: 5000;
 
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s;
+
 	&__content {
 		@include absCenter;
 		width: 75%;
@@ -46,5 +50,31 @@
 		-ms-hyphens: auto;
 		-webkit-hyphens: auto;
 		hyphens: auto;
+	}
+	&:target {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	&:target &__content {
+	}
+
+	&__close {
+		&:link,
+		&:visited {
+			color: $color-grey-dark;
+			position: absolute;
+			top: 2.5rem;
+			right: 2.5rem;
+			font-size: 3rem;
+			text-decoration: none;
+			display: inline-block;
+			transition: all 0.2s;
+			line-height: 1;
+		}
+
+		&:hover {
+			color: $color-primary;
+		}
 	}
 }
