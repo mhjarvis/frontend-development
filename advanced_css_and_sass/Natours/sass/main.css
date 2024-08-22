@@ -47,24 +47,19 @@
 html {
   font-size: 62.5%;
 }
-@media (max-width: 37.5em) {
+@media (max-width: 56.25em) {
   html {
     font-size: 50%;
   }
 }
-@media (max-width: 56.25em) {
-  html {
-    font-size: 60%;
-  }
-}
 @media (max-width: 75em) {
   html {
-    font-size: 70%;
+    font-size: 56.25%;
   }
 }
 @media (max-width: 112.5em) {
   html {
-    font-size: 80%;
+    font-size: 75%;
   }
 }
 
@@ -89,7 +84,7 @@ body {
 }
 .heading-primary--main {
   display: block;
-  font-size: 60px;
+  font-size: 6rem;
   font-weight: 400;
   letter-spacing: 3.5rem;
   /* These are the two properties needed to make the animation work */
