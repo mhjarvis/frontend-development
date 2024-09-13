@@ -1,34 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Container & Spacing</title>
-  </head>
-  <body>
-    <!-- Container -->
-    <div>
-      <article>
-        <h3>Article One</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Exercitationem laboriosam libero molestiae recusandae accusantium
-          voluptates? Expedita dignissimos amet eveniet dolore nobis odio a
-          sunt, maiores quasi. Modi amet quos dolores!
-        </p>
-      </article>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<title>Container & Spacing</title>
+	</head>
+	<body>
+		<!-- Container -->
+		<div class="container mx-auto">
+			<article>
+				<h3>Article One</h3>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					Exercitationem laboriosam libero molestiae recusandae accusantium
+					voluptates? Expedita dignissimos amet eveniet dolore nobis odio a
+					sunt, maiores quasi. Modi amet quos dolores!
+				</p>
+			</article>
 
-      <!-- Margin -->
+			<!-- Margin -->
+			<div class="bg-slate-100 m-2">Hello World</div>
+			<div class="bg-slate-300 ml-4">Hellow World</div>
+			<div class="bg-slate-300 mb-4 mt-4">Hellow World</div>
+			<div class="bg-slate-300 mr-[500px]">Hellow World</div>
+			<!-- Padding -->
+			<div class="bg-slate-200 p-2">Hello</div>
+			<div class="bg-slate-200 pl-4">Hello</div>
+			<div class="bg-slate-200 pr-4">Hello</div>
+			<div class="bg-slate-200 pr-6">Hello</div>
+			<div class="bg-slate-200 pt-10">Hello</div>
 
-      <!-- Padding -->
+			<!-- Space Between X -->
+			<div class="flex mt-4 space-x-14">
+				<div class="Item">Item</div>
+				<div class="Item">Item</div>
+				<div class="Item">Item</div>
+				<div class="Item">Item</div>
+				<div class="Item">Item</div>
+				<div class="Item">Item</div>
+				<div class="Item">Item</div>
+				<div class="Item">Item</div>
+			</div>
+			<!-- Space Between Y -->
 
-      <!-- Space Between X -->
-
-      <!-- Space Between Y -->
-    </div>
-  </body>
+			<div class="flex flex-col mt-4 space-y-4">
+				<div class="Item">Item</div>
+				<div class="Item">Item</div>
+				<div class="Item">Item</div>
+				<div class="Item">Item</div>
+				<div class="Item">Item</div>
+				<div class="Item">Item</div>
+				<div class="Item">Item</div>
+				<div class="Item">Item</div>
+			</div>
+		</div>
+	</body>
 </html>
 
 <!-- Breakpoinsts for Container 

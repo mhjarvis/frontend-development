@@ -1,35 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Sizing</title>
-  </head>
-  <body>
-    <!-- Width -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<title>Sizing</title>
+	</head>
+	<body>
+		<!-- Width -->
+		<div class="bg-black text-white">Tailwind is awesome</div>
+		<div class="bg-black text-white w-12">Tailwind is awesome</div>
+		<div class="bg-black text-white w-4">Tailwind is awesome</div>
+		<div class="bg-black text-white w-96">Tailwind is awesome</div>
 
-    <!-- Percentages -->
+		<!-- Percentages -->
+		<div class="bg-green-700 text-white w-1/2">Tailwind is awesome</div>
+		<div class="bg-blue-700 text-white w-1/5">Tailwind is awesome</div>
+		<div class="bg-red-700 text-white w-11/12">Tailwind is awesome</div>
 
-    <!-- Width of the viewport -->
+		<!-- Width of the viewport -->
+		<div class="bg-green-700 text-white w-screen">Tailwind is awesome</div>
+		<div class="bg-blue-700 text-white w-min">Tailwind is awesome</div>
+		<div class="bg-red-700 text-white w-max">Tailwind is awesome</div>
+		<div class="bg-red-700 text-white w-fit">Tailwind is awesome</div>
+		<div class="bg-red-700 text-white w-full">Tailwind is awesome</div>
 
-    <!-- 100% of container -->
+		<!-- 100% of container -->
 
-    <!-- min/max content -->
+		<!-- min/max content -->
 
-    <!-- Arbitrary width -->
+		<!-- Arbitrary width -->
+		<div class="bg-green-700 text-white w-[400px]">Tailwind is awesome</div>
+		<div class="bg-green-700 text-white w-[500px]">Tailwind is awesome</div>
 
-    <!-- Max Width -->
+		<!-- Max Width -->
+		<div class="bg-gray-300 max-w-sm">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. In odit facere
+			maiores placeat, beatae quibusdam hic sed corporis, at excepturi magnam
+			exercitationem fuga eos rem molestiae cupiditate ad, deleniti cumque.
+		</div>
+		<div class="bg-blue-300 max-w-2xl">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. In odit facere
+			maiores placeat, beatae quibusdam hic sed corporis, at excepturi magnam
+			exercitationem fuga eos rem molestiae cupiditate ad, deleniti cumque.
+		</div>
+		<div class="bg-green-300 max-w-max">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. In odit facere
+			maiores placeat, beatae quibusdam hic sed corporis, at excepturi magnam
+			exercitationem fuga eos rem molestiae cupiditate ad, deleniti cumque.
+		</div>
 
-    <!-- Height (Most of the same options as widths) -->
+		<!-- Height (Most of the same options as widths) -->
+		<div class="bg-orange-500 w-20 h-20">HELLO</div>
+		<div class="bg-orange-500 w-20 h-10">HELLO</div>
+		<div class="bg-orange-500 w-20 h-480">HELLO</div>
+		<!-- Min Height -->
 
-    <!-- Min Height -->
+		<!-- Max Height -->
 
-    <!-- Max Height -->
-
-    <!-- Full screen height -->
-  </body>
+		<!-- Full screen height -->
+		<div class="bg-blue-300 text-white h-screen">Howdy</div>
+	</body>
 </html>
 
 <!-- 
