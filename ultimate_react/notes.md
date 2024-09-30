@@ -15,3 +15,7 @@ When updating `state` based on a current state value, use a callback function to
     }
 
 This is of course not required when setting the current state value to an entirly new value. This should be mainly used when the current state update is based on the current state value.
+
+## Prop Drilling
+
+Prop Drilling refers to the action of passing a prop through several different components until it goes all the way to the component that actually is using it. This leads to many components receiving props that they do not actually need.
