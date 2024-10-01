@@ -64,3 +64,15 @@ export default function App() {
 	);
 }
 ```
+
+## TypeChecking Props
+
+Type checking will help prevent wrong values to be passed into components. TypeScript might be more beneficial to use long-term.
+
+```jsx
+import PropTypes from "prop-types"; // import
+
+StarRating.propTypes = {
+	maxRating: PropTypes.number,
+};
+```

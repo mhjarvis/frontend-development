@@ -6,9 +6,14 @@ import StarRating from "./StarRating.jsx";
 
 createRoot(document.getElementById("root")).render(
 	<StrictMode>
-		<StarRating maxRating={5} />
+		<StarRating
+			maxRating={5}
+			className="test"
+			messages={["Terrible", "Good", "Poop", "Sure", "Greatish"]}
+			defaultRating={3}
+		/>
 		<StarRating maxRating={10} />
-		<StarRating />
+		<StarRating size={24} />
 		{/* 		<App />
 		 */}{" "}
 	</StrictMode>
