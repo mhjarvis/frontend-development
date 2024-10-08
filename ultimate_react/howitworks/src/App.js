@@ -26,8 +26,6 @@ export default function App() {
 	);
 }
 
-console.log(<DifferentContent />);
-
 function Tabbed({ content }) {
 	const [activeTab, setActiveTab] = useState(0);
 	return (
