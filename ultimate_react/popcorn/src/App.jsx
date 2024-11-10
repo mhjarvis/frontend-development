@@ -57,6 +57,7 @@ const KEY = "e55a4912";
 export default function App() {
 	const [movies, setMovies] = useState([]);
 	const [watched, setWatched] = useState([]);
+	const [query, setQuery] = useState("Interstellar");
 
 	// This will re-render infinitely because of the state update
 	/* 	fetch(`https://www.omdbapi.com/?s=Interstellar&apikey=${KEY}`)
@@ -64,11 +65,17 @@ export default function App() {
 		.then((data) => console.log(data.Search)); */
 
 	// Data Fetching with the useEffect() hook which will only execute on 'mount'
-	useEffect(function () {
-		fetch(`https://www.omdbapi.com/?s=Interstellar&apikey=${KEY}`)
-			.then((res) => res.json())
-			.then((data) => setMovies(data.Search));
-	}, []);
+	useEffect(() => {
+		async function fetchMovies() {
+			const res = await fetch(
+				`https://www.omdbapi.com/?s=${query}&apikey=${KEY}`
+			);
+			const data = await res.json();
+			setMovies(data.Search);
+			console.log(data.Search);
+		}
+		fetchMovies();
+	}, [query]);
 
 	return (
 		<>
