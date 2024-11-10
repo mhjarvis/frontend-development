@@ -58,7 +58,8 @@ export default function App() {
 	const [movies, setMovies] = useState([]);
 	const [watched, setWatched] = useState([]);
 	const [isLoading, setIsLoading] = useState(false);
-	const [query, setQuery] = useState("Interstellar");
+	const [error, setError] = useState("");
+	const [query, setQuery] = useState("sadfafdf");
 
 	// This will re-render infinitely because of the state update
 	/* 	fetch(`https://www.omdbapi.com/?s=Interstellar&apikey=${KEY}`)
@@ -68,13 +69,27 @@ export default function App() {
 	// Data Fetching with the useEffect() hook which will only execute on 'mount'
 	useEffect(() => {
 		async function fetchMovies() {
-			setIsLoading(true);
-			const res = await fetch(
-				`https://www.omdbapi.com/?s=${query}&apikey=${KEY}`
-			);
-			const data = await res.json();
-			setMovies(data.Search);
-			setIsLoading(false);
+			try {
+				// Show the loading <p></p> element when getting data
+				setIsLoading(true);
+				// attempt to fetch the data
+				const res = await fetch(
+					`https://www.omdbapi.com/?s=${query}&apikey=${KEY}`
+				);
+				// If the fetched data failed, show error
+				if (!res.ok)
+					throw new Error("Something went wrong with fetching movies");
+				// convert data to json
+				const data = await res.json();
+				// If not movie was found, show new error
+				if (data.Response === "False") throw new Error("Movie not found");
+				setMovies(data.Search);
+			} catch (err) {
+				console.log(err.message);
+				setError(err.message);
+			} finally {
+				setIsLoading(false);
+			}
 		}
 		fetchMovies();
 	}, [query]);
@@ -87,7 +102,13 @@ export default function App() {
 			</NavBar>
 			<Main>
 				{/* Add loading indicicator for slower networks */}
-				<Box>{isLoading ? <Loader /> : <MovieList movies={movies} />}</Box>
+				<Box>
+					{/* {isLoading ? <Loader /> : <MovieList movies={movies} />} */}
+					{/* These three conditions are mutually exclusive */}
+					{isLoading && <Loader />}
+					{isLoading && !error && <MovieList movies={movies} />}
+					{error && <ErrorMessage message={error} />}
+				</Box>
 				<Box>
 					<WatchedSummary watched={watched} />
 					<WatchedMovieList watched={watched} />
@@ -97,8 +118,17 @@ export default function App() {
 	);
 }
 
+// show loading notice for slow networks
 function Loader() {
 	return <p className="loader">Loading...</p>;
+}
+
+function ErrorMessage({ message }) {
+	return (
+		<p className="error">
+			<span>:)</span> {message}
+		</p>
+	);
 }
 
 function NavBar({ children }) {
