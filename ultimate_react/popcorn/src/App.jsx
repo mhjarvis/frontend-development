@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const tempMovieData = [
 	{
@@ -59,11 +59,17 @@ export default function App() {
 	const [watched, setWatched] = useState([]);
 
 	// This will re-render infinitely because of the state update
-	let x = fetch(`https://www.omdbapi.com/?s=Interstellar&apikey=${KEY}`)
+	/* 	fetch(`https://www.omdbapi.com/?s=Interstellar&apikey=${KEY}`)
 		.then((res) => res.json())
-		.then((data) => console.log(data.Search));
+		.then((data) => console.log(data.Search)); */
 
-	console.log(x);
+	// Data Fetching with the useEffect() hook which will only execute on 'mount'
+	useEffect(function () {
+		fetch(`https://www.omdbapi.com/?s=Interstellar&apikey=${KEY}`)
+			.then((res) => res.json())
+			.then((data) => setMovies(data.Search));
+	}, []);
+
 	return (
 		<>
 			<NavBar>
