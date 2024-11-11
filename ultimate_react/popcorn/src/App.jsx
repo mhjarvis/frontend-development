@@ -55,11 +55,12 @@ const average = (arr) =>
 const KEY = "e55a4912";
 
 export default function App() {
+	const [query, setQuery] = useState("inception");
 	const [movies, setMovies] = useState([]);
 	const [watched, setWatched] = useState([]);
 	const [isLoading, setIsLoading] = useState(false);
 	const [error, setError] = useState("");
-	const [query, setQuery] = useState("sadfafdf");
+	const tempQuery = "interstellar";
 
 	// This will re-render infinitely because of the state update
 	/* 	fetch(`https://www.omdbapi.com/?s=Interstellar&apikey=${KEY}`)
@@ -72,6 +73,7 @@ export default function App() {
 			try {
 				// Show the loading <p></p> element when getting data
 				setIsLoading(true);
+				setError("");
 				// attempt to fetch the data
 				const res = await fetch(
 					`https://www.omdbapi.com/?s=${query}&apikey=${KEY}`
@@ -85,11 +87,15 @@ export default function App() {
 				if (data.Response === "False") throw new Error("Movie not found");
 				setMovies(data.Search);
 			} catch (err) {
-				console.log(err.message);
 				setError(err.message);
 			} finally {
 				setIsLoading(false);
 			}
+		}
+		if (query.length < 3) {
+			setMovies([]);
+			setError("");
+			return;
 		}
 		fetchMovies();
 	}, [query]);
@@ -97,15 +103,15 @@ export default function App() {
 	return (
 		<>
 			<NavBar>
-				<Search />
+				<Search query={query} setQuery={setQuery} />
 				<NumResults movies={movies} />
 			</NavBar>
+
 			<Main>
 				{/* Add loading indicicator for slower networks */}
 				<Box>
-					{/* {isLoading ? <Loader /> : <MovieList movies={movies} />} */}
 					{/* These three conditions are mutually exclusive */}
-					{isLoading && <Loader />}
+					{isLoading ? <Loader /> : <MovieList movies={movies} />}
 					{isLoading && !error && <MovieList movies={movies} />}
 					{error && <ErrorMessage message={error} />}
 				</Box>
@@ -118,7 +124,6 @@ export default function App() {
 	);
 }
 
-// show loading notice for slow networks
 function Loader() {
 	return <p className="loader">Loading...</p>;
 }
@@ -158,9 +163,7 @@ function Logo() {
 	);
 }
 
-function Search() {
-	const [query, setQuery] = useState("");
-
+function Search({ query, setQuery }) {
 	return (
 		<input
 			className="search"
