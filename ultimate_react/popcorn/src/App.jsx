@@ -60,7 +60,6 @@ export default function App() {
 	const [watched, setWatched] = useState([]);
 	const [isLoading, setIsLoading] = useState(false);
 	const [error, setError] = useState("");
-	const tempQuery = "interstellar";
 
 	// This will re-render infinitely because of the state update
 	/* 	fetch(`https://www.omdbapi.com/?s=Interstellar&apikey=${KEY}`)
