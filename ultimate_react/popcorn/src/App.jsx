@@ -56,7 +56,7 @@ const average = (arr) =>
 const KEY = "e55a4912"
 
 export default function App() {
-	const [query, setQuery] = useState("inception")
+	const [query, setQuery] = useState("")
 	const [movies, setMovies] = useState([])
 	const [watched, setWatched] = useState([])
 	const [isLoading, setIsLoading] = useState(false)
@@ -87,6 +87,9 @@ export default function App() {
 	}
 
 	useEffect(() => {
+		// abortcontroller to stop fetching items
+		const controller = new AbortController()
+
 		async function fetchMovies() {
 			try {
 				// Show the loading <p></p> element when getting data
@@ -94,7 +97,8 @@ export default function App() {
 				setError("")
 				// attempt to fetch the data
 				const res = await fetch(
-					`https://www.omdbapi.com/?s=${query}&apikey=${KEY}`
+					`https://www.omdbapi.com/?s=${query}&apikey=${KEY}`,
+					{ signal: controller.signal } // part of abortcontroller
 				)
 				// If the fetched data failed, show error
 				if (!res.ok)
@@ -104,9 +108,13 @@ export default function App() {
 				// If not movie was found, show new error
 				if (data.Response === "False") throw new Error("Movie not found")
 				setMovies(data.Search)
-				console.log(data.Search)
+				setError("")
 			} catch (err) {
-				setError(err.message)
+				/* 				console.error(err.message)
+				 */
+				if (err.name !== "AbortError") {
+					setError(err.message)
+				}
 			} finally {
 				setIsLoading(false)
 			}
@@ -116,7 +124,13 @@ export default function App() {
 			setError("")
 			return
 		}
+		handleCloseMovie()
 		fetchMovies()
+
+		// part of abortcontroller
+		return function () {
+			controller.abort()
+		}
 	}, [query])
 
 	return (
@@ -315,6 +329,23 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
 		onAddWatched(newWatchedMovie)
 		onCloseMovie()
 	}
+
+	// Listen globally for keypress (ESC) key to exit out of movie selection
+	useEffect(
+		function () {
+			function callback(e) {
+				if (e.code === "Escape") {
+					onCloseMovie()
+				}
+			}
+			document.addEventListener("keydown", callback)
+
+			return function () {
+				document.removeEventListener("keydown", callback)
+			}
+		},
+		[onCloseMovie]
+	)
 
 	useEffect(
 		function () {
