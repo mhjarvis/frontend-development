@@ -1,34 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Container & Spacing</title>
-  </head>
-  <body>
-    <!-- Container -->
-    <div>
-      <article>
-        <h3>Article One</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Exercitationem laboriosam libero molestiae recusandae accusantium
-          voluptates? Expedita dignissimos amet eveniet dolore nobis odio a
-          sunt, maiores quasi. Modi amet quos dolores!
-        </p>
-      </article>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<title>Container & Spacing</title>
+	</head>
+	<body>
+		<!-- Container -->
+		<div class="container mx-auto">
+			<article>
+				<h3>Article One</h3>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					Exercitationem laboriosam libero molestiae recusandae accusantium
+					voluptates? Expedita dignissimos amet eveniet dolore nobis odio a
+					sunt, maiores quasi. Modi amet quos dolores!
+				</p>
+			</article>
+		</div>
 
-      <!-- Margin -->
+		<!-- Margin -->
+		<div class="bg-slate-100 m-2">Hello World</div>
+		<div class="bg-slate-100 ml-[5rem]">Hello World</div>
 
-      <!-- Padding -->
+		<!-- Padding -->
 
-      <!-- Space Between X -->
+		<div class="bg-slate-100 pl-5">Hellow World</div>
 
-      <!-- Space Between Y -->
-    </div>
-  </body>
+		<!-- Space Between X -->
+		<div class="flex mt-4 space-x-4">
+			<div>item 1</div>
+			<div>item 2</div>
+			<div>item 3</div>
+			<div>item 4</div>
+		</div>
+
+		<!-- Space Between Y -->
+		<div class="mt-4 space-y-4">
+			<div>item 1</div>
+			<div>item 2</div>
+			<div>item 3</div>
+			<div>item 4</div>
+		</div>
+	</body>
 </html>
 
 <!-- Breakpoinsts for Container 
