@@ -1,37 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>TailwindCSS</title>
-  </head>
-  <body>
-    <!-- Positioning -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<title>TailwindCSS</title>
+	</head>
+	<body>
+		<!-- Positioning -->
+		<div class="relative h-12 bg-red-200 w-1/2">
+			<div class="absolute top-0 right-0 bg-green-500">Top Right</div>
+			<div class="absolute bottom-0 left-0 bg-blue-500">Bottom Left</div>
+			<div class="absolute bottom-0 right-0 bg-yellow-500">Bottom Right</div>
+			<div
+				class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-purple-500"
+			>
+				Centered
+			</div>
+			<div class="absolute top-0 left-0 bg-orange-500">Top Left</div>
+		</div>
 
-    <!-- Top left corner -->
+		<!-- Top left corner -->
 
-    <!-- Top right corner -->
+		<!-- Top right corner -->
 
-    <!-- Bottom left corner -->
+		<!-- Bottom left corner -->
 
-    <!-- Bottom right corner -->
+		<!-- Bottom right corner -->
 
-    <!-- Span top edge -->
+		<!-- Span top edge -->
+		<div class="relative h-12 bg-red-200 w-1/2">
+			<div class="absolute top-0 left-0 right-0 bg-green-500">Top Edge</div>
+			<div class="absolute bottom-0 left-0 right-0 bg-blue-500">
+				Bottom Edge
+			</div>
+			<div
+				class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-yellow-500"
+			>
+				Left Edge
+			</div>
+			<div
+				class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-purple-500"
+			>
+				Right Edge
+			</div>
+			<div
+				class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-orange-500"
+			>
+				Centered
+			</div>
+		</div>
 
-    <!-- Span left edge -->
+		<!-- Span left edge -->
 
-    <!-- Span right edge -->
+		<!-- Span right edge -->
 
-    <!-- Span bottom edge -->
+		<!-- Span bottom edge -->
 
-    <!-- Display Classes -->
+		<!-- Display Classes -->
 
-    <!-- Z-Index -->
+		<!-- Z-Index -->
+		<div class="relative h-12 bg-red-200 w-1/2 mt-10">
+			<div class="absolute top-0 left-0 right-0 bg-green-500 z-10">Z-10</div>
+			<div class="absolute top-0 left-0 right-0 bg-blue-500 z-20">Z-20</div>
+			<div class="absolute top-0 left-0 right-0 bg-yellow-500 z-30 left-20">
+				Z-30
+			</div>
+			<div class="absolute top-0 left-0 right-0 bg-purple-500 z-40 left-40">
+				Z-40
+			</div>
+		</div>
 
-    <!-- Floats -->
-  </body>
+		<!-- Floats -->
+		<div class="relative h-12 bg-red-200 w-1/2 mt-10">
+			<div class="float-left bg-green-500">Float Left</div>
+			<div class="float-right bg-blue-500">Float Right</div>
+			<div class="float-none bg-yellow-500">Float None</div>
+			<div class="float-left bg-purple-500">Float Left</div>
+		</div>
+	</body>
 </html>
 
 <!-- Position Classes

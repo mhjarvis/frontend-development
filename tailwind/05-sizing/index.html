@@ -1,35 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Sizing</title>
-  </head>
-  <body>
-    <!-- Width -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<title>Sizing</title>
+	</head>
+	<body>
+		<!-- Width -->
+		<div class="bg-black text-white w-96">Tailwind is Awesome!</div>
 
-    <!-- Percentages -->
+		<!-- Percentages -->
+		<div class="bg-green-700 text-white w-1/4">Tailwind is Awesome!</div>
+		<div class="bg-green-700 text-white w-1/3">Tailwind is Awesome!</div>
+		<div class="bg-green-700 text-white w-1/2">Tailwind is Awesome!</div>
 
-    <!-- Width of the viewport -->
+		<!-- Width of the viewport -->
+		<div class="bg-blue-700 text-white w-screen">Tailwind is Awesome!</div>
 
-    <!-- 100% of container -->
+		<!-- 100% of container -->
+		<div class="bg-red-700 text-white w-full">Tailwind is Awesome!</div>
 
-    <!-- min/max content -->
+		<!-- min/max content -->
+		<div class="bg-yellow-700 text-white w-min">Tailwind is Awesome!</div>
+		<div class="bg-yellow-700 text-white w-max">Tailwind is Awesome!</div>
+		<div class="bg-yellow-700 text-white w-fit">Tailwind is Awesome!</div>
 
-    <!-- Arbitrary width -->
+		<!-- Arbitrary width -->
+		<div class="bg-purple-700 text-white w-[500px]">Tailwind is Awesome!</div>
+		<div class="bg-purple-700 text-white w-[calc(100%-2rem)]">
+			Tailwind is Awesome!
+		</div>
 
-    <!-- Max Width -->
+		<!-- Max Width -->
+		<div class="bg-black text-white max-w-96">Tailwind is Awesome!</div>
+		<div class="bg-black text-white max-w-sm">Tailwind is Awesome!</div>
+		<div class="bg-black text-white max-w-md">Tailwind is Awesome!</div>
+		<div class="bg-black text-white max-w-lg">Tailwind is Awesome!</div>
 
-    <!-- Height (Most of the same options as widths) -->
+		<!-- Height (Most of the same options as widths) -->
+		<div class="bg-black text-white h-16">Tailwind is Awesome!</div>
 
-    <!-- Min Height -->
+		<!-- Min Height -->
+		<div class="bg-black text-white min-h-0">Tailwind is Awesome!</div>
+		<div class="bg-black text-white min-h-full">Tailwind is Awesome!</div>
+		<div class="bg-black text-white min-h-screen">Tailwind is Awesome!</div>
+		<div class="bg-black text-white min-h-min">Tailwind is Awesome!</div>
 
-    <!-- Max Height -->
+		<!-- Max Height -->
+		<div class="bg-black text-white max-h-0">Tailwind is Awesome!</div>
+		<div class="bg-black text-white max-h-full">Tailwind is Awesome!</div>
 
-    <!-- Full screen height -->
-  </body>
+		<!-- Full screen height -->
+		<div class="bg-black text-white h-screen">Tailwind is Awesome!</div>
+	</body>
 </html>
 
 <!-- 

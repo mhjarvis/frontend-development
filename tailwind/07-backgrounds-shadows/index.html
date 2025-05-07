@@ -1,21 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Backgrounds & Shadows</title>
-  </head>
-  <body>
-    <!-- Background Classes -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<title>Backgrounds & Shadows</title>
+	</head>
+	<body>
+		<!-- Background Classes -->
+		<div
+			class="h-64 w-72 bg-no-repeat bg-cover bg-center"
+			style="background-image: url('../assets/img/img1.jpg')"
+		></div>
 
-    <!-- Gradients -->
+		<!-- Gradients -->
+		<div class="h-24 bg-gradient-to-l from-cyan-500 to-blue-500"></div>
 
-    <!-- Shadows -->
+		<!-- Shadows -->
+		<div class="w-96 mt-6 ml-4 p-3 shadow">
+			Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates
+			reiciendis ratione perspiciatis expedita nam maiores velit dicta
+			aspernatur iure provident!
+		</div>
+		<div class="w-96 mt-6 ml-4 p-3 shadow-md">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+			aperiam officiis debitis mollitia odio dolore unde commodi et, distinctio
+			labore!
+		</div>
+		<div class="w-96 mt-6 ml-4 p-3 shadow-2xl">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos aut
+			placeat suscipit cumque. Minus corporis nesciunt voluptates
+			exercitationem.
+		</div>
+		<div class="w-96 mt-6 ml-4 p-3 shadow-inner">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos aut
+			placeat suscipit cumque. Minus corporis nesciunt voluptates
+			exercitationem.
+		</div>
 
-    <!-- Mix Blend -->
-  </body>
+		<!-- Mix Blend -->
+		<div class="flex justify-center -space-x-24">
+			<div class="mix-blend-multiply bg-blue-400">
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias, eaque.
+				Voluptates aliquam adipisci dolore error quae at dolores alias esse.
+			</div>
+			<div class="mix-blend-multiply bg-blue-300">
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe quaerat
+				ducimus voluptatem molestiae? Sed itaque sint cupiditate similique cum
+				at!
+			</div>
+		</div>
+	</body>
 </html>
 
 <!-- Background Size
